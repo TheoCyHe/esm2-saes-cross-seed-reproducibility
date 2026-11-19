@@ -1,0 +1,38 @@
+# never commit data or artefacts (root-level only -- src/data/ holds code)
+/data/
+*.h5
+*.hdf5
+*.fasta
+*.fa
+*.safetensors
+*.pt
+sae_ckpts/
+logs/
+results/
+figures/
+
+# python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+*.egg-info/
+
+# env
+.env
+
+# §CT18 (b) and §CT18-F: release/derived/'s data files are written by
+# slurm/release_derived.sbatch and slurm/release_derived_ext.sbatch and are never
+# committed: they ship as the release's assets (§CT18-D item 6). The manifest and
+# the meta files are committed, so the hashes are on main.
+/release/derived/*
+!/release/derived/MANIFEST.csv
+!/release/derived/meta.json
+!/release/derived/meta_ext.json
+
+# §CT18-D4 item 2: decoder assets are release assets on scratch, never committed; their manifest,
+# release/decoders/MANIFEST.csv, is
+/release/decoders/*.h5
+
+# the Zenodo data record's upload set, staged locally (scripts/deposit_package.py --upload-dir)
+/release/upload/

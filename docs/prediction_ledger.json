@@ -1,0 +1,514 @@
+{
+ "_purpose": "PREREGISTRATION amendment AX §2c. The ledger is DERIVED from this file at write time, never incremented from the previous amendment. Two arithmetic errors on a maintained counter (AW7's posted line, and a planning-thread proposal that was wrong in a worse way because it came from incrementing a tally across conversation turns) are what motivated the change. A derived count cannot drift.",
+ "_anchor_note": "The anchor is amendment AV's posted line (PREREGISTRATION.md, `LEDGER after AV`), VERIFIED rather than assumed: AU's line (23/32 within-system, 15/16 shape) plus AV's three scored predictions (AV-P1 shape HIT, AV-P2 shape HIT, AV-P3 within-system MISS) reproduces 23/33 and 17/18 exactly. That check is what establishes the anchor is usable and that the derivation method is the one AV itself used correctly.",
+ "_untraced": "Predictions BEFORE amendment AV are NOT itemised here. Their scorecards exist (AR15, AS10, AS17, AT10, AT14, AU15) but in five different prose formats, and AT's three SCORED_AGAINST_EXISTING_DATA predictions are deliberately excluded from the tallies under AT1 -- so itemising them is a reconstruction, not a reading. Recorded as UNTRACED rather than reconstructed, per the standing rule that an untraced entry is useful and a plausible-looking reconstruction is worse than a gap. Itemising AR through AU is a bounded follow-up; it needs those six scorecards read into this file's schema, and it would make the anchor itself derived rather than cited.",
+ "anchor": {
+  "after_amendment": "AV",
+  "source": "PREREGISTRATION.md, section AV20, `LEDGER after AV`",
+  "totals": {
+   "within-system": [
+    23,
+    33
+   ],
+   "distributional shape": [
+    17,
+    18
+   ],
+   "procedure-behaviour": [
+    4,
+    6
+   ],
+   "directional mechanism": [
+    2,
+    10
+   ],
+   "cross-system transfer": [
+    0,
+    2
+   ],
+   "constructive counterexample": [
+    1,
+    1
+   ]
+  }
+ },
+ "predictions": [
+  {
+   "id": "AW-P1",
+   "amendment": "AW",
+   "category": "distributional shape",
+   "scored_in": "AX",
+   "outcome": "HIT",
+   "note": "D(c) bimodal, under 40% interior. Measured interior mass 13.37% at the 95th-percentile reference, and 2.13%-15.36% across every estimable percentile in both the pooled and per-seed arms -- so the conclusion also holds across the reported range (AW1.5). Sealed in AW and explicitly not computed there; scored in AX from the concept_repro run (AX12)."
+  },
+  {
+   "id": "AW-P2",
+   "amendment": "AW",
+   "category": "distributional shape",
+   "outcome": "MISS",
+   "note": "Stratum-3 decile means monotone/non-decreasing. 0/20 seeds; a reproducible non-monotone dip-then-rise shape instead."
+  },
+  {
+   "id": "AW-P3",
+   "amendment": "AW",
+   "category": "within-system",
+   "outcome": "MISS",
+   "note": "Stratum-3 alignment coefficient exceeds global by >3x. Measured 2.1248x."
+  },
+  {
+   "id": "AW-P4",
+   "amendment": "AW",
+   "category": "within-system",
+   "outcome": "MISS",
+   "note": "V1 prevalence drift >5% relative in a majority of tested concepts. 0 of 5, max 0.028%."
+  },
+  {
+   "id": "AX-P1",
+   "amendment": "AX",
+   "category": "distributional shape",
+   "outcome": "NOT_SEALED",
+   "note": "Median masking fraction below 1%. The statement holds (0.00226%), but the quantity was ALREADY STORED on disk as feature_ap_experimental_av.h5:experimental/n_rows_effective beside the n_rows identity attr -- one subtraction away. A prediction about a stored quantity is not sealed, so it is recorded and NOT tallied. AX §1a."
+  },
+  {
+   "id": "AX-P2",
+   "amendment": "AX",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "Spearman(D(c), log annotated-residue count) > 0.5. Measured 0.5115 at the 95th-percentile reference -- a HIT on the literal predicate, by 0.0115. BUT THE CONCLUSION IT POINTS AT IS NOT LICENSED: the coefficient runs 0.2122 / 0.2979 / 0.4335 / 0.5115 / 0.6035 across p50-p99 and crosses 0.5 only between p90 and p95, so it fails AW1.5's requirement that a conclusion hold across the reported percentile range. Scored HIT on its own referent; the 'above 0.5' reading must not travel. Sealing confirmed against a listing of $PROJECT/analysis. See AX12.4."
+  },
+  {
+   "id": "AY-P1",
+   "amendment": "AY",
+   "category": "within-system",
+   "scored_in": "AY",
+   "outcome": "MISS",
+   "note": "The carrier-match rate exceeds the firing-rate-matched ambient rate. Measured B = 0.3517 against a matched baseline of 0.4895, a ratio of 0.7185 -- DOES NOT EXCEED. THE MISS IS PARTLY STRUCTURAL AND THE AMENDMENT SAYS SO: B is a strict subset of the baseline's event (the baseline asks whether a feature has ANY partner; B asks whether the carrier's partner IS the other seed's carrier). The like-for-like comparison, A vs the same baseline, gives 0.5617/0.4895 = 1.1475 and EXCEEDS. Scored on the quantity the prediction named. See AY7."
+  },
+  {
+   "id": "AY-P2",
+   "amendment": "AY",
+   "category": "distributional shape",
+   "scored_in": "AY",
+   "outcome": "HIT",
+   "note": "Fewer than 40% of concepts have a per-concept carrier-match rate above 0.9. Measured 2.92% of the 650 concepts with at least one qualifying seed pair -- a hit by a very wide margin, with the per-concept median at 0.30. See AY7."
+  },
+  {
+   "id": "AY-P3",
+   "amendment": "AY",
+   "category": "within-system",
+   "outcome": "NOT_SEALED",
+   "note": "Within the middle prevalence tercile, interior mass exceeds the pooled 13.37%. NOT TALLIED: concept_repro_ax_v2.json's per_concept array already carried D and n_annotated_residues for all 703 concepts, so terciles and their interior mass were one groupby from an artifact on disk. THE CHECK THAT ESTABLISHED THIS RAN BEFORE THE PREDICTION WAS FILED -- the first time in this family of six that it did. Measured at the reference the statement does not hold (13.30% vs 13.37%), and the reasoning was wrong in a recordable way: only the TOP tercile is near-degenerate (0.43%), while the bottom has the HIGHEST interior mass in the table (26.38%). See AY6.3 and AY8."
+  },
+  {
+   "id": "AZ-P1",
+   "amendment": "AZ",
+   "category": "within-system",
+   "scored_in": "AZ",
+   "outcome": "MISS",
+   "note": "The carrier excess over the DOUBLY-matched ambient (firing rate x homology support) is less than half the excess over the singly-matched one. Measured: it does not shrink at all -- +7.5147 pp against +7.2219 pp, ratio 1.0405, so HALF_OR_ABOVE. The excess survives conditioning on homology support. AZ11."
+  },
+  {
+   "id": "AZ-P2",
+   "amendment": "AZ",
+   "category": "distributional shape",
+   "outcome": "NOT_SEALED",
+   "note": "The median carrier sits above the 75th percentile of log M. The statement HOLDS (median percentile 95.73, 96.49% above the 75th), but the quantity is an argmax over the stored feature_ap_main_compliant.h5:pooled/ap joined to the stored gtilde M -- a reduction and a join of arrays already on disk, no unrun numerical path. Non-persistence of a pure reduction is not a seal. Recorded and NOT tallied. AZ3.2."
+  },
+  {
+   "id": "AZ-P3",
+   "amendment": "AZ",
+   "category": "distributional shape",
+   "outcome": "NOT_SEALED",
+   "note": "Mean r_f is monotone non-decreasing across percentile bins inside the top log M decile. Combined sequence MONOTONE_NON_DECREASING (span +8.64 pp, 0 violations, 2 adjacent pairs rescued by interval overlap); 15 of 20 seeds individually. Not sealed: M and match_count are both stored per (seed, feature) and design3_join already reports mean r_f by log M decile, so the finer bins are a re-bin of data already joined. AZ3.3."
+  },
+  {
+   "id": "BA-P1",
+   "amendment": "BA",
+   "category": "procedure-behaviour",
+   "scored_in": "BA",
+   "outcome": "MISS",
+   "note": "Of the AQ5 deferred-batch items, AT LEAST HALF are moot or superseded rather than still live. Measured on AQ7's canonical 12-row table: 4 moot or superseded (the statistics_only coverage question, answered at AN5a; the 7 exclude globs, which structurally cannot convert per AN4; the paired bootstrap on the CV difference, superseded by AQ9's non-overlapping arm intervals; gotcha 26's refinement, decided at AO18 as guidance rather than retroactive work) against 8 still live -- 33%, so FEWER THAN HALF. Including AV12d's two additions and AQ13's smooth_mu provenance gap it is 4 of 15, 27%. The per-item verdicts are stated at BA15c so the count is auditable. The triage rule itself is NOT scored by this -- it is scored on whether it kept ~12 items from displacing the join, which it did; what MISSES is the specific argument that deferred items would go moot on their own. BA15c."
+  },
+  {
+   "id": "BB-P1",
+   "amendment": "BB",
+   "category": "within-system",
+   "outcome": "NOT_SEALED",
+   "note": "The fitted primary model's predicted span across the top-decile percentile bins is LESS THAN HALF the observed +8.64 pp. The statement HOLDS -- fitted +1.12 pp [0.74, 1.51] against observed +8.64 pp [6.36, 10.91], ratio 0.130, intervals DISJOINT -- but it is NOT TALLIED. The brief pre-committed a conditional rule making it sealable if the spline were not stored, and it is not stored (the only `beta` key under `primary` is marginal_effect/beta). BB2.1 DEPARTS from that conditional on BA-2's precedent: design3_join computes fit['eta'] on every run and reduces it before storage, so the path exists and has been executed, and AZ3.2 refuses non-persistence of a pure reduction as a seal. The brief's rule asks whether the quantity is STORED; AZ3.2 says storage is not the criterion. The alternative reading is stated at BB2.1 so it can be overruled. BB7."
+  },
+  {
+   "id": "BB-P2",
+   "amendment": "BB",
+   "category": "directional mechanism",
+   "outcome": "NOT_SEALED",
+   "note": "Carriers ARE materially enriched in activation concentration relative to their firing-rate-matched peers, on BA10's pre-declared 45/55 bands. The statement HOLDS -- median percentile 81.02, IQR [57.19, 93.39], 80.20% above the 50th, per-seed medians 79.58-82.53 -- but it is NOT TALLIED: per-feature concentration is a bincount and an entropy over the row-index cache and the label store, and assemble_covariates has already been executed by the join's feature-side arm, whose output was reduced before storage. The CATEGORY is recorded even though it is not tallied, because the reasoning ('AP selection rewards a feature whose activation mass sits on a concept's residues') is a story about how the selection criterion interacts with the covariate rather than a comparison between two quantities we compute -- so it belongs in the 2/10 bin, not the within-system one. Filed visibly rather than in the bin with the better record. BB9.1."
+  },
+  {
+   "id": "BD-P1",
+   "amendment": "BD",
+   "category": "procedure-behaviour",
+   "scored_in": "BD",
+   "outcome": "HIT",
+   "note": "The ratio check of BD2 finds AT LEAST THREE further defective ratios in the record beyond the five already identified in docs/RETROSPECTIVE_VERIFICATION.md section 2. FIVE were found: PROJECT.md 5.13's '19x' (gamma raw-scale over b1_z per-SD -- NEITHER_RATIO_NOR_DIFFERENCE_IS_DEFINED, and retired by 5.15(a) of the same document); METHODS_PROVENANCE 5's 'nine times' (theta 0.70 over a bound attained at theta 0.60, neither named); PROJECT.md 5.16(d)'s '9x' (denominator's theta absent); PREREGISTRATION AT's '25x' (a decile SPREAD over a per-SD effect); and PREREGISTRATION AZ0's '8.59x' (denominator named, thetas not). TWO candidates were checked and CLEARED -- PREREGISTRATION U's '12x' comes back DEFENSIBLE, and CLAUDE.md's AI-block '7x' is a withdrawn figure lacking a marker rather than a new defect -- which is the evidence the instrument discriminates. The counting rule and the exclusion of the UNVERIFIABLE cell were fixed in BD1.1 before the scan ran. Filed as procedure-behaviour rather than within-system because the outcome depends on how the check is written and I wrote it. BD2.4."
+  },
+  {
+   "id": "BE-P1",
+   "amendment": "BE",
+   "category": "procedure-behaviour",
+   "scored_in": "BE",
+   "outcome": "MISS",
+   "note": "Under BE3's symmetric extension of gotcha 33, AT LEAST THREE ratios that the check currently classifies as clean reclassify to UNVERIFIABLE. TWO did, against a threshold of three. The currently-clean set was EIGHT of an eighteen-candidate set drawn by a rule that does not mention intervals, and it was computed under BD's implementation BEFORE the extension was written. The two: PREREGISTRATION section U's '12x less' (numerator 8.4% carries no interval, denominator [0.34%, 1.13%] does) and METHODS_PROVENANCE 9.46's '5x to 17x' (numerator an AME endpoint with no interval, denominator +0.1356 [+0.1004, +0.1708]). THE VERDICT TURNS ON A DESIGN DECISION, STATED: under the LITERAL extension with no exemption for exactly-known constants, AB1's 4.83x also reclassifies (numerator = the pre-registered threshold 0.70) and the count is three, a HIT. The implemented rule exempts quantities EXACT BY CONSTRUCTION, decided on the merits before the re-run, so the count is two and the MISS is scored. THE FINDING UNDER THE MISS: the extension is nearly inert on this record. A numerator lacking an interval almost always has a denominator lacking one too, so such ratios were already caught. The clean count is EIGHT before and EIGHT after -- same size, different membership, two leaving and two arriving via EXACT. The rule's value is prospective, not retrospective. BE1.2, BE1.3."
+  },
+  {
+   "id": "BI3(a)",
+   "amendment": "BI",
+   "category": "procedure-behaviour",
+   "scored_in": "BT",
+   "outcome": "STRUCTURAL_CHECK",
+   "check_verdict": "HELD",
+   "previous_outcome": "HIT",
+   "note": "EXCLUDED FROM EVERY LEDGER TALLY BY THE AUTHOR'S RATIFICATION AT AMENDMENT CA-a. THE OUTCOME IS NOT RETRACTED AND THE CHECK IS NOT WITHDRAWN: it was scored HIT at BT-C5, it HELD (cell 2 -- some pairs =, the rest <, no > anywhere, in both arms), and cell 4's refusal branch would still have fired on an implementation defect. `check_verdict` records that. What changed is that it stops contributing arithmetic to a calibration statistic, not whether it is true. FOUR INDEPENDENT GROUNDS, all recorded because a multi-ground decision recorded as single-ground is hostage to whichever ground was written down (gotcha 41): (1) THE SCORED PREDICATE IS DEDUCTIVE -- amendment BZ-C established that `anti_conservative_bound` takes only `loss` and `keep`, that each cell's factor is `observed[c]/surviving[c,s]` and depends on that cell's own draws alone, that the multiple-testing threshold §BX-D3 named as the blocking second input never reaches the bound (`k_min` moves 218 -> 192 -> 156 -> 104 -> 64 and is consumed only by the clearance and floor-limited blocks), that the only T-dependent input is the row subset `keeps[T] = (n_positives >= T)`, that the surviving sets nest POSITIONALLY by cell identity at 8 of 8 adjacent steps with ADDED = 0 everywhere, and that the stored `bound_at_worst` reproduces from two per-cell counts at 10 of 10 grid points to <1e-9. A maximum over a subset cannot exceed a maximum over the superset. (2) GOTCHA 44 ALREADY RULES IT -- 'a structural necessity is a check, never a prediction'; this is that rule's first application to an entry scored before the rule existed, which is an instance and not a rewrite. (3) §BI3(a)'s OWN HEADER SAYS 'THIS IS A CHECK' and §BI6 says it is 'a structural property of a maximum, not a prediction about data' -- the ledger entry was the outlier, not the amendment. (4) WHAT THE LEDGER IS FOR: it is a calibration instrument, and a deductive entry tallied as a HIT inflates a calibration statistic with something that could not have come out otherwise -- a different kind of damage from a wrong prediction. THE COUNTER-ARGUMENT, RECORDED AT FULL STRENGTH RATHER THAN ANSWERED: the outcome space contained cell 4, whose firing would have been a real defect finding, and BZ-C3(b) measured cell 7 as NON-deductive -- the surviving cell set changes at 4 of 4 steps in both arms, which required the null run to establish. That is an argument for BI3(a) having been a check WITH TEETH, which it was; it is not an argument for it contributing to a tally. BZ-C3(b) also measured cell 7's thinness: firing required every removed concept at every step to be wholly degenerate, against a record already carrying exactly one degenerate cell in arm B and zero in arm A. CATEGORY RETAINED as procedure-behaviour -- an absent field is not the same as a considered one, and the BW assignment's grounds stand unchanged below. SCOPE: this ratification applies to BI3(a) ALONE and authorises no sweep; CA-d reports the screen of the other tallied entries without changing any of them. --- THE ENTRY AS IT STOOD BEFORE CA, RETAINED VERBATIM (archive, never delete) --- The combined anti-conservative bound is monotone non-increasing in the thinness threshold T, in both arms. Filed at BI (deee924) as a DECLARED EXPECTATION; outcome space enumerated at BM-E2a in the primitive the data has -- four adjacent-pair comparisons per arm, each in {<,=,>} or NOT_EVALUABLE. Scored at BT-C5: HOLDS in both arms, cell 2 (some pairs =, the rest <, no > anywhere). Cell 3 did not apply (bound not constant); cell 7 was checked DIRECTLY against the surviving-cell sets rather than inferred from flatness. CATEGORY ASSIGNED IN BW: no filing amendment declared one. Grounds: the predicate concerns how the bound -- an instrument -- behaves as a parameter moves, and its MISS branch is declared a defect finding, which is the procedure-behaviour shape. CAVEAT RECORDED RATHER THAN RESOLVED: on nested inputs a maximum over a shrinking set cannot increase, so the MISS branch is reachable only via an implementation defect; the predicate is nevertheless not vacuous, because cells 3 and 7 (UNINFORMATIVE) were live outcomes and cell 7 was checked directly."
+  },
+  {
+   "id": "BI3(b)",
+   "amendment": "BI",
+   "category": "procedure-behaviour",
+   "scored_in": "BT",
+   "outcome": "HIT",
+   "note": "Scored on its COMPUTABLE FOOTPRINT only: gained > 0 at >= 1 grid step. BM-E2b established that the brief's stronger reading ('the ALIGNED count is NOT monotone') is not what BI3(b) claims and that BI6 pre-emptively refused it, so scoring that reading would have manufactured a directional-mechanism entry BI deliberately declined to file. Scored at BT-C6: cell 1 HOLDS -- gained positive at 7 of 8 steps. The observed monotonicity of ALIGNED is reported DESCRIPTIVE, NOT SCORED. CATEGORY ASSIGNED IN BW; grounds as for BI3(a)."
+  },
+  {
+   "id": "BL-P1",
+   "amendment": "BL",
+   "category": "procedure-behaviour",
+   "scored_in": "BL",
+   "outcome": "HIT",
+   "note": "eps_first >= 1e-9 -- the smallest relative perturbation at which any of the 14,060 detection decisions flips is at least six orders of magnitude above the pooled null's measured run-to-run float64 movement (7.105e-15, used ONLY to set the grid's scale and explicitly NOT transferred as these artifacts' floor). Measured eps_first = 1e-07: cell (a), HIT. The outcome space had six cells, two of which (e and f) score neither way and are separated by a PLANTED-PERTURBATION check that must itself flip decisions. Committed at 8933c3d before the sweep; git log is the ancestry evidence. CATEGORY ASSIGNED IN BW: both sides are computed from our own data, and the quantity is the numerical behaviour of the detection surface."
+  },
+  {
+   "id": "BP-P1",
+   "amendment": "BP",
+   "category": "procedure-behaviour",
+   "scored_in": "BP",
+   "outcome": "HIT",
+   "note": "k_rule == n_rejected in all 40 (seed, arm) cells -- BH's step-up rule evaluated on the p-atom histogram alone reproduces the stored rejection count exactly. Measured 40 of 40, zero disagreements; branch occupancy 3_ZERO 23, 1_TWO_ATOM 12, 2_SINGLE_ATOM 5; branches 4, 5 and 6 empty. Recorded verdict string HELD_BUT_UNINFORMATIVE_ON_THE_TWO_FLOOR_REFINEMENT: the PRINCIPAL claim held, and the two-floor refinement came back UNINFORMATIVE exactly as BP3 declared it might, because A19 = 0 in every arm-B cell makes branches 1 and 2 predict the same count. The refinement is LIVE BUT UNEXERCISED rather than idle -- five of twenty arm-B seeds sit inside the separating window. Prediction committed at f93847f, ancestral to the implementation and the run by git log. CATEGORY ASSIGNED IN BW."
+  },
+  {
+   "id": "BT-P1",
+   "amendment": "BT",
+   "category": "procedure-behaviour",
+   "scored_in": "BT",
+   "outcome": "HIT",
+   "note": "Clearance -- the total at-floor count divided by k_min, equivalently the mean at-floor count per concept -- is NON-DECREASING in the threshold T, in BOTH arms. Scored at BT-C7: cell 1, every adjacent pair strictly increasing in both arms; UNINFORMATIVE (cell 4) did not apply and no point was NOT_EVALUABLE. Its ground was recorded with three stated limits, including that the supporting association was established only over the T >= 10 region and that arm A is not monotone in the supporting series -- the prediction named in advance where it was least supported. Declared at fcab5fc, before the run. CATEGORY ASSIGNED IN BW."
+  },
+  {
+   "id": "BQ-NS1",
+   "amendment": "BQ",
+   "category": "procedure-behaviour",
+   "scored_in": "BQ",
+   "outcome": "NOT_SEALED",
+   "note": "Whether the POOLED stratum's at-floor count reaches k_min = 703 and can therefore reject at all. Adjudicated NOT_SEALED at BQ5 (commit 6679c6b) BEFORE the pass ran, explicitly rather than assumed in either direction: answering it is a pure reduction over arrays already on disk joined on their own axes, and non-persistence of a pure reduction is not a seal. NOT TALLIED, and the measurement is reported in full at BQ8e: at-floor counts arm B 10,907-11,251, arm A 2,708-2,939, every cell above the floor by more than 3.8x, 0 of 40 cells floor-limited. BQ filed no prediction. The amendment assigned no id; BQ-NS1 is BW's handle for it, and the content rather than the label identifies it. CATEGORY ASSIGNED IN BW (procedure-behaviour: the quantity is whether the BH instrument can reject at all at this pool size). It is excluded from every tally, so the category carries no arithmetic -- it is recorded because the ledger schema requires one and an absent field is not the same as a considered one."
+  },
+  {
+   "id": "BU-NS1",
+   "amendment": "BU",
+   "category": "within-system",
+   "scored_in": "BU",
+   "outcome": "NOT_SEALED",
+   "note": "'At matched firing rate, ALIGNED features have higher r_f than their matched ORPHAN controls.' Killed by the AZ1/AZ5.2 sealing check, plainly and not marginally: match_count, fire_counts and the 2x2 cells are all stored, so answering needs a join and a reduction of arrays already on disk and no numerical path that has not been run. NOT TALLIED. Its outcome is reported so it is not quietly dropped: the statement HOLDS on the BU-B3 measurement -- median d of +4/39 pooled, the same sign in all 17 contributing seeds, none negative. BU scored no prediction, and first established by attempting the lookup that no committed prediction governs that arm. The amendment assigned no id; BU-NS1 is BW's handle. CATEGORY ASSIGNED IN BW (within-system: both sides are quantities of our own ensemble, not of an instrument). Excluded from every tally, so the category carries no arithmetic."
+  },
+  {
+   "id": "CQ-P1",
+   "amendment": "CQ",
+   "category": "procedure-behaviour",
+   "scored_in": "CQ",
+   "outcome": "HIT",
+   "note": "The primary block of design3_join_cq.json reproduces design3_join_at.json's primary BIT-IDENTICALLY -- 20 anchors x 8 fields (b1_z, se_b1_z, gamma_d_fs, se_gamma, deviance, loglik, lambda, edf), compared positionally. Filed at CQ4 (commit 2ba8665) before job 26348835 ran; SEALED because the quantity is a fit at a SHA that did not yet exist. Scored at CQ7: n_disagreements 0, verdict BIT_IDENTICAL, re-derived from the two files as 0 of 160 cells. CATEGORY ASSIGNED AT FILING (procedure-behaviour: how the instrument behaves under a code change declared not to touch it). WARRANT recorded per the AX ambiguity rule: the edits to design3_join.py were one alignment in an arm the primary does not read, one identity key and one emission. Outcome space HOLDS/FAILS; FAILS was a declared stop."
+  },
+  {
+   "id": "CQ-P2",
+   "amendment": "CQ",
+   "category": "procedure-behaviour",
+   "scored_in": "CQ",
+   "outcome": "STRUCTURAL_CHECK",
+   "check_verdict": "DIFFERED",
+   "note": "ak8_discovery_set.smooth in design3_join_cq.json differs from design3_join_at.json's block. A DEDUCTION from corrections entry 218 and the measured seed orders (18 of 20 rows of the smooth M change partner), filed as a STRUCTURAL_CHECK per amendment CA-b, contributing no arithmetic. check_verdict DIFFERED: 124 of 180 per-seed entries differ, n_discovery differs in 17 of 20 seeds; old count_across_seeds median 113.5 / min 83 / max 138 / mean 112.95, new 107.0 / 94 / 128 / 107.85 -- reported descriptively, no prediction about direction or size was filed (gotcha 22). SAME would have been a declared stop. CATEGORY procedure-behaviour, carried because the schema requires one; it carries no arithmetic."
+  },
+  {
+   "id": "CQ-P3",
+   "amendment": "CQ",
+   "category": "procedure-behaviour",
+   "scored_in": "CQ",
+   "outcome": "NOT_SEALED",
+   "note": "'Every assertion CQ2 adds passes on the artifacts of record.' The governing brief filed this as scoring; the AZ1/AZ5.2 sealing check, run before the draft, returned NOT SEALED: each assertion's truth value is a reduction or join of arrays already on disk, and three of the four were already in the record (gotcha 29's table: AP and null-reductions axes both lexicographic; the BS C3 sidecar: the raw null's row-to-seed mapping; DATAFLOW section 4's stage-9 row, 2026-09-15: n_compare_seeds 39 = 20 + 20 - 1). Gotcha 44 also applies: a deduction from committed material is asserted and verified, never scored. NOT TALLIED. The measurement is reported in full at CQ7 -- job 26348836, ten assertions, ALL_PASS -- and a FAIL would have been a stop and a corrections entry regardless of tally status. A4 was evaluated against the CD1 rebuild of the eval cache (byte-identical to the purged original), the artifact the record names being gone."
+  },
+  {
+   "id": "CS-P1",
+   "amendment": "CS",
+   "category": "within-system",
+   "scored_in": "CS",
+   "outcome": "HIT",
+   "note": "'At each width, the cross-seed CV of FVU is at least one order of magnitude below 1 - r_f(w), r_f the rule-1 mean at theta = 0.70; HOLDS 4/4 / FAILS at >= 1 (named).' Filed at CS2 (commit 0ee0622, 2026-09-17 00:2x EDT) before any tier-1 job; SEALED (no r_f, FVU or rule split existed at any width but the anchors' 10,240, and the sweep's 10,240 arm is a fresh retrain). Scored at CS7: ratio CV/(1 - r_f) = 0.0049, 0.0075, 0.0086, 0.0088 at 2,560 / 10,240 / 20,480 / 40,960 (bar 0.1); HOLDS at 4 of 4 in both spaces. Within-system comparison: both sides computed inside the sweep, ten seeds per width, n_compare = 9. The 40,960 arm carries the two-SHA pool (CS3b/c). CATEGORY ASSIGNED AT FILING."
+  },
+  {
+   "id": "CS-P2",
+   "amendment": "CS",
+   "category": "within-system",
+   "scored_in": "CS",
+   "outcome": "MISS",
+   "note": "'At theta = 0.70 the within-width spread across rules 1-3 (max - min of the per-pair means) is >= the across-width spread of the rule-1 mean, at >= 3 of 4 widths.' Filed at CS2 (0ee0622) before any tier-1 job; SEALED. Scored at CS7: within-width spreads 0.1341, 0.1934, 0.2135, 0.2081 against an across-width rule-1 spread of 0.2650; HOLDS at 0 of 4. MISS. Both spreads are reported at every width (NoR 19.4); the paper's title claim, restated as this comparison, does not hold when width varies 16x at fixed k. CATEGORY ASSIGNED AT FILING."
+  },
+  {
+   "id": "CT3-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "scored_in": "CT",
+   "outcome": "HIT",
+   "note": "'W = (jackknife SE) / (fixed-effect SE) at theta = 0.70 is <= 2.0', the jackknife over the 40 trained dictionaries of the design-3 primary (arm primary_hard_bin), beta-binomial fixed effect. Outcome HIT / MISS on W, UNMEASURABLE if more than 2 of 40 leave-one-out fits fail. SEALED (CT-pre 18): no leave-one-out fit exists and no per-comparator match indicator is stored from which one could be joined. Both sides are SEs of the same estimator on the same scale from this project's data -- hence within-system. Filed at CT (PREREGISTRATION amendment CT, 2026-10-21; content the author's decision of that date). PENDING: written in this file's format as an entry whose `outcome` is null and which has no `scored_in` -- prediction_ledger.derive reports a null outcome under not_yet_scored, test_every_shipped_entry_has_the_fields_the_deriver_reads requires the key to be present, and refuses any unrecognised outcome value, so the literal 'PENDING' is not used (CT-pre item 16). CATEGORY ASSIGNED AT FILING by the session (the brief assigned none; BX-C2), by content; the author may re-categorise. SCORED at CT3-R (2026-10-21): W = 1.227 at theta = 0.70 (SE_jk 0.08508 pp / FE SE 0.06932 pp); 0 of 520 leave-one-out fits failed; match gate EXACT; full-refit control BIT_IDENTICAL. HIT. Inputs per the author's option (a), CT11.1, 2026-10-22."
+  },
+  {
+   "id": "CT4-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "scored_in": "CT",
+   "outcome": "MISS",
+   "note": "'At theta*, the 95% interval of the alignment slope under activation-space matching overlaps the decoder-cosine interval at theta = 0.70.' theta* is the activation-correlation threshold whose mean match rate equals 0.495513 (NoR 1.1). Outcome HIT / MISS if the arm is COMPLETE; under PARTIAL scored only if computed in the stated design; NOT_SCORED under either NOT EXECUTED branch (CT4, the session's totality addition). SEALED (CT-pre 18): no activation-space similarity has ever been implemented (CD4, CF4). Filed at CT (PREREGISTRATION amendment CT, 2026-10-21; content the author's decision of that date). PENDING: written in this file's format as an entry whose `outcome` is null and which has no `scored_in` -- prediction_ledger.derive reports a null outcome under not_yet_scored, test_every_shipped_entry_has_the_fields_the_deriver_reads requires the key to be present, and refuses any unrecognised outcome value, so the literal 'PENDING' is not used (CT-pre item 16). CATEGORY ASSIGNED AT FILING by the session (the brief assigned none; BX-C2), by content; the author may re-categorise. SCORED at CT4-R (2026-10-22): at theta* = 0.70091 the activation-space slope is +2.5694 pp [+2.4152, +2.7236] against the decoder-cosine +0.2889 [+0.1531, +0.4248]; no overlap under the fixed-effect or the across-seed combination. MISS. Arm COMPLETE in the full design."
+  },
+  {
+   "id": "CT4-P2",
+   "amendment": "CT",
+   "category": "within-system",
+   "scored_in": "CT",
+   "outcome": "MISS",
+   "note": "'The mean match rate at numeric theta = 0.70 under activation correlation differs from 49.55% by more than 10 percentage points (direction not predicted).' 49.55% is NoR 1.1's 0.495513 (n_compare = 39), not NoR 13.1's 49.55% median at n_compare = 19 (CT-pre 5). Outcome as CT4-P1. SEALED (CT-pre 18). Filed at CT (PREREGISTRATION amendment CT, 2026-10-21; content the author's decision of that date). PENDING: written in this file's format as an entry whose `outcome` is null and which has no `scored_in` -- prediction_ledger.derive reports a null outcome under not_yet_scored, test_every_shipped_entry_has_the_fields_the_deriver_reads requires the key to be present, and refuses any unrecognised outcome value, so the literal 'PENDING' is not used (CT-pre item 16). CATEGORY ASSIGNED AT FILING by the session (the brief assigned none; BX-C2), by content; the author may re-categorise. SCORED at CT4-R (2026-10-22): mean match rate at numeric 0.70 under activation correlation 49.6628% against 49.5513%, difference +0.1115 pp (bar: more than 10). MISS."
+  },
+  {
+   "id": "CT5-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "UNMEASURABLE",
+   "note": "'The experimental-only slope's magnitude is <= 1.0 pp per SD.' Specification: amendment A1 (both strata restricted to the shared protein set), the experimental half reported as the brief's experimental-only score (CT-pre 10). Outcome HIT / MISS / UNMEASURABLE (stratum too small for the fitter; count and fitter minimum stated). The bar is a constant declared in CT, recorded so the category's two-computed-quantities reading is not stretched silently. SEALED (CT-pre 18): no experimental-stratum slope has been computed; experimental AP exists, the fit does not. Filed at CT (PREREGISTRATION amendment CT, 2026-10-21; content the author's decision of that date). PENDING: written in this file's format as an entry whose `outcome` is null and which has no `scored_in` -- prediction_ledger.derive reports a null outcome under not_yet_scored, test_every_shipped_entry_has_the_fields_the_deriver_reads requires the key to be present, and refuses any unrecognised outcome value, so the literal 'PENDING' is not used (CT-pre item 16). CATEGORY ASSIGNED AT FILING by the session (the brief assigned none; BX-C2), by content; the author may re-categorise. SCORED at CT5.1-R (2026-10-22, session clock): UNMEASURABLE on cause 3 declared at CT5.1 before the run -- a stratum mu_s <= 0 under ratio normalisation, so standardize_gain refuses and no stratum M, and no slope, exists. Under the author's option 1 (decision dated 2026-10-22) N = 44 of 178 pool concepts are admitted in both strata (refused: 123 experimental, 99 propagated). Count (read-only probe, job 30308171): experimental 5 strata in 3 of 20 seeds, propagated 6 strata in 6 of 20 seeds; every one in firing bin 0 (firing rate < 1e-4 on the shared set's rows), holding 1-2 concepts and 33-48 features, every null value exactly 0, so mu_s = 0 exactly. The fitter's minimum (N >= 1, read from the code) is met; cause 1 did not fire, cause 2 (NaN) cannot arise on the admitted columns (no degenerate draw), cause 4 not reached. UNMEASURABLE was added to prediction_ledger.NON_SCORING for this (a declared branch, not VOID, not NOT_SCORED); the author may re-classify.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT10-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'The act-A/B slope's 95% interval (widest of fixed-effect, across-seed, jackknife where computable) does not overlap dec/B's.' act-A/B: activation-correlation MNN on half-A rows at theta*_A (rate-matched to 0.495513), alignment scored on half B; dec/B: decoder-cosine MNN at 0.70, alignment scored on half B (CT10). Outcome HIT / MISS; UNMEASURABLE on CT5's four causes applied to either half; NOT_SCORED if CT10 is NOT EXECUTED under its stop rule. SEALED (CT-pre2 13): no row split, no half-row matching, no half-row AP or null exists. Within-system: two slopes from this project's data on one scale. Filed at CT-pre2 (PREREGISTRATION amendment CT; content the author's decision dated 2026-10-22, the brief 'sections CT10-CT17' and its preamble; session clock 2026-10-22). PENDING: outcome null and no scored_in, as CT-pre item 16 established. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none; BX-C2), by content; the author may re-categorise. Overlap is judged on each side's widest 95% interval among those computed for it (CT-pre2 item 15, the session's reading). NOT_SCORED if the section is NOT EXECUTED. SCORED at CT10-R (2026-10-23, session clock): act-A/B (activation-correlation MNN on half-A rows at theta*_A = 0.66691, alignment scored on the cluster-disjoint half B) +3.0816 pp per SD, widest interval its fixed effect [+2.9248, +3.2385]; dec/B (decoder cosine MNN at 0.70, alignment on half B) +0.2852, widest its jackknife [+0.1053, +0.4651]; no overlap: HIT. Control BIT_IDENTICAL; no UNMEASURABLE cause fired; 0 fit failures. Fit job 30375876, checkout 618c498; halves 8,004,933 / 7,967,392 rows.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT10-P2",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'The act-A/B slope is >= 1.0 pp per SD.' Read on the beta-binomial fixed effect's point estimate (CT5-P1's precedent). Outcome as CT10-P1. SEALED (CT-pre2 13). Within-system: a computed quantity against a bar declared in this amendment, recorded so the category's reading is not stretched silently. Filed at CT-pre2 (PREREGISTRATION amendment CT; content the author's decision dated 2026-10-22, the brief 'sections CT10-CT17' and its preamble; session clock 2026-10-22). PENDING: outcome null and no scored_in, as CT-pre item 16 established. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none; BX-C2), by content; the author may re-categorise. Overlap is judged on each side's widest 95% interval among those computed for it (CT-pre2 item 15, the session's reading). NOT_SCORED if the section is NOT EXECUTED. SCORED at CT10-R (2026-10-23, session clock): act-A/B fixed effect +3.0816 pp per SD >= 1.0: HIT. act-A/A (alignment on half A) +2.6873 [+2.5314, +2.8432]. Outcome row 'P1 HIT and P2 HIT' applies; applied to CT4-T-R's text as a second draft.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT14-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'The experimental-stratum slope's magnitude is <= 1.0 pp per SD', CT5 with the lowest firing bin merged into the next ([0, 3e-4), edges stated at CT14 before running), both strata, everything else CT5.1's. HIT / MISS on the fixed effect's point estimate; UNMEASURABLE on CT5's remaining causes, and if mu_s is still 0 in any group, with the count. A sensitivity, reported beside CT5-P1's UNMEASURABLE. SEALED (CT-pre2 13): no stratum M exists under any binning. Within-system, as CT5-P1. Filed at CT-pre2 (PREREGISTRATION amendment CT; content the author's decision dated 2026-10-22, the brief 'sections CT10-CT17' and its preamble; session clock 2026-10-22). PENDING: outcome null and no scored_in, as CT-pre item 16 established. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none; BX-C2), by content; the author may re-categorise. Overlap is judged on each side's widest 95% interval among those computed for it (CT-pre2 item 15, the session's reading). NOT_SCORED if the section is NOT EXECUTED. SCORED at CT14-R (2026-10-22, session clock): the experimental-stratum slope with the lowest firing bin merged ([0, 3e-4)) is -0.574995 pp per SD [-0.7080, -0.4420] (beta-binomial fixed effect; across-seed -0.5746 [-0.6542, -0.4949]); |-0.574995| <= 1.0: HIT. Control: 0 mu_s <= 0 strata in either stratum after the merge (job 30342498, against 5 and 6 before); the full-score refit reproduces +0.28894; no UNMEASURABLE cause fired; 0 of 20 anchor fits failed. Propagated -0.5108 [-0.6469, -0.3747]. A sensitivity beside CT5-P1's UNMEASURABLE, which stands. Jobs 30342495-30342497, checkout daf5440.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT15-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'The n_compare = 20 slope's interval overlaps the n_compare = 39 primary's.' r_f against the 20 non-anchor dictionaries only (CT3's mnn_sim columns 20-39), theta = 0.70, slope refit with fixed-effect and across-seed intervals; the primary's widest at 0.70 is the jackknife's [+0.1222, +0.4557] (CT3-R). HIT / MISS. SEALED (CT-pre2 13): the counts are a reduction of stored arrays but the fit has not been run (CT-pre 18's precedent). Not a structural necessity: a 20-comparator subset's interval need not overlap the whole's. Within-system. Filed at CT-pre2 (PREREGISTRATION amendment CT; content the author's decision dated 2026-10-22, the brief 'sections CT10-CT17' and its preamble; session clock 2026-10-22). PENDING: outcome null and no scored_in, as CT-pre item 16 established. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none; BX-C2), by content; the author may re-categorise. Overlap is judged on each side's widest 95% interval among those computed for it (CT-pre2 item 15, the session's reading). NOT_SCORED if the section is NOT EXECUTED. SCORED at CT15-R (2026-10-22, session clock): n_compare = 20 (seeds 20-39), slope +0.2056 pp per SD [+0.0667, +0.3446] (fixed effect, its widest; across-seed +0.2065 [+0.0680, +0.3449]) against the primary's widest, the jackknife [+0.1222, +0.4557]: they overlap, as do both same-combination pairs. HIT. Control BIT_IDENTICAL; 0 of 20 anchor fits failed. Job 30343772, checkout c3473fd.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT19-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'The widest 95% interval for +7.22 pp excludes 0.' The carrier excess (rate_B 0.561691 against the firing-rate-matched ambient 0.489472, +7.2219 pp, n_compare = 19, Appendix G, BB9.2) with a jackknife over the 20 anchors (each removed as anchor and as comparator), an across-seed interval and a cell-independence interval (CT19: the submitted paper carries no interval, CT-pre2 6; the session defines the independence interval before any value). HIT / MISS; UNMEASURABLE if a leave-one-out recomputation fails (count reported; more than 2 of 20 and no jackknife interval is quoted). SEALED (CT-pre2 13): partner identities are not persisted, so every leave-one-out re-runs the matching. Within-system. Filed at CT-pre2 (PREREGISTRATION amendment CT; content the author's decision dated 2026-10-22, the brief 'sections CT10-CT17' and its preamble; session clock 2026-10-22). PENDING: outcome null and no scored_in, as CT-pre item 16 established. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none; BX-C2), by content; the author may re-categorise. Overlap is judged on each side's widest 95% interval among those computed for it (CT-pre2 item 15, the session's reading). NOT_SCORED if the section is NOT EXECUTED. SCORED at CT19-R (2026-10-22, session clock): the widest 95% interval for +7.2219 pp is the jackknife over the 20 anchor dictionaries, [+6.6105, +7.8332] (SE 0.3119); across-seed [+6.9316, +7.5115]; cell-independence [+6.9274, +7.5164]; it excludes 0: HIT. Controls: counts BIT_IDENTICAL to rf_counts_theta070_n19; the full run reproduces carrier_concentration_bb.json's +7.221862004486324 and +6.8807145740281905 exactly (after the purged row indices were rebuilt); the leave-one-out matching re-run equal for 20 of 20. Triple arm: jackknife [+6.2999, +7.4615]. Job 30345322, checkout fce55c7. NOTE 2026-10-25 (verifier pass, corrections entry 282): 'rate_B 0.561691' above is the carrier rate A (owner key arms.*.full.rate_A 0.5616906936649426; §CT19-R and §BB9.2 call it A). The outcome is unchanged.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT20-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "MISS",
+   "note": "'Rule 3's slope interval overlaps rule 1's at the reference threshold.' Rule 1 = MNN, decoder cosine; rule 3 = Hungarian, encoder AND decoder agree (NoR 13.1, 18.1); n_compare = 19, theta = 0.70, both from rule_interior_mass_co.h5 (CPU). HIT / MISS. SEALED (CT-pre2 13): no slope has been fitted on any rule's n_compare = 19 outcomes. Within-system. Filed at CT-pre2 (PREREGISTRATION amendment CT; content the author's decision dated 2026-10-22, the brief 'sections CT10-CT17' and its preamble; session clock 2026-10-22). PENDING: outcome null and no scored_in, as CT-pre item 16 established. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none; BX-C2), by content; the author may re-categorise. Overlap is judged on each side's widest 95% interval among those computed for it (CT-pre2 item 15, the session's reading). NOT_SCORED if the section is NOT EXECUTED. SCORED at CT20-R (2026-10-22, session clock): at theta = 0.70, n_compare = 19, rule 3 (Hungarian, encoder AND decoder agree) +1.0369 pp per SD, widest interval its jackknife over the 20 anchors [+0.8856, +1.1882]; rule 1 (MNN, decoder cosine) +0.2556, widest its jackknife [+0.0451, +0.4661]; no overlap: MISS. Rules 1-3 from the CO counts (gate EXACT against rule_interior_mass_co.h5 via the persisted per-comparator similarities, rerun job 30346832); fits job 30346833, checkout fce55c7; 0 fit failures.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT20-P2",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'Rule 4's interval overlaps neither rule 1's nor rule 3's.' Rule 4 = activation correlation (CT4), MNN, numeric theta = 0.70 at n_compare = 19 (CT4's mnn_sim, anchor columns). HIT if it overlaps neither; MISS if it overlaps either. SEALED (CT-pre2 13). Not entailed by CT4-R's non-overlap at n_compare = 39 (different denominator and comparator set); that result is a prior, stated so the score is not read as independent of it. Within-system. Filed at CT-pre2 (PREREGISTRATION amendment CT; content the author's decision dated 2026-10-22, the brief 'sections CT10-CT17' and its preamble; session clock 2026-10-22). PENDING: outcome null and no scored_in, as CT-pre item 16 established. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none; BX-C2), by content; the author may re-categorise. Overlap is judged on each side's widest 95% interval among those computed for it (CT-pre2 item 15, the session's reading). NOT_SCORED if the section is NOT EXECUTED. SCORED at CT20-R (2026-10-22, session clock): rule 4 (activation correlation, MNN) at numeric theta = 0.70, n_compare = 19, +2.5515 pp per SD, widest interval its fixed effect [+2.3929, +2.7100]; overlaps neither rule 1's widest [+0.0451, +0.4661] nor rule 3's [+0.8856, +1.1882]: HIT. Job 30346833, checkout fce55c7.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT22-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'More than half of confirmatory concepts have median null exceedance >= 0.95.' Exceedance = the fraction of a (concept, seed-pair) cell's 100 firing-rate-matched null draws below the observed subspace overlap (CT22.1; orientation for a distance measure per CT22-F item 6); a concept's median is over its measurable cells; the denominator is the confirmatory concepts with at least one measurable cell (CT22-F item 9). SEALED: no cross-seed subspace overlap has been computed in this project (CT22 premise check: no principal-angle, subspace-overlap or Grassmann computation in src/, tests/, scripts/, docs/ or PREREGISTRATION.md). Within-system: both sides (observed Omega and its firing-rate-matched null; the feature-level MNN indicator) are computed from our data. Filed at CT22 (PREREGISTRATION amendment CT, section CT22.4; content the author's brief 'CT22 Concept-subspace reproducibility' of 2026-10-23; session clock 2026-10-23). PENDING: outcome null and no scored_in. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none; BX-C2), by content; the author may re-categorise. Scored on the 552 confirmatory concepts (CT22-F item 1) under the configuration CT22.3-R locks. HIT / MISS; UNMEASURABLE on any declared cause of CT22.4 (null SD = 0, rank-deficient feature sets, or the matched draw infeasible, each in more than 5% of confirmatory cells). SCORED at CT22.4-R (2026-10-23, session clock): 551 of 552 confirmatory concepts (99.82%) have median null exceedance >= 0.95, under the lock m = 3, mean cos^2 Omega, A(c, f) (CT22.3-R); no UNMEASURABLE cause (0 cells infeasible, rank-deficient or null-degenerate): HIT. Read at its strength (CT22.3-R item 1): the firing-rate-matched null is a low bar (of the cells with Omega >= 0.01, every tuning cell and 92,173 of 92,182 confirmatory cells clear it); the HIT does not show overlap beyond the best single feature matches or concept specificity. Job 30427411, checkout f163fbe; ct22_confirm_ct.json d0491efc.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT22-P2",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'Among confirmatory concepts whose features do not reproduce (median feature-level match fraction < 0.5), more than half have median exceedance >= 0.95.' Feature-level match fraction = the share of F(c, s) with an MNN partner at theta = 0.70 in s' under decoder cosine (jackknife_match_ct.h5 mnn_sim), mean of the two directions per cell, median over the concept's cells (CT22-F item 8). SEALED: no cross-seed subspace overlap has been computed in this project (CT22 premise check: no principal-angle, subspace-overlap or Grassmann computation in src/, tests/, scripts/, docs/ or PREREGISTRATION.md). Within-system: both sides (observed Omega and its firing-rate-matched null; the feature-level MNN indicator) are computed from our data. Filed at CT22 (PREREGISTRATION amendment CT, section CT22.4; content the author's brief 'CT22 Concept-subspace reproducibility' of 2026-10-23; session clock 2026-10-23). PENDING: outcome null and no scored_in. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none; BX-C2), by content; the author may re-categorise. Scored on the 552 confirmatory concepts (CT22-F item 1) under the configuration CT22.3-R locks. HIT / MISS; UNMEASURABLE on any declared cause of CT22.4 (null SD = 0, rank-deficient feature sets, or the matched draw infeasible, each in more than 5% of confirmatory cells; or fewer than 30 concepts in this prediction's denominator, the count stated). SCORED at CT22.4-R (2026-10-23, session clock): 143 of 143 confirmatory concepts whose median feature-level match fraction is < 0.5 have median null exceedance >= 0.95 (denominator 143 >= 30; no UNMEASURABLE cause): HIT. Read at its strength (CT22.3-R item 1): the 6,290 cells with no MNN-matched feature at 0.70 clear the firing-matched null in 99.84% of cases, so the HIT shows overlap above random matched features where one-to-one matching fails, not overlap beyond each feature's best single partner. Job 30427411, checkout f163fbe.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT24-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "MISS",
+   "note": "'Mean r_f at theta = 0.70 at k = 64 lies within +/-10 pp of k = 32's 49.58% (n = 19).' Scored per CT24-F item 9: HIT if |mean r_f(0.70, k=64, decoder-cosine MNN, n_compare = 19) - 0.4958151727| <= 0.10. UNMEASURABLE per CT24.0 as resolved by the author's decision 2 (2026-10-23): fewer than 18 non-diverged seeds complete by 2026-11-05, or the null degenerate (CT5.1 causes 1-3); a diverging seed is excluded and counted. Filed at §CT24 (PREREGISTRATION amendment CT; content the author's brief '§CT23 continuation and §CT24–§CT27' of 2026-10-23; system clock 2026-10-23). SEALED (CT23-pre item 13): no k = 64 dictionary exists. Within-system: both sides computed from our data. PENDING: outcome null and no scored_in. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none), by content; the author may re-categorise. MEASURED at CT24-R1 (2026-10-24, system clock), NOT YET SCORED: mean r_f at theta = 0.70, k = 64, n_compare = 19 = 0.2169886; |0.2169886 - 0.4958152| = 0.2788 > 0.10. Held pending because the declared UNMEASURABLE cause 'the null degenerate (CT5.1 causes 1-3)' is a property of the normalised score, still being rerun (found by record-verifier). 20 of 20 seeds kept (raw FVU 0.3230-0.3275 < 0.7272). SCORED at CT24-R2 (2026-10-24, system clock): the null-degenerate causes (CT5.1 1-3) did not occur (pool 703; standardize_gain and the fit ran to completion); |0.2169886 - 0.4958152| = 0.2788 > 0.10: MISS.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT24-P2",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "MISS",
+   "note": "'The decoder-space slope interval at k = 64 overlaps k = 32's at n = 19 (+0.2556 [+0.1162, +0.3950]).' Scored per CT24-F item 9 on fixed-effect intervals on both sides (CT23-pre item 9, the session's reading): HIT if the closed intervals share a point. UNMEASURABLE as CT24-P1. Filed at §CT24 (PREREGISTRATION amendment CT; content the author's brief '§CT23 continuation and §CT24–§CT27' of 2026-10-23; system clock 2026-10-23). SEALED (CT23-pre item 13): no k = 64 dictionary exists. Within-system: both sides computed from our data. PENDING: outcome null and no scored_in. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none), by content; the author may re-categorise. AMENDED BEFORE ANY k = 64 SEED TRAINED (the author, 2026-10-23, system clock; CT24-F-C2): the WIDEST 95% interval governs, as CT3 established -- HIT if the k = 64 widest interval shares a point with k = 32's widest at n_compare = 19, rule 1's jackknife [+0.0451, +0.4661] (NoR 20.20 (a)). The fixed-effect clause above is superseded. SCORED at CT24-R2 (2026-10-24, system clock): k = 64 slope +1.7580, widest (jackknife) [+1.6469, +1.8692] against k = 32's widest [+0.0451, +0.4661]: no shared point, MISS. Jobs 30625617/18, checkout 9ff7c96, under the AP-arithmetic exemption (control (a) BITWISE).",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT24-P3",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'(Only if the activation arm runs.) The activation-space slope interval at k = 64 does not overlap its decoder-space interval.' Fixed-effect intervals, activation at its rate-matched theta* (CT4's rule), decoder at 0.70. If the arm is not run by its condition (CT24-F item 10), the outcome is NOT_SCORED. UNMEASURABLE as CT24-P1. Filed at §CT24 (PREREGISTRATION amendment CT; content the author's brief '§CT23 continuation and §CT24–§CT27' of 2026-10-23; system clock 2026-10-23). SEALED (CT23-pre item 13): no k = 64 dictionary exists. Within-system: both sides computed from our data. PENDING: outcome null and no scored_in. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none), by content; the author may re-categorise. SCORED at CT24-R3 (2026-10-24, system clock): activation correlation at theta* = 0.77942 (rate-matched to the k = 64 decoder-cosine mean at 0.70, 0.21698858963815787), fixed effect +2.4037 [+2.2857, +2.5217] pp per SD; decoder cosine at 0.70, fixed effect +1.7580 [+1.6551, +1.8609] (refit beside it, equal to CT24-R2). The intervals share no point: HIT. No UNMEASURABLE cause (20 of 20 seeds; null not degenerate, CT24-R2; 0 failed anchor fits). Under the AP-arithmetic exemption (CT24-F-C3; gtilde_k64_b_ratio_ct.h5). Jobs 30629475-78, checkout c70c20b.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT25-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "MISS",
+   "note": "'The decoder-space slope at every width lies in [-0.5, +1.0] pp per SD.' Rule 1 at theta = 0.70, n_compare = 9, design 3 beta-binomial fixed-effect point estimate per width (CT25-F items 3 and 5). MISS if any measurable width lies outside; HIT if all four are measurable and inside; otherwise UNMEASURABLE (memory failure at 40,960 with its peak reported; null degenerate; fewer than 8 seeds scoring at a width). Filed at §CT25 (PREREGISTRATION amendment CT; content the author's brief '§CT23 continuation and §CT24–§CT27' of 2026-10-23; system clock 2026-10-23). SEALED (CT23-pre item 13): no per-width null or alignment pass exists (CS Appendix A reserved; $PROJECT/analysis/cs/ holds no feature_ap). Within-system: both sides computed from our data. PENDING: outcome null and no scored_in. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none), by content; the author may re-categorise. SCORED at CT25-R (2026-10-24, system clock): fixed-effect slopes at 0.70, n_compare = 9: +0.2524, +0.2253, -0.9139, -1.6565 (2,560 ... 40,960); outside [-0.5, +1.0] at 20,480 and 40,960: MISS. All four widths measurable (0 failed fits; the scored 40,960 null completed at MaxRSS 142.6 GiB of 460G). Jobs 30625619-27.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT25-R1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "MISS",
+   "note": "'The slope is not MONOTONE in width (its four point estimates do not form a strictly increasing or decreasing sequence).' Scored HIT/MISS on its own stated rule (CT23-pre item 10, the session's reading of 'scored as CS scores R's': CS records its R's unscored); HIT as soon as the measurable widths are already non-monotone; UNMEASURABLE as CT25-P1 otherwise. CS1's band classification reported beside it, unscored. Filed within-system, not distributional shape: a trend in width. Filed at §CT25 (PREREGISTRATION amendment CT; content the author's brief '§CT23 continuation and §CT24–§CT27' of 2026-10-23; system clock 2026-10-23). SEALED (CT23-pre item 13): no per-width null or alignment pass exists. Within-system: both sides computed from our data. PENDING: outcome null and no scored_in. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none), by content; the author may re-categorise. SCORED at CT25-R (2026-10-24, system clock): the four point estimates decrease strictly with width: MISS. CS1's band class, unscored: NON_MONOTONE (s 0.2468; first step inside 2s).",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT26-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'The median rotation excess (subspace-captured minus best-partner-captured) over cells is < 0.05.' CT22.5-D5 (b)'s per-cell mean over 6 features of ||Pf||^2 - max cos^2, median over cells, on the 190 pairs among seeds 20-39 under CT22's lock (CT26-F item 5); anchors' value 0.0220. UNMEASURABLE on CT22.4's causes over these cells. Filed at §CT26 (PREREGISTRATION amendment CT; content the author's brief '§CT23 continuation and §CT24–§CT27' of 2026-10-23; system clock 2026-10-23). SEALED (CT23-pre item 13): no alignment pass, null or detection exists for seeds 20-39, and no MNN similarity among them is stored. Within-system: both sides computed from our data. PENDING: outcome null and no scored_in. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none), by content; the author may re-categorise. SCORED at CT26-R (2026-10-24, system clock): median over 108,259 cells (seeds 20-39, 645 concepts) of the per-cell mean beyond-best = 0.0216 < 0.05: HIT (anchors 0.0220). Anchor control EXACT against ct22_confirm_ct.json and ct22_diagnostics_ct.json; job 30488487, checkout 3e9c6c8.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT26-P2",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'The median different-concept overlap is below 0.01 (concept-specificity holds).' CT22.5-D5 (a)'s cross-seed Omega(F(c,s), F(c',s')), median over cells (CT26-F item 5); anchors' value 0.0026. UNMEASURABLE as CT26-P1. Filed at §CT26 (PREREGISTRATION amendment CT; content the author's brief '§CT23 continuation and §CT24–§CT27' of 2026-10-23; system clock 2026-10-23). SEALED (CT23-pre item 13): no alignment pass, null or detection exists for seeds 20-39. Within-system: both sides computed from our data. PENDING: outcome null and no scored_in. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none), by content; the author may re-categorise. SCORED at CT26-R (2026-10-24, system clock): median cross-seed different-concept Omega = 0.0026 < 0.01: HIT (anchors 0.0026). Job 30488487.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT26-P3",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'The fraction of concepts with median exceedance >= 0.95 is above 0.9.' Over the concepts with at least one measurable cell among seeds 20-39 (CT26-F items 2 and 5). UNMEASURABLE as CT26-P1. Filed at §CT26 (PREREGISTRATION amendment CT; content the author's brief '§CT23 continuation and §CT24–§CT27' of 2026-10-23; system clock 2026-10-23). SEALED (CT23-pre item 13): no alignment pass, null or detection exists for seeds 20-39. Within-system: both sides computed from our data. PENDING: outcome null and no scored_in. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none), by content; the author may re-categorise. SCORED at CT26-R (2026-10-24, system clock): 645 of 645 concepts with median exceedance >= 0.95 (1.0 > 0.9): HIT. No UNMEASURABLE cause (0 infeasible, 0 rank-deficient, 0 null SD 0). Job 30488487.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT27-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "MISS",
+   "note": "'The dot-product variant's slope interval overlaps normalized rule 3's (+1.0369 [+0.9117, +1.1621]).' The variant per the author's decision 1 (2026-10-23): decoder cosine >= 0.70 unchanged, assignments agree, raw encoder product >= theta_e rate-matched to rule 3's mean r_f at 0.70 (CT27-F item 2). Fixed-effect intervals on both sides (CT23-pre item 9). UNMEASURABLE on TARGET_UNREACHABLE or a failed anchor fit. Filed at §CT27 (PREREGISTRATION amendment CT; content the author's brief '§CT23 continuation and §CT24–§CT27' of 2026-10-23; system clock 2026-10-23). SEALED (CT23-pre item 13): the raw-encoder assignment is not recoverable from the stored rule-3 minimum (CT23.2 (d)). Within-system: both sides computed from our data. PENDING: outcome null and no scored_in. CATEGORY ASSIGNED AT FILING by the session (the brief assigns none), by content; the author may re-categorise. SCORED at CT27-R (2026-10-23, system clock; jobs 30484992/30484993, checkout a907984): theta_e 1.1678 (raw product) at rate 0.303814; slope +0.7646, fixed effect [+0.6416, +0.8876] against rule 3's [+0.9117, +1.1621]: no overlap, MISS. Control: normalised rule 3 rebuilt EXACT (0 of 4,096,000 cells differing). Not scored, reported beside: the widest (jackknife) intervals overlap ([+0.6005, +0.9287] against [+0.8856, +1.1882]). Jaccard of the matched sets 0.6425. THE AUTHOR'S DECISION, 2026-10-23 (system clock; CT27-D item 1): stays MISS as written (fixed effect vs fixed effect, the brief's own figures); under CT3's widest-interval rule it would be a HIT; section 6 states both slopes.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT28-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "MISS",
+   "note": "'At theta*_arm, the k = 64 rule-1 slope's fixed-effect interval (n = 19) overlaps k = 32's at n = 19 (+0.2556 [+0.1162, +0.3950]).' theta*_k64 by CT4's rule on jackknife_match_k64_ct.h5 with target 0.495814 (CT28-pre item 3); design 3 beta-binomial, own SD; closed intervals (CT28-F item 7). UNMEASURABLE: TARGET_UNREACHABLE, NO_FINITE_SIMILARITY, a failed anchor fit at theta*, or a stopped control (CT28-F items 1, 3). Filed at §CT28 (PREREGISTRATION amendment CT; content the author's brief '§CT28 (threshold and scale rescorings across arms) and §CT29 (the k × width grid)' of 2026-10-24, with the author's amendments (a) and (b) of the same date; system clock 2026-10-24). SEALED (CT28-pre item 13): no k = 64 slope at any theta but 0.70 exists. Within-system. PENDING: outcome null and no scored_in. CATEGORY: the brief files it within-system; the author may re-categorise. SCORED at CT28-R (2026-10-24, system clock): theta*_k64 = 0.5093041 (rate 0.4958141); k = 64 fixed effect +3.0833 [+2.9365, +3.2301] pp per own SD, n_compare = 19, against [+0.1162, +0.3950]: no shared point, MISS. Widest at theta*: the fixed effect. Controls: 0.70 refit BIT_IDENTICAL; 0 failed fits. ct28_score_ct.json, jobs 30654469, 30662905.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT28-P2",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "MISS",
+   "note": "'At theta*_arm, all four width-arm fixed-effect estimates lie in [-0.5, +1.0] pp per SD (own SD).' Target 0.4957942708333333 (CT28-pre item 4). HIT if all four measurable and inside (closed); MISS if any measurable width outside; otherwise UNMEASURABLE. The 10,240 component is a deduction, asserted not scored (CT28-pre item 12): the content rests on 2,560, 20,480, 40,960. Filed at §CT28 (PREREGISTRATION amendment CT; content the author's brief '§CT28 (threshold and scale rescorings across arms) and §CT29 (the k × width grid)' of 2026-10-24, with the author's amendments (a) and (b) of the same date; system clock 2026-10-24). SEALED (CT28-pre item 13). Within-system. PENDING: outcome null and no scored_in. CATEGORY: the brief files it within-system; the author may re-categorise. SCORED at CT28-R (2026-10-24, system clock): at theta*_arm, +0.1148 (2,560, theta* 0.7624482), +0.2253 (10,240, the asserted deduction, HOLDS), -0.8871 (20,480, theta* 0.6653619), -1.6733 (40,960, theta* 0.6191343) pp per own SD, n_compare = 9; 20,480 and 40,960 outside [-0.5, +1.0]: MISS. All four measurable (controls BIT_IDENTICAL, 0 failed fits). Jobs 30654472-75.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT28-P3",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "MISS",
+   "note": "'The s_f slope's fixed-effect interval has the same sign (both ends) in all five arms as in the record's (+0.00059 [+0.00002, +0.00116]); an interval containing 0 is a MISS.' Five arms: k = 64 at n_compare = 19 and the four widths at 9; s_f per CT16 over each arm's comparators, Gaussian design 3, gate on the stored mnn_sim (CT28-F item 4). HIT if all five measurable and wholly above 0; MISS if any measurable arm's interval contains or lies below 0; otherwise UNMEASURABLE. Filed at §CT28 (PREREGISTRATION amendment CT; content the author's brief '§CT28 (threshold and scale rescorings across arms) and §CT29 (the k × width grid)' of 2026-10-24, with the author's amendments (a) and (b) of the same date; system clock 2026-10-24). SEALED (CT28-pre item 13): no s_f exists for any arm but the anchors. Within-system. PENDING: outcome null and no scored_in. CATEGORY: the brief files it within-system; the author may re-categorise. SCORED at CT28-R (2026-10-24, system clock): s_f slope fixed-effect intervals (cosine per own SD): k = 64 [+0.013414, +0.014815]; 2,560 [-0.002549, +0.000897]; 10,240 [-0.000079, +0.001578]; 20,480 [-0.004630, -0.003444]; 40,960 [-0.007986, -0.007115]. Two contain 0 and two lie below: MISS. k = 64 at n_compare = 19, the widths at 9. Gates EXACT in all five arms. Jobs 30654477, 80, 82, 84, 86 (s_f) and 30654479, 81, 83, 85, 87 (fits).",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT28-P4",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "NOT_SEALED",
+   "note": "'On the shared scale at theta = 0.70, the k = 64 interval still shares no point with k = 32's.' NOT_SEALED (CT28-pre item 13): to first order the quantity is the stored k = 64 interval times a ratio of SDs of log M, each a reduction and join of stored arrays (gtilde, null reductions, d_fs; design 3's fit-set mask); the per-seed weighting is second-order. Measured and reported at the result, NOT tallied. Filed at §CT28 (PREREGISTRATION amendment CT; content the author's brief '§CT28 (threshold and scale rescorings across arms) and §CT29 (the k × width grid)' of 2026-10-24, with the author's amendments (a) and (b) of the same date; system clock 2026-10-24). The author may re-file it. MEASURED at CT28-R (2026-10-24, system clock): shared-scale fixed effects at 0.70, n_compare = 19: k = 64 +2.0743 [+1.9530, +2.1957], k = 32 +0.2556 [+0.1162, +0.3950]: no shared point, so the statement holds; not tallied. Scale verification WITHIN_CONTROL (delta 5.652e-5 against the x2 control's 5.706e-5)."
+  },
+  {
+   "id": "CT28-P5",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "MISS",
+   "note": "'At k = 64, the spread across rules 1-4 at their rate-matched thresholds (max - min of the fixed-effect estimates) is at least the rule-1 difference between k = 64 and k = 32 at n = 19 (shared scale).' Target 0.21698858963815787; the difference read at theta = 0.70 (the session's fill, CT28-F item 7; the author may strike). At filing, rules 1 and 4 are known (+1.7580, +2.4037 own SD; spread already >= 0.6457 own SD): the outcome turns on rules 2-3 and the shared-scale conversion (CT28-pre item 10). Rule 1 is taken from the same CPU rule_interior_mass run as rules 2-3. UNMEASURABLE: a rule's theta* unreachable, a rule's fit failing, rule 4 not reproducing CT24-R3, or CT28-F item 2's DIFFERS. Filed at §CT28 (PREREGISTRATION amendment CT; content the author's brief '§CT28 (threshold and scale rescorings across arms) and §CT29 (the k × width grid)' of 2026-10-24, with the author's amendments (a) and (b) of the same date; system clock 2026-10-24). SEALED: no rule-2/3 similarity exists at k = 64. Within-system. PENDING: outcome null and no scored_in. CATEGORY: the brief files it within-system; the author may re-categorise. SCORED at CT28-R (2026-10-24, system clock): shared-scale fixed effects at each rule's theta* (target 0.21698858963815787): rule 1 +2.0743, rule 2 +2.0976, rule 3 +2.5717, rule 4 +2.8360; spread 0.7617 < the rule-1 k = 64 minus k = 32 difference at 0.70, 1.8188 (shared): MISS. Scale verification WITHIN_CONTROL; rule 4 reproduced CT24-R3 BIT_IDENTICAL. Jobs 30654488-89, 30654469, 30654471.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT29-P1",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "HIT",
+   "note": "'Match rate at 0.70 is lower at k = 64 than at k = 32 at both 2,560 and 40,960.' HIT if mean r_f(0.70, k = 64, n_compare = 9) < 0.6015277777777777 at 2,560 AND < 0.3365565321180556 at 40,960; MISS if either measured arm is at or above, whatever the other's state; UNMEASURABLE otherwise (CT29-F items 7, 10). Filed at §CT29 (PREREGISTRATION amendment CT; content the author's brief '§CT28 (threshold and scale rescorings across arms) and §CT29 (the k × width grid)' of 2026-10-24, with the author's amendments (a) and (b) of the same date; system clock 2026-10-24). SEALED (CT29-pre item 8): no k = 64 dictionary off width 10,240 exists. Within-system. PENDING: outcome null and no scored_in. CATEGORY: the brief files it within-system; the author may re-categorise. SCORED at CT29-R (2026-10-25, system clock): HIT. Mean r_f(0.70, k = 64, n_compare = 9) 0.3545 at 2,560 (comparator 0.6015) and 0.1113 at 40,960 (comparator 0.3366); both arms MEASURED (no item 7 cause; all ten seeds kept, none diverged). ct29_score_ct.json (sha256 2cf2b1d53e8617560bf2dc3c38a15dfac44a5e1a4c1a38ac4493fdf40be0886d), job 30805045, checkout eeb66be, git_dirty false.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT29-P2",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "UNMEASURABLE",
+   "note": "'At width 10,240, the rate-matched rule-1 slope's fixed-effect estimates are strictly monotone in k over k = 16, 32, 64, 128.' Target 0.4957942708333333; k = 32 the retrained 10,240 arm (its theta* fit is its 0.70 fit); k = 64 seeds 0-9 at n_compare = 9 (CT28-F item 1). HIT if strictly increasing or strictly decreasing; otherwise MISS; UNMEASURABLE if any of the four theta* figures is. Filed at §CT29 (PREREGISTRATION amendment CT; content the author's brief '§CT28 (threshold and scale rescorings across arms) and §CT29 (the k × width grid)' of 2026-10-24, with the author's amendments (a) and (b) of the same date; system clock 2026-10-24). SEALED (CT29-pre item 8): no k = 16 or k = 128 dictionary exists. Within-system. PENDING: outcome null and no scored_in. CATEGORY: the brief files it within-system; the author may re-categorise. SCORED at CT29-R (2026-10-25, system clock): UNMEASURABLE. The k = 16 and k = 128 theta* figures do not exist: arms (iii) k16_w10240 and (iv) k128_w10240 are UNMEASURABLE on CT5.1's cause 3 (a stratum mu_s <= 0 under ratio normalisation; gtilde jobs 30702921 and 30789141 refused), under CT29-D addendum reading 2 (the cause read from the job), which the author may strike; passed to the scorer by name. Counts (read-only diagnostics): arm (iii) 11 strata in 9 of 10 seed rows (job 30728096, CT29-D addendum 3); arm (iv) 3 strata in 3 of 10 seed rows, all in concept cell 31 and the top firing bin (job 30804448, CT29-D2 results 2). The two measured, at n_compare = 9: k = 32 (the retrained arm) +0.2253, k = 64 (seeds 0-9) +3.0306 pp per own SD. UNMEASURABLE is in prediction_ledger.NON_SCORING, as for CT5-P1. ct29_score_ct.json (sha256 2cf2b1d53e8617560bf2dc3c38a15dfac44a5e1a4c1a38ac4493fdf40be0886d), job 30805045, checkout eeb66be, git_dirty false.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT29-P3",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "UNMEASURABLE",
+   "note": "'Equal-ratio pairs: the rate-matched slope intervals overlap within (k = 128 @ 10,240 vs k = 32 @ 2,560) AND within (k = 16 @ 10,240 vs k = 64 @ 40,960).' Fixed-effect 95% intervals at theta*_arm, own SD, closed (the session's reading, CT29-F item 10; the author may change it before training). HIT only if both pairs overlap; MISS if a fully measured pair does not, whatever the other pair's state; UNMEASURABLE otherwise. Filed at §CT29 (PREREGISTRATION amendment CT; content the author's brief '§CT28 (threshold and scale rescorings across arms) and §CT29 (the k × width grid)' of 2026-10-24, with the author's amendments (a) and (b) of the same date; system clock 2026-10-24). SEALED (CT29-pre item 8). Within-system. PENDING: outcome null and no scored_in. CATEGORY: the brief files it within-system; the author may re-categorise. SCORED at CT29-R (2026-10-25, system clock): UNMEASURABLE. Pair one's k = 128 side and pair two's k = 16 side are the unmeasurable arms, so no pair is fully measured and neither MISS nor HIT applies: arms (iii) k16_w10240 and (iv) k128_w10240 are UNMEASURABLE on CT5.1's cause 3 (a stratum mu_s <= 0 under ratio normalisation; gtilde jobs 30702921 and 30789141 refused), under CT29-D addendum reading 2 (the cause read from the job), which the author may strike; passed to the scorer by name. Counts (read-only diagnostics): arm (iii) 11 strata in 9 of 10 seed rows (job 30728096, CT29-D addendum 3); arm (iv) 3 strata in 3 of 10 seed rows, all in concept cell 31 and the top firing bin (job 30804448, CT29-D2 results 2). Measured sides (closed fixed-effect 95% intervals at theta*, own SD): k = 32 @ 2,560 [-0.3080, +0.5375]; k = 64 @ 40,960 [+1.2277, +1.4465]. ct29_score_ct.json (sha256 2cf2b1d53e8617560bf2dc3c38a15dfac44a5e1a4c1a38ac4493fdf40be0886d), job 30805045, checkout eeb66be, git_dirty false.",
+   "scored_in": "CT"
+  },
+  {
+   "id": "CT29-P4",
+   "amendment": "CT",
+   "category": "within-system",
+   "outcome": "UNMEASURABLE",
+   "note": "'FVU falls strictly with k at 10,240 (k = 16 > 32 > 64 > 128).' Mean raw FVU over seeds 0-9, full eval split: arm (iii), the retrained 10,240 arm, seeds 0-9 of the k = 64 arm, arm (iv). HIT if strictly decreasing in that order; otherwise MISS; UNMEASURABLE if arm (iii) or (iv) is. Filed at §CT29 (PREREGISTRATION amendment CT; content the author's brief '§CT28 (threshold and scale rescorings across arms) and §CT29 (the k × width grid)' of 2026-10-24, with the author's amendments (a) and (b) of the same date; system clock 2026-10-24). SEALED (CT29-pre item 8): the k = 32 and k = 64 sides are stored, the k = 16 and k = 128 sides do not exist. Within-system. PENDING: outcome null and no scored_in. CATEGORY: the brief files it within-system; the author may re-categorise. SCORED at CT29-R (2026-10-25, system clock): UNMEASURABLE by item 10's text ('UNMEASURABLE if arm (iii) or (iv) is'): arms (iii) k16_w10240 and (iv) k128_w10240 are UNMEASURABLE on CT5.1's cause 3 (a stratum mu_s <= 0 under ratio normalisation; gtilde jobs 30702921 and 30789141 refused), under CT29-D addendum reading 2 (the cause read from the job), which the author may strike; passed to the scorer by name. Counts (read-only diagnostics): arm (iii) 11 strata in 9 of 10 seed rows (job 30728096, CT29-D addendum 3); arm (iv) 3 strata in 3 of 10 seed rows, all in concept cell 31 and the top firing bin (job 30804448, CT29-D2 results 2). The cause is in the null, not in FVU; CT29-D2 reported the rule's effect to the author with its declaration, before the scorer ran, and did not change it; every seed's raw FVU for all four arms had been read at 04:17 (read_fvu2.out), so the order could be seen then. The NON_SCORING reason's 'the quantity was not obtained' does not fit this entry: the FVUs were obtained. Descriptive, NOT a score: mean raw FVU over seeds 0-9 is 0.40242 (k = 16), 0.36389 (k = 32), 0.32443 (k = 64), 0.27570 (k = 128), read through ct29_score.fvu_by_seed (read_fvu_iv.out). Whether gotcha 26's companion rule ('a prediction about a quantity that is a deterministic function of a retained quantity gets TRANSLATED and SCORED, not voided') applies is the author's decision, and any change would come after these numbers. ct29_score_ct.json (sha256 2cf2b1d53e8617560bf2dc3c38a15dfac44a5e1a4c1a38ac4493fdf40be0886d), job 30805045, checkout eeb66be, git_dirty false.",
+   "scored_in": "CT"
+  }
+ ],
+ "_category_assignment_note": "CATEGORIES FOR THE FIVE PREDICTIONS SCORED BETWEEN BF AND BV WERE ASSIGNED IN AMENDMENT BW, NOT BY THEIR FILING AMENDMENTS. Established by attempting the lookup rather than inferred: a search for the six anchor category names across PREREGISTRATION.md from BL onward returns two hits, neither of which assigns a category to a prediction. Each assignment's grounds are recorded in that entry's own note, and all five landed in procedure-behaviour -- not a coincidence to hide but a property of the phase: BF through BV is the build, and its predictions are about how instruments behave rather than about biology. A later session may re-categorise any of them; the grounds are written down so that re-categorisation argues against a stated reason rather than against a bare label.",
+ "_not_in_this_file_and_why": {
+  "BR concentration diagnostic": "BR-C3 labelled its per-concept at-floor quantity COMPUTED_BEFORE_DECLARED and stated in terms that it is 'excluded from the prediction ledger and from anything requiring blindness'. That instruction is honoured: no entry is created. Recorded here so its ABSENCE reads as a disposition rather than an omission. BR filed no prediction and said so explicitly, on the ground that a prediction there could not have come out otherwise.",
+  "the G8 prediction-2 margin clause": "RETURNED UNCOMPUTED at BV-A6 on three independently sufficient grounds: no operationalisation of 'much smaller' is declared anywhere; the declared comparison is TRANSPOSED relative to G4's own mechanism and contradicts its own sentence's first clause; and the rule is arithmetically incapable of firing for 83.59% of (seed, feature) pairs at any cutoff. IT GETS NO ENTRY HERE, and the reason is SCOPE rather than the return: G8 predates the anchor at AV, and this file's _untraced field excludes everything before AV by policy, so adding it would make the anchor's own scope incoherent. The RETURNED outcome now exists in prediction_ledger.py's vocabulary so that a post-AV return has a home; this one is out of range."
+ }
+}

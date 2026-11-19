@@ -1,0 +1,548 @@
+# ESM-2 SAE reproducibility x geometry -- MVP config.
+# Everything locked lives here. Changing a value here should be the ONLY way to
+# change the experiment; nothing below should be hardcoded in src/.
+
+model:
+  name: facebook/esm2_t33_650M_UR50D
+  d_model: 1280
+  layer: 24                 # hidden_states[24] = output of block 24
+  apply_final_layer_norm: false
+  max_len: 1022             # ESM-2 caps at 1024 positions + <cls> + <eos>
+
+data:
+  source: swissprot
+  cluster_identity: 0.30    # mmseqs2; LOCKED
+  split: cluster_disjoint   # no homology leakage train <-> eval
+
+  # The rest of the mmseqs2 settings are experiment-defining too -- they change
+  # which clusters form, hence what counts as homology leakage -- so they live
+  # here rather than falling out of a script default.
+  cluster_coverage: 0.8     # -c
+  cluster_cov_mode: 0       # bidirectional
+  # -s. Low-identity clustering needs a sensitive search: under-clustering
+  # means missed homologs, which is leakage into the eval split. Erring high.
+  cluster_sensitivity: 7.5
+
+  # DECIDED 2026-07-23. 'all' keeps every cluster member and splits BY cluster;
+  # 'representatives' would keep only one sequence per cluster.
+  #
+  # Clustering here is used ONLY to make the split homology-disjoint -- it
+  # discards nothing. That matters beyond general hygiene: annotation-aligned
+  # features track conserved functional sites, which are exactly what stays
+  # conserved across homologs. So a random split would inflate the ALIGNED
+  # group more than the orphan group, biasing the headline aligned-vs-orphan
+  # comparison in the direction of the hypothesis. Cluster-disjoint splitting
+  # is what stops the result being manufactured.
+  #
+  # 'all' also means stage-2 functional protein sets lose zero members
+  # (cf. protein_sets.report_coverage, which only bites under
+  # 'representatives').
+  cluster_members: all
+  eval_cluster_fraction: 0.10   # fraction of CLUSTERS (not sequences) held out
+  # Seed for the cluster -> train/eval assignment. Pinned and logged (with the
+  # cluster tsv it reads) so the split -- and therefore the activation cache
+  # built from it -- reproduces bit-identically, not approximately. This is NOT
+  # an ensemble seed; it is fixed once and shared across all 40 seeds.
+  split_seed: 0
+  # CORRECTED 2026-08-05: this read "Train cache is residue-subsampled; eval
+  # cache is NOT (needs full coverage for residue-level AP)." NEITHER cache is
+  # subsampled -- `train_max_residues` and `eval_max_residues` are BOTH null
+  # below, and the built shards carry `subsampled = False` / `residue_ids =
+  # null`. Eval's reason is unchanged and still binding (residue-level AP needs
+  # full coverage); train simply was never capped.
+  #
+  # MEASURED 2026-07-23 (job 19335939, mmseqs 18, 89s on 32 cores), NOT
+  # estimated. 575,503 sequences -> 76,279 clusters, mean size 7.54.
+  # Residues capped at max_len, at 2560 bytes/residue:
+  #
+  #                        corpus        TRAIN (90%)      EVAL (10%, uncapped)
+  #   all members      198,156,259      178,340,633      19,815,625  (~51 GB)
+  #   representatives   27,668,964       24,902,067       2,766,896  (~ 7 GB)
+  #
+  # The corpus column is measured; TRAIN/EVAL are a 90/10 split BY RESIDUE,
+  # projected, while the split holds out 10% of CLUSTERS. Realised split
+  # (all members, swissprot/split/split.json, 2026-07-24): 180,416,896 train
+  # / 17,739,363 eval residues; eval.h5 is 45.4 GB.
+  #
+  # The cluster_members choice is therefore a ~7x difference in corpus size,
+  # not a detail. Per CLAUDE.md open question 2: under 'representatives' the
+  # train corpus (24.9M) is already below the ~100M threshold, so the cap
+  # should be DROPPED (set null); under 'all' (178M) a ~100M cap applies.
+  # Storage is not binding either way -- scratch is 10 TiB.
+  #
+  # NO CAP (decided 2026-07-23). With cluster_members: all the train corpus is
+  # 180.4M residues / ~462 GB, against 10 TiB of scratch. Capping was never
+  # storage-forced, and corpus size does not affect training time -- n_steps
+  # controls that, so a larger corpus only means less repetition per seed.
+  # One-time cost is ~6 GPU-hours of ESM forward passes (~13 min/shard across
+  # 24 shards) at the measured smoke-test throughput of ~9.3k residues/s.
+  #
+  # If this is ever re-capped: cache.py subsamples WITHIN each protein
+  # (n_keep = max(1, round(L * keep_frac))), so a cap thins every protein
+  # rather than dropping proteins. Protein diversity survives capping; that is
+  # why capping was never the thing that threatened stage-2 coverage.
+  train_max_residues: null
+  eval_max_residues: null    # eval is NEVER subsampled -- needs full coverage
+                             # for residue-level AP (17.7M residues, ~45 GB)
+  # CORRECTED 2026-08-05. A comment above this block read "Train cache is
+  # residue-subsampled; eval cache is NOT", asserting a property these two keys
+  # contradict two lines away. BOTH are null, so NEITHER cache is subsampled:
+  # the built shards carry `subsampled = False` and `residue_ids = null`, and
+  # cache.py's subsampling branch never ran. The subsampling machinery and the
+  # keep_frac note above are retained for a future re-cap, not as a description
+  # of what is on disk.
+
+sae:
+  arch: topk
+  dict_size: 10240          # 8x expansion
+  k: 32
+  n_seeds: 20               # = n_anchors (seeds 0-19), NOT the 40-seed
+                            # ensemble: seeds 20-39 live in sae_ckpts_ext/
+                            # (AD5; CLAUDE.md 'Notation for N'). Kept at 20
+                            # per AD5; inert in train.py (CN0).
+  # Vary ONLY seed + data order. Everything else fixed across the ensemble.
+  # SOURCED 2026-07-24 from InterProt (interprot/training.py, sae_module.py) --
+  # same model (ESM2-650M), same layer (24), TopK. Its recipe:
+  #   lr 2e-4, AdamW, grad-clip 1.0, decoder grad-projection, 1 epoch,
+  #   batch 48 SEQUENCES, k 64-128, dict 4096-16384.
+  # Its loss reduction is 'd_model_mean' (see loss_reduction below), so 2e-4 is
+  # valid for OUR reduction. What is NOT settled is transfer across architecture:
+  #   - InterProt LayerNorm-normalizes its input activations per token; our SAE
+  #     encodes RAW activations. That changes the encoder-gradient scale, which
+  #     is what lr trades against -- so 2e-4 is a CENTER POINT, not a drop-in.
+  #   - InterProt also uses AdamW + decoder grad-projection + grad-clip; our
+  #     train.py now does all three (optimizer / grad_clip /
+  #     decoder_grad_projection, set below).
+  #   - k differs (ours 32, locked; theirs 64-128).
+  # SET 2026-07-24 from the pilot lr sweep (job 19507709, 3 seeds x {1e-4,2e-4,
+  # 4e-4} x 30k steps on the real cache). Final mse: 1e-4 -> 12.86 (undertrained),
+  # 2e-4 -> 12.65, 4e-4 -> 12.62 (2e-4 and 4e-4 tied within cross-seed noise, all
+  # 0 dead). Chose 2e-4: InterProt's sourced value, tied-best, and the more
+  # conservative lr. Matches loss_reduction=d_model_mean.
+  lr: 2.0e-4
+  batch_size: 4096          # residue ROWS. Validated on the real cache (~12
+                            # steps/s, fits GPU memory comfortably).
+  n_steps: 30000            # pilot: mse plateaued ~8k, b_dec converged ~30k.
+                            # ~0.68 epoch over 180M residues at batch 4096.
+
+  # ---- Optimizer / stability. SOURCED 2026-07-24 from InterProt
+  # (interprot/sae_module.py). These are recipe elements, not a scientific fork,
+  # so they are adopted directly; lr itself was set by the pilot sweep above. ----
+  optimizer: adamw          # torch.optim.AdamW(params, lr) -- default betas,
+                            # eps, and weight_decay=0.01, as InterProt uses.
+  grad_clip: 1.0            # InterProt gradient_clip_val=1.0. null disables.
+  decoder_grad_projection: true  # remove the component of the decoder gradient
+                            # parallel to each unit-norm decoder column before
+                            # the step, so Adam does not fight the unit-norm
+                            # renorm (Gao et al. / Anthropic trick; InterProt
+                            # norm_grad()).
+
+  # ---- Loss convention. Made explicit because it is coupled to lr. ----
+  # 'd_model_mean': MSE, i.e. mean over batch AND d_model.
+  # 'd_model_sum' : sum over d_model, mean over batch (~d_model x larger).
+  #
+  # SOURCED 2026-07-24: InterProt's loss_fn (interprot/sae_model.py) is
+  # `F.mse_loss(recons, x)` with the default reduction='mean', i.e. mean over
+  # batch, residues, AND d_model -> this is exactly 'd_model_mean'. So an lr
+  # taken from InterProt is valid for THIS reduction, not 'd_model_sum'. The
+  # AuxK term uses the same reduction, so aux_coef keeps its InterProt meaning.
+  # (Both are raw MSE. InterProt normalizes activations per token with an
+  # internal LayerNorm but computes the loss on the un-normalized reconstruction
+  # in raw space, so the loss scale matches ours; see the input-LN note by lr.)
+  loss_reduction: d_model_mean
+
+  # ---- b_dec: TRAINABLE, from a SHARED init (RESOLVED 2026-07-24, open Q5).
+  # History: originally "frozen shared constant" (zero cross-seed variance).
+  # That was corrected twice. (1) Freezing at a data-only statistic (mean/GM of
+  # x) omits the -W_dec.E[z] term of the reconstruction-optimal bias
+  # b* = E[x] - W_dec.E[z], leaving an offset a reproducing high-firing
+  # "corrector" latent absorbs. (2) The pilot then showed b* is genuinely
+  # SEED-SPECIFIC, not shared: within-run b_dec drift over the final 10% was ~0.8
+  # vs a cross-seed spread of ~13 (17x), and forcing a seed onto the pooled b_dec
+  # cost ~1.2% mse (9% of the residual norm). So freezing at ANY single value
+  # bakes a wrong, uncorrectable per-seed offset into all 20 runs -> per-seed
+  # corrector incentive.
+  #
+  # DECISION: each seed TRAINS its own b_dec from a shared geometric-median init.
+  # This is seed-determined (consistent with "vary only the seed") and avoids the
+  # frozen-offset/corrector. Its cost is measured, not assumed: swapping a seed's
+  # b_dec for another's leaves the Pearson activation-correlation the metric uses
+  # at ~0.99 across all firing rates (MNN matching robust); firing-set Jaccard
+  # drops to ~0.89 (0.78 in the low-firing tail) -- a NOISE cost (uniform across
+  # aligned/orphan at matched firing rate, beatable with more seeds), not a bias.
+  # Freezing's alternative cost was a BIAS (top-bin corrector); noise < bias for
+  # a headline. GATE: the offset-corrector scan (firing saturation x decoder
+  # alignment with the residual-mean direction), with matched-pair counts PER
+  # firing-rate bin, is now MANDATORY before trusting any headline result.
+  b_dec_trainable: true
+  b_dec_path: $SCRATCH/cache/b_dec_gm_init.pt  # shared init
+  b_dec_source: geometric_median   # the SHARED init all seeds start from. GM
+                                    # matches Gao et al.'s init; 'mean' is the
+                                    # L2-optimal data centroid. (Init only now --
+                                    # each seed trains away from it.)
+  b_dec_sample_rows: 1000000       # rows sampled (fixed seed) to build the init;
+                                   # identical across all 40 runs.
+
+  # ---- AuxK dead-latent revival. LOCKED: in. A dead latent has firing rate 0,
+  # is necessarily an orphan, and is necessarily non-reproducing; letting the
+  # dead fraction float by seed would put optimizer luck inside the cross-seed
+  # variance we are trying to interpret. AuxK gives dead latents a gradient by
+  # asking the top-k_aux of them to reconstruct the main model's residual. ----
+  aux_k: 512                # dead latents used to model the residual. NOTE:
+                            # InterProt uses min(d_model//2, n_dead) = min(640,.);
+                            # 512 is close. Consider 640 to match the recipe.
+  aux_coef: 0.03125         # alpha = 1/32. CONFIRMED 2026-07-24 against
+                            # InterProt loss_fn (auxk_coeff = 1.0/32.0).
+  dead_tokens_threshold: 500000    # a latent is dead after this many tokens
+                                   # without firing. SET 2026-07-24 to ~InterProt's
+                                   # aggressiveness (their ~2000 examples/batch ~=
+                                   # 500k residue-tokens). The pilot saw 0 dead at
+                                   # 10M (AuxK inert); 500k lets AuxK engage
+                                   # rarely-firing latents as intended.
+
+reference:
+  # InterPLM released SAE is ReLU+L1, dict 10240, NOT TopK.
+  # It is an OUT-OF-ENSEMBLE comparator. It must never enter the MNN pool or
+  # the firing-rate-matched test -- L1 lets L0 float, which would inject
+  # architecture into the exact variable we control on.
+  name: interplm
+  hf_repo: Elana/InterPLM-esm2-650m
+  layer: 24
+  arch: relu_l1
+  dict_size: 10240
+  use_for: [concept_level_ap]
+  exclude_from: [mnn_matching, firing_rate_matched_test]
+
+annotations:
+  residue_level:
+    - uniprot_sites        # every FT type except uniprot_sites.SKIP_TYPES
+                           # (sites, domains, regions, HELIX/STRAND/TURN, ...)
+    - interpro_pfam        # domains -- declared; not implemented as of a725abc
+    - dssp                 # secondary structure + disorder -- declared; not implemented as of a725abc
+  min_positive_residues: 100  # LEGACY floor (retention_floor_mode: legacy only).
+                              # Kept for the robustness-check machinery
+                              # (amendment C/D6/D7, repositioned by E1; it reads
+                              # the legacy-floor residue_labels.h5 -- see
+                              # slurm/build_residue_labels_subtyped.sbatch),
+                              # which still runs on this
+                              # rule against the shared-experimental subset.
+
+  # ---- Concept sub-typing and retention floor. PREREGISTRATION amendment E
+  # (2026-07-27). The type-level concepts (DOMAIN, REGION, MOTIF, ZN_FING) pool
+  # every family together, which is structurally hostile to a feature that
+  # specifically detects ONE family -- its positive set includes every other
+  # family the feature never touches, so recall collapses. InterPLM evaluates
+  # at /note sub-type granularity (256 DOMAIN concepts, 55 REGION, 37 MOTIF, 15
+  # ZN_FING) rather than 4 pooled types; measured here, DOMAIN/REGION supplied
+  # 87.9% of pooled-stratum aligned features under the old pooled-only axis --
+  # consistent with only PROMISCUOUS features being coarse enough to register.
+  # EXTENDED (still 2026-07-27, same amendment E): REPEAT and TOPO_DOM added
+  # after the top-10-by-cost concentration check showed both are /note-
+  # bearing and sub-typable -- REPEAT's notes are things like "WD 1"/"ANK 2"
+  # (normalize_subtype_note already strips the instance ordinal, same as
+  # ZN_FING's "C2H2-type N"), TOPO_DOM's are topological labels
+  # ("Cytoplasmic"/"Extracellular"/"Lumenal") that are genuinely meaningful
+  # sub-categories. NOTE for D8 (not yet built): InterPLM's own appendix
+  # marks ft_transmem, ft_repeat, ft_intramem, and ft_dna_bind as NOT used for
+  # their quantitative concept analysis, and TOPO_DOM is not in their field
+  # list at all -- the D8 comparability arm must EXCLUDE these to match their
+  # axis, even though the MAIN analysis sub-types them here.
+  # EXTENDED AGAIN (still 2026-07-27): SIGNAL and TRANSIT, on a principle
+  # worth stating explicitly since it's the reverse case from DOMAIN/REGION/
+  # etc. -- :unspecified is legitimate (a coherent concept, not a pooling
+  # artifact) exactly when the PARENT TYPE is itself coherent. DOMAIN is a
+  # grab-bag of hundreds of unrelated families, so a no-note DOMAIN residual
+  # would be structurally hostile in the same way the pooled parent is
+  # (moot here -- measured at 0% no-note). SIGNAL is different: an N-terminal
+  # secretion signal is ONE biological function regardless of sub-mechanism,
+  # so SIGNAL:unspecified at 98.5% (measured: 44,019/44,676 SIGNAL FT records
+  # carry no /note) is a homogeneous real concept, not a mixed bag -- adding
+  # SIGNAL buys axis parity with InterPLM's own "Signal Peptide (any)" +
+  # named sub-type structure. TRANSIT was checked before deciding, not
+  # assumed: 19 distinct normalized note values, no single value dominant
+  # (Mitochondrion 62.7%, Chloroplast 34.7%, plus real minority targeting
+  # mechanisms -- Thylakoid, Peroxisome, Amyloplast, Hydrogenosome,
+  # Glyoxysome, Chromoplast, Apicoplast, Cyanelle), each a genuinely distinct
+  # organelle-targeting mechanism, not a rewording of the same one.
+  subtype_note_types: [DOMAIN, REGION, MOTIF, ZN_FING, REPEAT, TOPO_DOM, SIGNAL, TRANSIT]
+  # An occurrence of a subtype_note_types FT record with NO usable /note
+  # (missing, or empty after normalize_subtype_note strips a bare ordinal)
+  # becomes "<TYPE>:unspecified" -- checked against the real label store: the
+  # pooled parent (e.g. "DOMAIN") is the union of its /note children PLUS a
+  # no-note residual whose size is type-specific: 0% of DOMAIN/MOTIF/REGION
+  # FT records, 3.59% of ZN_FING, 98.5% of SIGNAL (PREREGISTRATION.md
+  # amendment E5/E6) -- so not one rule for every type. Neither
+  # "the parent is redundant duplication" nor "the parent is the no-note
+  # residual" was correct alone -- :unspecified makes the real residual its
+  # own disjoint, classifiable concept (InterPLM's "any" category) instead of
+  # disappearing into a parent that is MOSTLY redundant with its own
+  # children. The pooled parent itself (e.g. plain "DOMAIN") is measured
+  # duplication for 85-93% of its residues (checked, not assumed -- see
+  # PREREGISTRATION.md amendment E), so it must be EXCLUDED from the
+  # classification/FDR family and reported ONLY as a labelled diagnostic AP
+  # arm (pooled-vs-best-sub-typed AP per feature is the direct per-feature
+  # measurement of the granularity effect this whole amendment argues for).
+  # NOT sub-typed (checked, not assumed): DISULFID/CROSSLNK are PAIRED
+  # residues, not spans -- a /note here describes one specific bond, not a
+  # reusable family, and "instance boundary" is undefined for a non-contiguous
+  # pair. ACT_SITE/BINDING/MOD_RES/CARBOHYD/LIPID typically carry a chemistry
+  # description in /note rather than a family name (BINDING already has its
+  # own /ligand sub-typing mechanism, used independently of this list).
+  # TRANSMEM, INTRAMEM, DNA_BIND deliberately left un-subtyped for now, per
+  # InterPLM's own judgment that these FT types are not good concept-analysis
+  # candidates (see the D8 note above) -- revisit only with a specific reason.
+  retention_floor_mode: interplm   # 'legacy' (residues>=min_positive_residues)
+                                   # or 'interplm' (disjunctive, below). MAIN
+                                   # test uses interplm; --retention-floor CLI
+                                   # flag can override per run for comparison.
+  retention_min_residues: 1500    # InterPLM's disjunctive floor, exact values:
+  retention_min_instances: 10     # keep if residues > 1500 OR instances > 10.
+                                   # Protects a rare-but-well-defined family (few
+                                   # residues, but each occurrence is a real,
+                                   # clean instance) that residues-only would
+                                   # drop -- exactly the case sub-typing creates.
+                                   # Measured impact on the sub-typed concept
+                                   # axis: see PREREGISTRATION.md amendment E2.
+
+  # Listed for extraction from Swiss-Prot (re-parsing later is a day of work).
+  # go_terms is NOT parsed: uniprot_sites.py reads no DR/GO lines.
+  # taxonomic_lineage IS parsed (OC, top-level token only) and used by the
+  # composition reports (never_detected.py, ap_diagnostics.py). No code
+  # reads this list.
+  extract_but_defer:
+    - go_terms             # protein-level, for stage 2
+    - taxonomic_lineage    # OC lines, for the evolution angle
+
+  # ---- EVIDENCE PROVENANCE. First-class reported diagnostic, not an internal
+  # check. A Swiss-Prot annotation is not automatically an observation: ECO codes
+  # separate experiment from labels PROPAGATED along sequence homology
+  # (ECO:0000250 "by similarity") or emitted by a sequence-analysis PROGRAM
+  # (ECO:0000255/6/9). This matters more here than it would elsewhere: the
+  # project's claimed advantage over LLM interpretability is genuine
+  # residue-level ground truth, but ESM-2 itself encodes homology/coevolution
+  # statistics -- so a feature "aligning" with a by-similarity label may be two
+  # homology-based methods agreeing, not a detector of catalytic chemistry.
+  # Propagated labels are also more motif-regular (that is what makes them
+  # propagatable), so they may be EASIER to align with for non-biological
+  # reasons, inflating g_f on that subset specifically.
+  #
+  # DSSP-derived HELIX/STRAND/TURN are excluded from the headline entirely for a
+  # related reason: they come from PDB structures, which cover only ~10% of
+  # Swiss-Prot, so 'absent' means NOT MEASURED, not negative -- and AP scores
+  # unlabelled rows as negative. Crystallised constructs also omit termini and
+  # disordered loops, so gaps exist even within covered proteins.
+  # PROVENANCE EXCLUSION -- ENFORCED, not merely documented (amendment M2).
+  #
+  # Until 2026-07-28 the exclusion above existed ONLY as this comment: nothing
+  # in build_residue_labels.py filtered these types, so HELIX, STRAND, TURN and
+  # COMPBIAS were all present in the 716-concept library and therefore in the
+  # 707-concept argmax pool that defines g_f. THREE OF THEM RANKED AMONG THE
+  # TEN BROADEST CONCEPTS IN THAT POOL (COMPBIAS p=0.0207, HELIX p=0.0200,
+  # STRAND p=0.0113). Found while recomputing D5, whose criterion (b) is
+  # measured over exactly those ten. Measured impact on g_f itself was small --
+  # 0.106% of aligned features had their argmax on one of the four -- but the
+  # criterion-(b) distortion is structural.
+  #
+  # Note the pre-flight gate could not have caught this: every artifact AGREED
+  # on the contaminated axis, which is what the gate checks. Cross-component
+  # agreement does not imply agreement with the SPECIFICATION.
+  #
+  # Reasons, per gotcha 9 (provenance before spec):
+  #   HELIX/STRAND/TURN -- from PDB cross-references in the flat file, so they
+  #     exist only for the ~10% of Swiss-Prot with solved structures. 'Absent'
+  #     means NOT MEASURED, while AP scores every unlabelled row as a negative.
+  #     Crystallised constructs also omit termini and disordered loops.
+  #   COMPBIAS -- zero experimental residues out of 405,798.
+  #
+  # Matching is on the FT TYPE, i.e. the part before ':', so a sub-typed child
+  # such as 'HELIX:...' is excluded with its parent.
+  provenance_excluded_types: [HELIX, STRAND, TURN, COMPBIAS]
+
+  evidence:
+    report_composition: true      # per-concept tier fractions in every run
+    # Coarse groups used by the pre-registered stratified headline. 'other'
+    # (curator inference / no evidence) is reported but is in NEITHER stratum.
+    groups:
+      experimental: [experimental, experimental_highthroughput]
+      propagated:   [by_similarity, predicted, imported]
+      other:        [curator_inference, none]
+    # The headline aligned-vs-orphan test is run on each stratum SEPARATELY as
+    # well as pooled. Pre-registered before any AP -- see PREREGISTRATION.md.
+    # Declared; not implemented as of a725abc: the implemented arm is the one
+    # AV5 construction (matched_pair_arm.py; no per-stratum run reads this key).
+    stratified_headline: [experimental, propagated, pooled]
+    # PREREGISTRATION amendment A1. Experimental annotation concentrates in
+    # heavily-studied, crystallisable, model-organism proteins, so the strata are
+    # different PROTEIN POPULATIONS, not just different label quality. The
+    # PRIMARY stratified contrast therefore restricts both strata to proteins
+    # carrying >=1 experimental label, making evidence tier the only thing that
+    # varies; the full-set version is secondary. Stratum composition (n proteins,
+    # length, taxonomy) is reported either way.
+    restrict_to_shared_protein_set: true
+
+metrics:
+  primary: average_precision
+  secondary: f1_at_natural_threshold
+  concept_level:
+    statistic: best_feature_ap
+    report: [mean, std, capture_fraction_curve]
+  feature_level:
+    matching: mutual_nearest_neighbour     # amendment X1
+    # CORRECTED 2026-07-29, amendment AB decision B. This read
+    # `min(activation_correlation, decoder_cosine)`, which CONTRADICTED the
+    # pre-registration and had done so since the original file.
+    #
+    # Why the `min` is wrong, and this project has already paid for the
+    # reasoning once: H3 chose decoder cosine specifically because `W_dec` is
+    # a separate unit-norm parameter, PROVABLY invariant to a `b_dec` swap --
+    # that invariance is what discharged the b_dec ceiling debt. Activation
+    # correlation has no such property: a `b_dec` swap leaves Pearson at ~0.99
+    # but moves firing-set Jaccard to ~0.89 overall and ~0.78 IN THE LOW-FIRING
+    # TAIL. Since min(a,b) <= b, the correlation term can VETO a decoder-cosine
+    # match, reintroducing `b_dec` dependence into match membership --
+    # concentrated in exactly the tail the design controls for. That fails the
+    # governing constraint's own test.
+    similarity: decoder_cosine
+    # Activation correlation is retained as its OWN robustness arm, computed
+    # and reported separately, NEVER combined via `min`.
+    similarity_robustness_arm: activation_correlation
+    # Amendment AB decision A. NOT "the selected theta" -- the full sensitivity
+    # curve is the primary reported object and a conclusion counts only if it
+    # holds across the qualifying range. 0.70 is the REFERENCE theta for
+    # headline numbers, adopted because its justification is entirely external
+    # to our data (Leask via Gerasimov, fixed before we measured anything).
+    # Cleared the rotation-null floor of 0.1449 by ~4.8x in job 20351254.
+    threshold: 0.70
+    threshold_role: reference_only_full_curve_is_primary
+    # X2's "smallest qualifying theta" tiebreak is VOID BY FAILED PREMISE --
+    # it was an anti-floor-effect device and no floor effect occurred. Retired,
+    # not retuned. "Maximise interior mass" was considered and REJECTED as a
+    # replacement: it would be chosen after seeing interior mass at every
+    # theta, and it happens to land at 0.65, adjacent to the literature value.
+    threshold_selection_rule: retired_see_amendment_AB_decision_A
+
+confound_control:
+  # `headline_test` IS REMOVED (PREREGISTRATION amendment AM2), for the same
+  # reason as `regression` before it: a config key that names a ROLE is a second
+  # source of truth for a decision, and this decision has already changed.
+  #
+  # It read `headline_test: firing_rate_matched_paired_wilcoxon`. Amendment F
+  # DEMOTED that test to a ROBUSTNESS ARM, and H1 fixed the full ordering --
+  # concept-level reproducibility is the
+  # descriptive headline and the g_f -> r_f regression is the inferential
+  # primary -- and H1 says in terms that the old phrasing "must not be quoted as
+  # current". So the key's NAME asserted precisely the superseded claim.
+  #
+  # H1 owns precedence. The matched test's MECHANICS are untouched and still
+  # mandatory: `match_on` and `caliper` below are those mechanics and stay.
+  match_on: log_firing_rate
+  caliper: 0.1             # in log10 firing-rate units; report unmatched count
+
+  # `regression` IS REMOVED, not corrected (PREREGISTRATION amendment AL4).
+  # It read `"r_f ~ g_f + log(rho_f) + local_id_f"` -- the ORIGINAL section-2
+  # model -- and had been stale since amendment F1 replaced it with
+  #   logit(E[r_fs]) = b0 + b1*g~_fs + s(log10 phi_fs) + gamma*d_fs
+  # (binomial likelihood, penalised spline, per-seed fits meta-analysed),
+  # which AL8 restates for design 3 with b1*z(log M_fs) in place of b1*g~_fs.
+  # A config string restating the model is a SECOND SOURCE OF TRUTH for it, and
+  # duplicated facts drift -- which is exactly what happened. F1 and AL own the
+  # model; this file points at them and states nothing itself.
+  #
+  # Two things the removal also records, because they were live in that string:
+  #   * `local_id_f` is DROPPED from the primary specification (AL8b), not
+  #     silently absent. Per-feature TwoNN is unstable on small firing sets
+  #     (gotcha 4) and small firing sets ARE low-firing features, so it would
+  #     re-import the confound the spline exists to absorb.
+  #   * `d_fs` (representation density) is F1.6's pre-registered covariate and
+  #     is BUILT (AL8b; src/analysis/repr_density.py), from the mmseqs2 cluster
+  #     assignments already on
+  #     disk from the train/eval split.
+  local_id_min_firing_set: 200   # TwoNN is unstable on small sets, and small
+                                 # firing sets ARE low-rate features -- this
+                                 # floor stops the confound re-entering the
+                                 # control. Check excluded features aren't
+                                 # disproportionately orphans.
+
+  # ---- Analysis-inclusion firing floor (PREREGISTRATION amendment A4a).
+  # "0 dead features" was measured at a ~2e-6 threshold (fire_counts == 0 over
+  # training) and is compatible with a population firing at 1e-5-1e-4 --
+  # effectively dead for AP, unreliable for MNN, and orphan by construction.
+  # Features below this floor are excluded from BOTH groups; the excluded counts
+  # are reported per firing-rate bin, and whether they are disproportionately
+  # orphan is checked (gotcha 4).
+  # Dated 2026-10-04: the orphan-ness check is not implemented on the design-3
+  # path, and matched_pair_arm.py applies no floor -- vacuous on current data
+  # (the floor excludes 0 features in all 20 anchors); would need implementing
+  # before any data where excluded > 0.
+  analysis_min_firing_rows: 200  # ~1.1e-5 of the 17.7M eval rows
+
+  # ---- Effect-size floor for "aligned" (PREREGISTRATION section 2 + A2).
+  # G = (AP - p) / (1 - p), the fraction of achievable improvement over chance.
+  # NOT prevalence-neutral: at 0.05 it implies 1.3x lift for DOMAIN but 58.8x for
+  # ACT_SITE and 879x for LIPID -- i.e. it is STRICTEST on the primary
+  # functional-site set. The asymmetry is tabulated per concept in
+  # PREREGISTRATION.md A2. Both floors below are pre-committed and both reported.
+  alignment_min_normalised_gain: 0.05        # primary
+  alignment_min_normalised_gain_sensitivity: 0.01   # pre-specified sensitivity
+  alignment_fdr_q: 0.05                      # Benjamini-Hochberg
+
+  # ---- Offset-corrector scan. MANDATORY GATE before any headline result
+  # (CLAUDE.md open Q5). A "corrector" is a latent acting as a BIAS rather than
+  # a feature: it fires on ~every token with ~constant magnitude, so its
+  # contribution E[z_f]*d_f is a fixed vector absorbing an offset b_dec did not.
+  # It would be an ORPHAN that REPRODUCES across seeds at the TOP of the
+  # firing-rate distribution -- where orphans are scarce and each matched pair
+  # carries outsized weight -- so it can move the headline while being invisible
+  # in an aggregate statistic. Detect, exclude, and report the headline WITH and
+  # WITHOUT the flagged features; report matched-pair counts PER firing-rate bin
+  # (src/analysis/corrector_scan.py BIN_EDGES), never aggregate only.
+  corrector_scan:
+    min_firing_rate: 0.5      # "always on"
+    min_bias_fraction: 0.5    # E[z]^2/E[z^2] over all tokens: 1.0 = pure DC
+                              # offset, and <= firing_rate for a sparse latent,
+                              # so this one scalar captures always-on AND
+                              # constant-magnitude.
+
+geometry:
+  intrinsic_dimension: twonn
+  per_layer: true
+  per_feature_local_id: true
+  variance_alignment: true   # decoder direction vs layer PCs
+
+# ---- Stage 2 (protein-level). Plumbing only; not part of the MVP. ----
+protein_sets:
+  enabled: false
+  paths: []                # TODO: the author's curated functional sets
+  id_namespace: null       # TODO: uniprot_acc? gene symbol? needs mapping
+  aggregation: max_activation_per_protein   # or fraction_residues_firing
+  background: domain_matched                # NOT "all other proteins"
+  # A functional protein set is enriched for shared domains, so a feature
+  # "matching" the set may just be a domain detector. Two required controls:
+  localization_check: true   # does the feature fire only on the shared domain?
+  report_coverage: true      # how many set members survived 30% clustering?
+
+runtime:
+  cluster: bouchet
+  partition: gpu             # rtx_5000_ada (32 GB) -- right-sized. NOT h200/b200.
+  gpus: 1                    # ESM2-650M inference is ~3GB VRAM
+  group: <allocation>            # scratch was empty (0/10240 GiB) at setup time
+  # Train cache is built as this many residue-balanced shards (shard_fasta.py),
+  # one .h5 each, cached by a SLURM array. 24 -> ~7.5M residues / ~13 min per
+  # shard at the measured ~9.3k res/s, short enough to backfill the ~441-deep
+  # queue. PINNED for reproducibility: shard count + assignment set the loader's
+  # block layout, hence the shuffle order, hence the trained weights -- constant
+  # across the 40 seeds, so not a "vary only the seed" violation, but it must be
+  # fixed to regenerate the cache bit-identically.
+  cache_shards: 24
+  paths:
+    # From `mydirectories` on Bouchet, 2026-07-23.
+    scratch: $SCRATCH   # caches; PURGED after 60 days
+    project: $PROJECT   # checkpoints; backed up
+    # Quota headroom at setup: scratch 10240 GiB free, project ~379 GiB free
+    # (91% used group-wide). train_max_residues=40M (~102 GB) fits easily;
+    # the binding risk is the 60-day scratch purge, not space.
+    # Dated 2026-10-04 (alignment-pass correction): true as of 2026-07-23
+    # (f64b489, when train_max_residues was 40_000_000); it has been null since
+    # 4502972 the same evening (no cap, open question 2), and the purge and
+    # quota figures above are setup-time too; current state: docs/CODEBASE.md
+    # section 5 and getquota.

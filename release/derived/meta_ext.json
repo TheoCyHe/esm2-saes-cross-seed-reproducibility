@@ -1,0 +1,4522 @@
+{
+  "governing_amendment": "CT \u00a7CT18-F",
+  "producing_commit": "b550ca239854dc78d10fe44644481c3d12fcfdfc",
+  "git_dirty": false,
+  "n_files_new": 120,
+  "bytes_new": 426242308,
+  "n_files_total": 126,
+  "families": {
+    "arm_w2560": {
+      "n_gates": 10,
+      "all_pass": true,
+      "verdicts": [
+        "BIT_IDENTICAL",
+        "PASS"
+      ]
+    },
+    "arm_w10240": {
+      "n_gates": 10,
+      "all_pass": true,
+      "verdicts": [
+        "BIT_IDENTICAL",
+        "PASS"
+      ]
+    },
+    "arm_w20480": {
+      "n_gates": 10,
+      "all_pass": true,
+      "verdicts": [
+        "BIT_IDENTICAL",
+        "PASS"
+      ]
+    },
+    "arm_w40960": {
+      "n_gates": 10,
+      "all_pass": true,
+      "verdicts": [
+        "BIT_IDENTICAL",
+        "PASS"
+      ]
+    },
+    "arm_k64": {
+      "n_gates": 16,
+      "all_pass": true,
+      "verdicts": [
+        "BIT_IDENTICAL",
+        "PASS"
+      ]
+    },
+    "arm_k64_w2560": {
+      "n_gates": 10,
+      "all_pass": true,
+      "verdicts": [
+        "BIT_IDENTICAL",
+        "PASS"
+      ]
+    },
+    "arm_k64_w40960": {
+      "n_gates": 10,
+      "all_pass": true,
+      "verdicts": [
+        "BIT_IDENTICAL",
+        "PASS"
+      ]
+    },
+    "arm_k16_w10240": {
+      "n_gates": 10,
+      "all_pass": true,
+      "verdicts": [
+        "BIT_IDENTICAL",
+        "PASS",
+        "RECORDED"
+      ]
+    },
+    "arm_k128_w10240": {
+      "n_gates": 10,
+      "all_pass": true,
+      "verdicts": [
+        "BIT_IDENTICAL",
+        "PASS",
+        "RECORDED"
+      ]
+    },
+    "anchors": {
+      "n_gates": 6,
+      "all_pass": true,
+      "verdicts": [
+        "BIT_IDENTICAL",
+        "PASS"
+      ]
+    },
+    "replay": {
+      "n_gates": 33,
+      "all_pass": true,
+      "verdicts": [
+        "BIT_IDENTICAL",
+        "PASS"
+      ]
+    },
+    "phase2b": {
+      "n_gates": 159,
+      "all_pass": true,
+      "verdicts": [
+        "BIT_IDENTICAL",
+        "MATCH",
+        "NOT_STATED",
+        "PASS",
+        "RECORDED"
+      ]
+    }
+  },
+  "levels": {
+    "REGENERATED": "scripts/reproduce_table1.py (Table 1, the headline, the nine-arm table)",
+    "RECOMPUTED": "the build gates, BIT_IDENTICAL against each owner",
+    "RECOUNTED": "the subspaces, the classification, the disorder shares",
+    "RE-READ": "owner__*.json, verbatim"
+  },
+  "inputs_recorded": {
+    "governing_amendment": "CT \u00a7CT18-D2 (the build's owed items: \u00a7CT18-F items 4 and 5.1)",
+    "producing_commit": "a53b68dc7ed6814d20a5aca7935397495bd8cd1d",
+    "git_dirty": false,
+    "data_files_byte_identical_to_build": "b550ca239854dc78d10fe44644481c3d12fcfdfc",
+    "n_data_files_compared": 120,
+    "record_hash_verdicts_artifact_inputs": {
+      "MATCH": 96,
+      "NOT_STATED": 484,
+      "UNRESOLVED": 1
+    }
+  },
+  "inputs": {
+    "arm_w2560": [
+      {
+        "path": "$PROJECT/analysis/cs/fvu_eval_w2560.json",
+        "kind": "artifact",
+        "bytes": 9475,
+        "sha256": "15099dfd5ca88dafed68c24aee03b0451906cf83ff4464f44fa8e3d8517872e2",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/rf_counts_all_theta_w2560_n9.h5",
+        "kind": "artifact",
+        "bytes": 245026,
+        "sha256": "28b6ec6f58aeadbaa693d22518a6055501b826711aa13d61e0cbdc0f7c4a2b9c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/rf_marginal_m1_w2560_n9.json",
+        "kind": "artifact",
+        "bytes": 215151,
+        "sha256": "bae04318caddea20f1a9276e1b6bb5c731e476f1167cc08e11f28f095290585b",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sf_w2560_ct.h5",
+        "kind": "artifact",
+        "bytes": 810789,
+        "sha256": "65682e18d47db6ddd4b8165d2820db3847d543a49a274cedfd2f2e1db3667272",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_w2560_ct.json",
+        "kind": "artifact",
+        "bytes": 5479,
+        "sha256": "cfe243682764f24ea05d66f7146a90b995b6076cabf7fe21e5a4b0da0e5239b7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/d_fs_w2560_ct.h5",
+        "kind": "artifact",
+        "bytes": 539591,
+        "sha256": "cb23624d724de7cb45448e51c5ef034cbd9ff9442e017dba95d89fcb5c80b034",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_w2560_b_ratio_ct.h5",
+        "kind": "artifact",
+        "bytes": 38165129,
+        "sha256": "9ab46df833b7a75e0f7720920ed28c9a78eda1113c9ef3f8ad2a78d312ef4703",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_match_w2560_ct.h5",
+        "kind": "artifact",
+        "bytes": 729742,
+        "sha256": "a9971dfce1a7fd03c8d12670fc585c6857d476f497fbdc7d7b7d42c6cb9aab6b",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/null_pilot_w2560_ct.h5",
+        "kind": "artifact",
+        "bytes": 14378679,
+        "sha256": "799ca471ee55cc5b9f109ee615e93a5c5f8af544735cee866e2b7ab95d9d86d1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_w2560_ct.json",
+        "kind": "artifact",
+        "bytes": 12529,
+        "sha256": "d7bfdb07078aa7e5b36d7339c6f04bc890a2730ca43ebbe0b37996dc2a44f728",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/annotated_doc-0.0.4.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 34,
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/anyio-4.14.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "fdde98bbaba269998d7b40b2768c22ac4f429a0ef350bda0d3cb50a684b742f7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/fonttools-4.63.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 147,
+        "sha256": "f2454775dc5f156038e05483e26069982fb8b82ca7427928cfff5a3496f6dbb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/httpx-0.28.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 37,
+        "sha256": "da55647509b12c0d6934c812376795f3da3dd070997b3866370b32eabc8a0d20",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/huggingface_hub-1.24.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 212,
+        "sha256": "ccfec5fdb052762adc3d0172b07419f45dcb727e7f74248e119c559460ac1b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/idna-3.18.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 38,
+        "sha256": "ec7de718e1daa778e72c4e5eeeaed8c2bf55abc6b107b5888f9f82ff8376be1c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "4fcd65edf1d0de9965a50e3052d40ae9af20fe9eb0c506e78ca5470a4d96306e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 94,
+        "sha256": "1f68d9683b0327f8bd1f64b05a9c2e15e97c06b67dc472aebe1f83400596f654",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/direct_url.json",
+        "kind": "artifact",
+        "bytes": 337,
+        "sha256": "f1bbffd462d579270d4a2e6c1d0987ea23c5f11049e3ce29e05f3ca0737c7487",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 220,
+        "sha256": "ec26fade0c8bdac211a6c1dd003a65eb16885b925395423e93fcaa115af4052c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pandas-3.0.3.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 69,
+        "sha256": "3952ca3443ecf90ec85b2a5604be9fc6fe7aff3b78b119c423bcdac28eb2ff4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pip-26.1.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 84,
+        "sha256": "5617fcb34218817dfb9ad778bc62fbdc13dcc5d2a7a9e0853f3079f9ddf4c7ca",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pygments-2.20.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 53,
+        "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pytest-9.1.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 95,
+        "sha256": "b21b5de5a40ce6372eff650d87fe4ce166b662590a307535e179bfc6c8d2a4d6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/setuptools-83.0.0-py3.10.egg-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 2449,
+        "sha256": "ce482d8697ff15af4d544f69e85293dd793d0d1d5f680711538728820b15ee30",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/sympy-1.14.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "4a9faf2c9a26e0f4658467d8e91a54adeed28d89b7dc936af4d0b0086796f9f4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/torch-2.13.0+cu126.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 211,
+        "sha256": "72ba54dc1186d950460c57b009875635e78314ee5d4872d276137c1ff61b762e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 57356,
+        "sha256": "a0406c7575adf27f56a09afa6fbcdcd8d9951d12ca219698baa5627351b0d9a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/transformers-5.14.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 68,
+        "sha256": "4dc0659aab98578ef928904af04850367b0b89e816532fd0a0a478474a4c8768",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 1663,
+        "sha256": "c0067ae183ac3e221330fc16dd9539a4bc7f2e56a34245cca63335e9da14a8ce",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 176,
+        "sha256": "8eceb6f3d151935f3f24b99b35f1ac9ad28fefb0fa6986b024e4881efdd7f3d2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/typer-0.27.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 57,
+        "sha256": "60ed770728aa59eb9ab3d5742400cb5004591547bf73053fef099336fc41610f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/wheel-0.47.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 110,
+        "sha256": "24976d480193bcc2db2244d565400cbc628edfd16d59f09517c9a9fcd1fa7b88",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/configs/width/mvp_w2560.yaml",
+        "kind": "repo",
+        "bytes": 32080,
+        "sha256": "9648a3e79ac5d8600764d358bfd21e3ecbdcd76c3d3cd90b5de3c756f1a2b018"
+      },
+      {
+        "path": "/proc/3285483/maps",
+        "kind": "other"
+      }
+    ],
+    "arm_w10240": [
+      {
+        "path": "$PROJECT/analysis/cs/fvu_eval_w10240.json",
+        "kind": "artifact",
+        "bytes": 9482,
+        "sha256": "9f3c1d117704e646347613bff54d34c8b3435b56cfde2436cc08a475665196fe",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/rf_counts_all_theta_w10240_n9.h5",
+        "kind": "artifact",
+        "bytes": 808065,
+        "sha256": "2ee248559ea0024210c23380a03f49b784bf4e3af372aede0901ac8869ef0da1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/rf_marginal_m1_w10240_n9.json",
+        "kind": "artifact",
+        "bytes": 240495,
+        "sha256": "c6d2bdb5e942fc94a1502e90bba97ab383d57aad73d10c1d0246fa7047abd894",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sf_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 3229788,
+        "sha256": "58fc5c8b7dac11750a317acafbcbaa6a36952c4d380ab486b5edf8b86ab44ac4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_w10240_ct.json",
+        "kind": "artifact",
+        "bytes": 5496,
+        "sha256": "e1d89c67812485fbef2454f1c47e7e345f6262534140317db6fac6be67e285f8",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/d_fs_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 1868192,
+        "sha256": "fc8d4e29d1fb3b96f976e0451e1c0a904371bfe810d19a4892a1a47e32545a42",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_w10240_b_ratio_ct.h5",
+        "kind": "artifact",
+        "bytes": 85376576,
+        "sha256": "db6832baa98a82bf91845cc1017d869bed4eb755c03e2ac2ed268e26daed8e2f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_match_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 2782742,
+        "sha256": "c0ffda648c751f9c578d1b401cb4486c55351a1078354473b7df154d69a97641",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/null_pilot_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 38253374,
+        "sha256": "6e9b06b248eb61b844ce1a06b25c90e32c34462c0354726322f6303cca091b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_w10240_ct.json",
+        "kind": "artifact",
+        "bytes": 12543,
+        "sha256": "0ade5d25dbb4b51df9d7d97d8212301af2c7812bbcf223fde8af4b72719a6675",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/annotated_doc-0.0.4.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 34,
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/anyio-4.14.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "fdde98bbaba269998d7b40b2768c22ac4f429a0ef350bda0d3cb50a684b742f7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/fonttools-4.63.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 147,
+        "sha256": "f2454775dc5f156038e05483e26069982fb8b82ca7427928cfff5a3496f6dbb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/httpx-0.28.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 37,
+        "sha256": "da55647509b12c0d6934c812376795f3da3dd070997b3866370b32eabc8a0d20",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/huggingface_hub-1.24.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 212,
+        "sha256": "ccfec5fdb052762adc3d0172b07419f45dcb727e7f74248e119c559460ac1b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/idna-3.18.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 38,
+        "sha256": "ec7de718e1daa778e72c4e5eeeaed8c2bf55abc6b107b5888f9f82ff8376be1c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "4fcd65edf1d0de9965a50e3052d40ae9af20fe9eb0c506e78ca5470a4d96306e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 94,
+        "sha256": "1f68d9683b0327f8bd1f64b05a9c2e15e97c06b67dc472aebe1f83400596f654",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/direct_url.json",
+        "kind": "artifact",
+        "bytes": 337,
+        "sha256": "f1bbffd462d579270d4a2e6c1d0987ea23c5f11049e3ce29e05f3ca0737c7487",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 220,
+        "sha256": "ec26fade0c8bdac211a6c1dd003a65eb16885b925395423e93fcaa115af4052c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pandas-3.0.3.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 69,
+        "sha256": "3952ca3443ecf90ec85b2a5604be9fc6fe7aff3b78b119c423bcdac28eb2ff4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pip-26.1.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 84,
+        "sha256": "5617fcb34218817dfb9ad778bc62fbdc13dcc5d2a7a9e0853f3079f9ddf4c7ca",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pygments-2.20.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 53,
+        "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pytest-9.1.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 95,
+        "sha256": "b21b5de5a40ce6372eff650d87fe4ce166b662590a307535e179bfc6c8d2a4d6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/setuptools-83.0.0-py3.10.egg-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 2449,
+        "sha256": "ce482d8697ff15af4d544f69e85293dd793d0d1d5f680711538728820b15ee30",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/sympy-1.14.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "4a9faf2c9a26e0f4658467d8e91a54adeed28d89b7dc936af4d0b0086796f9f4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/torch-2.13.0+cu126.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 211,
+        "sha256": "72ba54dc1186d950460c57b009875635e78314ee5d4872d276137c1ff61b762e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 57356,
+        "sha256": "a0406c7575adf27f56a09afa6fbcdcd8d9951d12ca219698baa5627351b0d9a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/transformers-5.14.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 68,
+        "sha256": "4dc0659aab98578ef928904af04850367b0b89e816532fd0a0a478474a4c8768",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 1663,
+        "sha256": "c0067ae183ac3e221330fc16dd9539a4bc7f2e56a34245cca63335e9da14a8ce",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 176,
+        "sha256": "8eceb6f3d151935f3f24b99b35f1ac9ad28fefb0fa6986b024e4881efdd7f3d2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/typer-0.27.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 57,
+        "sha256": "60ed770728aa59eb9ab3d5742400cb5004591547bf73053fef099336fc41610f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/wheel-0.47.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 110,
+        "sha256": "24976d480193bcc2db2244d565400cbc628edfd16d59f09517c9a9fcd1fa7b88",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/configs/width/mvp_w10240.yaml",
+        "kind": "repo",
+        "bytes": 32081,
+        "sha256": "c3d7975fbbb3d8b0d3d39f6ae53d43a99c5e9f118c430e6d908d2d59cbd606c6"
+      },
+      {
+        "path": "/proc/3285484/maps",
+        "kind": "other"
+      }
+    ],
+    "arm_w20480": [
+      {
+        "path": "$PROJECT/analysis/cs/fvu_eval_w20480.json",
+        "kind": "artifact",
+        "bytes": 9469,
+        "sha256": "d341e8dedbbcff822dc3376ff47011782cd1ebbdff2e73fd3b5e3fcb40cfbe78",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/rf_counts_all_theta_w20480_n9.h5",
+        "kind": "artifact",
+        "bytes": 1555064,
+        "sha256": "86e68d11c8cf1806002a1ff90b9303d63dee60bcbf1f989966aceb6b5bd2b7e5",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/rf_marginal_m1_w20480_n9.json",
+        "kind": "artifact",
+        "bytes": 242451,
+        "sha256": "c0d5feab03f3ee735c22439e2a81a0c75b31ccbdcf50838dff658dff76539050",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sf_w20480_ct.h5",
+        "kind": "artifact",
+        "bytes": 6448739,
+        "sha256": "6d685bcb24d6219e2822957967974dc8c1b53fa71ea530dad722a02ff12942a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_w20480_ct.json",
+        "kind": "artifact",
+        "bytes": 5541,
+        "sha256": "164e65bb17d55e6a624a64f81d04c471d63439afc5f3ec5a4206332d78b44e05",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/d_fs_w20480_ct.h5",
+        "kind": "artifact",
+        "bytes": 3525603,
+        "sha256": "11e928385b49becc8c56104a826982c40e3b94ae6258ec3df56c6ad2713d61d8",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_w20480_b_ratio_ct.h5",
+        "kind": "artifact",
+        "bytes": 129917689,
+        "sha256": "a46cbb5c012958d5ea137013dd58b76a0119af561d00f581433d2152d329610d",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_match_w20480_ct.h5",
+        "kind": "artifact",
+        "bytes": 5376278,
+        "sha256": "7f343d19083654d331a8e464843e8a24f354634639c94674b548b81e2e3552e4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/null_pilot_w20480_ct.h5",
+        "kind": "artifact",
+        "bytes": 69991710,
+        "sha256": "d78f20abb7f8a14a9621a1d5c1ed2a64c19697dc0677e205130e9abdf2f93e2c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_w20480_ct.json",
+        "kind": "artifact",
+        "bytes": 12534,
+        "sha256": "b5ae8a1b4cde9d154ea7f635b07c5f508082fdbe7166f93f4a494002d0ce813d",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/annotated_doc-0.0.4.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 34,
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/anyio-4.14.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "fdde98bbaba269998d7b40b2768c22ac4f429a0ef350bda0d3cb50a684b742f7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/fonttools-4.63.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 147,
+        "sha256": "f2454775dc5f156038e05483e26069982fb8b82ca7427928cfff5a3496f6dbb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/httpx-0.28.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 37,
+        "sha256": "da55647509b12c0d6934c812376795f3da3dd070997b3866370b32eabc8a0d20",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/huggingface_hub-1.24.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 212,
+        "sha256": "ccfec5fdb052762adc3d0172b07419f45dcb727e7f74248e119c559460ac1b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/idna-3.18.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 38,
+        "sha256": "ec7de718e1daa778e72c4e5eeeaed8c2bf55abc6b107b5888f9f82ff8376be1c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "4fcd65edf1d0de9965a50e3052d40ae9af20fe9eb0c506e78ca5470a4d96306e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 94,
+        "sha256": "1f68d9683b0327f8bd1f64b05a9c2e15e97c06b67dc472aebe1f83400596f654",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/direct_url.json",
+        "kind": "artifact",
+        "bytes": 337,
+        "sha256": "f1bbffd462d579270d4a2e6c1d0987ea23c5f11049e3ce29e05f3ca0737c7487",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 220,
+        "sha256": "ec26fade0c8bdac211a6c1dd003a65eb16885b925395423e93fcaa115af4052c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pandas-3.0.3.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 69,
+        "sha256": "3952ca3443ecf90ec85b2a5604be9fc6fe7aff3b78b119c423bcdac28eb2ff4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pip-26.1.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 84,
+        "sha256": "5617fcb34218817dfb9ad778bc62fbdc13dcc5d2a7a9e0853f3079f9ddf4c7ca",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pygments-2.20.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 53,
+        "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pytest-9.1.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 95,
+        "sha256": "b21b5de5a40ce6372eff650d87fe4ce166b662590a307535e179bfc6c8d2a4d6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/setuptools-83.0.0-py3.10.egg-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 2449,
+        "sha256": "ce482d8697ff15af4d544f69e85293dd793d0d1d5f680711538728820b15ee30",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/sympy-1.14.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "4a9faf2c9a26e0f4658467d8e91a54adeed28d89b7dc936af4d0b0086796f9f4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/torch-2.13.0+cu126.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 211,
+        "sha256": "72ba54dc1186d950460c57b009875635e78314ee5d4872d276137c1ff61b762e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 57356,
+        "sha256": "a0406c7575adf27f56a09afa6fbcdcd8d9951d12ca219698baa5627351b0d9a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/transformers-5.14.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 68,
+        "sha256": "4dc0659aab98578ef928904af04850367b0b89e816532fd0a0a478474a4c8768",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 1663,
+        "sha256": "c0067ae183ac3e221330fc16dd9539a4bc7f2e56a34245cca63335e9da14a8ce",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 176,
+        "sha256": "8eceb6f3d151935f3f24b99b35f1ac9ad28fefb0fa6986b024e4881efdd7f3d2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/typer-0.27.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 57,
+        "sha256": "60ed770728aa59eb9ab3d5742400cb5004591547bf73053fef099336fc41610f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/wheel-0.47.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 110,
+        "sha256": "24976d480193bcc2db2244d565400cbc628edfd16d59f09517c9a9fcd1fa7b88",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/configs/width/mvp_w20480.yaml",
+        "kind": "repo",
+        "bytes": 32082,
+        "sha256": "d3f4c570bee38719f8ba8b93b71053d3b6f43a132e94e46b883ca14f86369237"
+      },
+      {
+        "path": "/proc/3558882/maps",
+        "kind": "other"
+      }
+    ],
+    "arm_w40960": [
+      {
+        "path": "$PROJECT/analysis/cs/fvu_eval_w40960.json",
+        "kind": "artifact",
+        "bytes": 10079,
+        "sha256": "1a942bc079b982b4bbd2ceb01690b3d0c3f48d1cb0747180a99bef99d1e19141",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/rf_counts_all_theta_w40960_n9.h5",
+        "kind": "artifact",
+        "bytes": 2952191,
+        "sha256": "f7bd35cb2b8c87adecae16d921e15af571587c9418589e64fbfd914260165ee6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/rf_marginal_m1_w40960_n9.json",
+        "kind": "artifact",
+        "bytes": 245769,
+        "sha256": "8adaaef5a575308dd7c94d4b7d098563fc010d7c25989c60b17429bcb63fbec2",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sf_w40960_ct.h5",
+        "kind": "artifact",
+        "bytes": 12956487,
+        "sha256": "e297d7e9837123321582b704aaf5d2938309e0d46d47de3b3e16577fc8d8310c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_w40960_ct.json",
+        "kind": "artifact",
+        "bytes": 5433,
+        "sha256": "a79578d76f15056b1a47bc241ee5fbd75ff07dc25ca69cd822718f6f8f2d28c9",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/d_fs_w40960_ct.h5",
+        "kind": "artifact",
+        "bytes": 6595948,
+        "sha256": "c3c0107b7bf3acf81199b06b2bff9339a6928ff8867c06fa48bd53d3be961942",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_w40960_b_ratio_ct.h5",
+        "kind": "artifact",
+        "bytes": 197311950,
+        "sha256": "5edc750e7a7705b6bf0e073b2889e031621ce7def3d283c7b01e6c50db152e49",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_match_w40960_ct.h5",
+        "kind": "artifact",
+        "bytes": 10339464,
+        "sha256": "f49e9c966586620ba3aa2324d39edd901754732a8cfa6fbc6216d053223a1c43",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/null_pilot_w40960_ct.h5",
+        "kind": "artifact",
+        "bytes": 133436469,
+        "sha256": "b5a6691f4bfaa4dc98822ee2a9cba5c137fb2dd331ca98f2b56fa40f5a9cf8bd",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_w40960_ct.json",
+        "kind": "artifact",
+        "bytes": 12531,
+        "sha256": "cd2e3168f0560ac697639d2b72ddf8208cae4b71ef7cb66c27d367878428d27c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/annotated_doc-0.0.4.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 34,
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/anyio-4.14.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "fdde98bbaba269998d7b40b2768c22ac4f429a0ef350bda0d3cb50a684b742f7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/fonttools-4.63.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 147,
+        "sha256": "f2454775dc5f156038e05483e26069982fb8b82ca7427928cfff5a3496f6dbb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/httpx-0.28.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 37,
+        "sha256": "da55647509b12c0d6934c812376795f3da3dd070997b3866370b32eabc8a0d20",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/huggingface_hub-1.24.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 212,
+        "sha256": "ccfec5fdb052762adc3d0172b07419f45dcb727e7f74248e119c559460ac1b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/idna-3.18.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 38,
+        "sha256": "ec7de718e1daa778e72c4e5eeeaed8c2bf55abc6b107b5888f9f82ff8376be1c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "4fcd65edf1d0de9965a50e3052d40ae9af20fe9eb0c506e78ca5470a4d96306e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 94,
+        "sha256": "1f68d9683b0327f8bd1f64b05a9c2e15e97c06b67dc472aebe1f83400596f654",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/direct_url.json",
+        "kind": "artifact",
+        "bytes": 337,
+        "sha256": "f1bbffd462d579270d4a2e6c1d0987ea23c5f11049e3ce29e05f3ca0737c7487",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 220,
+        "sha256": "ec26fade0c8bdac211a6c1dd003a65eb16885b925395423e93fcaa115af4052c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pandas-3.0.3.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 69,
+        "sha256": "3952ca3443ecf90ec85b2a5604be9fc6fe7aff3b78b119c423bcdac28eb2ff4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pip-26.1.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 84,
+        "sha256": "5617fcb34218817dfb9ad778bc62fbdc13dcc5d2a7a9e0853f3079f9ddf4c7ca",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pygments-2.20.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 53,
+        "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pytest-9.1.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 95,
+        "sha256": "b21b5de5a40ce6372eff650d87fe4ce166b662590a307535e179bfc6c8d2a4d6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/setuptools-83.0.0-py3.10.egg-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 2449,
+        "sha256": "ce482d8697ff15af4d544f69e85293dd793d0d1d5f680711538728820b15ee30",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/sympy-1.14.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "4a9faf2c9a26e0f4658467d8e91a54adeed28d89b7dc936af4d0b0086796f9f4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/torch-2.13.0+cu126.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 211,
+        "sha256": "72ba54dc1186d950460c57b009875635e78314ee5d4872d276137c1ff61b762e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 57356,
+        "sha256": "a0406c7575adf27f56a09afa6fbcdcd8d9951d12ca219698baa5627351b0d9a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/transformers-5.14.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 68,
+        "sha256": "4dc0659aab98578ef928904af04850367b0b89e816532fd0a0a478474a4c8768",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 1663,
+        "sha256": "c0067ae183ac3e221330fc16dd9539a4bc7f2e56a34245cca63335e9da14a8ce",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 176,
+        "sha256": "8eceb6f3d151935f3f24b99b35f1ac9ad28fefb0fa6986b024e4881efdd7f3d2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/typer-0.27.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 57,
+        "sha256": "60ed770728aa59eb9ab3d5742400cb5004591547bf73053fef099336fc41610f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/wheel-0.47.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 110,
+        "sha256": "24976d480193bcc2db2244d565400cbc628edfd16d59f09517c9a9fcd1fa7b88",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/configs/width/mvp_w40960.yaml",
+        "kind": "repo",
+        "bytes": 32082,
+        "sha256": "7ac79edc310b2d3d7af6924201b60a27c4be20fbb6202aacc57b94bbccae64ca"
+      },
+      {
+        "path": "/proc/3558881/maps",
+        "kind": "other"
+      }
+    ],
+    "arm_k64": [
+      {
+        "path": "$PROJECT/analysis/ct/activation_correlation_counts_k64_ct.h5",
+        "kind": "artifact",
+        "bytes": 14151470,
+        "sha256": "4cc36cb29662787b158438fd73b9ac86dcaab93d449fac91c929c5e8b1e2e1ad",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/activation_correlation_fit_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 1848,
+        "sha256": "6cc3c8c289df2524b0499a47a0567e19418bf1729f33bc7be6493dd037d6e364",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/activation_correlation_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 1600,
+        "sha256": "d2faf6b11f19e67332df35346a5ea00d46b3a9fb4c43dfe650219381721990ed",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_arm_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 25455,
+        "sha256": "6710fd61d244ef4de99f1ecc5e7d21c344f58542dae33d96ac70e99ae236250e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_arm_k64n9_ct.json",
+        "kind": "artifact",
+        "bytes": 13198,
+        "sha256": "cd4dc319cffd52bc6d9c5ddb362a581a63e92b1a6f9c05a888a0755f2dc94f4a",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sf_k64_ct.h5",
+        "kind": "artifact",
+        "bytes": 13799414,
+        "sha256": "1d14d4d147754e3b0ff920d72870fceb0b6eafb48f7f267c9b614b19d6ba312f",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 7977,
+        "sha256": "8b59f2e584164682f8acfd0db3a72cd3e696eded85087ef8d1e6a45cb3597b65",
+        "record_hash": "MATCH",
+        "mismatch_lines": [
+          "PREREGISTRATION.md: **Control (\u00a7CT9-D item 5): BIT_IDENTICAL.** The generalised `sffit` on the full `k = 64` comparison set (seeds 0\u201319) reproduced `ct28_sffit_k64_ct.json` (`8ad67"
+        ]
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_k64n9_ct.json",
+        "kind": "artifact",
+        "bytes": 6008,
+        "sha256": "d5e21075db88548a341f097b4605ce86f4f01746ea78787b687d7f4a0e697ebe",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/d_fs_k64_ct.h5",
+        "kind": "artifact",
+        "bytes": 3950265,
+        "sha256": "f598eaa730e80d2fbe40b71e9356c6f8b33e28883a98a1e799755400770d398f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/fvu_eval_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 18290,
+        "sha256": "a8d6b178c6939ac66ec26682da6c43c942e110714462c2cc68f7c17e2fccf436",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_k64_b_ratio_ct.h5",
+        "kind": "artifact",
+        "bytes": 263410803,
+        "sha256": "fb6374d1949047756051b8ff90ef2c86ccdeb3f612718914e4cc21c7f4c8ad31",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_match_k64_ct.h5",
+        "kind": "artifact",
+        "bytes": 10280382,
+        "sha256": "2ace98e7782051641d8d244c09cd8b529c220d4632ecd01bf5c25d1c7212ba5f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/null_pilot_k64_ct.h5",
+        "kind": "artifact",
+        "bytes": 72165791,
+        "sha256": "eff38e393262939d908b89d9af50af57068f8c5489bd0d0171c0b6c23494d49a",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_counts_all_theta_k64_ct.h5",
+        "kind": "artifact",
+        "bytes": 1748814,
+        "sha256": "43d7185f93c6f8582250e0f2410ac3e5ba5b55db32f2729d889927e99db4a228",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_marginal_m1_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 522640,
+        "sha256": "b03325ae97976715c6d7147dda74ac4fbfea25d2285bb6b17a438401352f2b4d",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 17930,
+        "sha256": "fd0373d6c6636198ea79a4a257116d747006182a5be1b222b664bd96e3c08666",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/annotated_doc-0.0.4.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 34,
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/anyio-4.14.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "fdde98bbaba269998d7b40b2768c22ac4f429a0ef350bda0d3cb50a684b742f7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/fonttools-4.63.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 147,
+        "sha256": "f2454775dc5f156038e05483e26069982fb8b82ca7427928cfff5a3496f6dbb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/httpx-0.28.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 37,
+        "sha256": "da55647509b12c0d6934c812376795f3da3dd070997b3866370b32eabc8a0d20",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/huggingface_hub-1.24.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 212,
+        "sha256": "ccfec5fdb052762adc3d0172b07419f45dcb727e7f74248e119c559460ac1b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/idna-3.18.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 38,
+        "sha256": "ec7de718e1daa778e72c4e5eeeaed8c2bf55abc6b107b5888f9f82ff8376be1c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "4fcd65edf1d0de9965a50e3052d40ae9af20fe9eb0c506e78ca5470a4d96306e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 94,
+        "sha256": "1f68d9683b0327f8bd1f64b05a9c2e15e97c06b67dc472aebe1f83400596f654",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/direct_url.json",
+        "kind": "artifact",
+        "bytes": 337,
+        "sha256": "f1bbffd462d579270d4a2e6c1d0987ea23c5f11049e3ce29e05f3ca0737c7487",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 220,
+        "sha256": "ec26fade0c8bdac211a6c1dd003a65eb16885b925395423e93fcaa115af4052c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pandas-3.0.3.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 69,
+        "sha256": "3952ca3443ecf90ec85b2a5604be9fc6fe7aff3b78b119c423bcdac28eb2ff4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pip-26.1.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 84,
+        "sha256": "5617fcb34218817dfb9ad778bc62fbdc13dcc5d2a7a9e0853f3079f9ddf4c7ca",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pygments-2.20.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 53,
+        "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pytest-9.1.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 95,
+        "sha256": "b21b5de5a40ce6372eff650d87fe4ce166b662590a307535e179bfc6c8d2a4d6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/setuptools-83.0.0-py3.10.egg-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 2449,
+        "sha256": "ce482d8697ff15af4d544f69e85293dd793d0d1d5f680711538728820b15ee30",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/sympy-1.14.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "4a9faf2c9a26e0f4658467d8e91a54adeed28d89b7dc936af4d0b0086796f9f4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/torch-2.13.0+cu126.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 211,
+        "sha256": "72ba54dc1186d950460c57b009875635e78314ee5d4872d276137c1ff61b762e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 57356,
+        "sha256": "a0406c7575adf27f56a09afa6fbcdcd8d9951d12ca219698baa5627351b0d9a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/transformers-5.14.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 68,
+        "sha256": "4dc0659aab98578ef928904af04850367b0b89e816532fd0a0a478474a4c8768",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 1663,
+        "sha256": "c0067ae183ac3e221330fc16dd9539a4bc7f2e56a34245cca63335e9da14a8ce",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 176,
+        "sha256": "8eceb6f3d151935f3f24b99b35f1ac9ad28fefb0fa6986b024e4881efdd7f3d2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/typer-0.27.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 57,
+        "sha256": "60ed770728aa59eb9ab3d5742400cb5004591547bf73053fef099336fc41610f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/wheel-0.47.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 110,
+        "sha256": "24976d480193bcc2db2244d565400cbc628edfd16d59f09517c9a9fcd1fa7b88",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/configs/k64/mvp_k64.yaml",
+        "kind": "repo",
+        "bytes": 34282,
+        "sha256": "d8365bc69fe912e61d2e5ea07932de9b31c99952e808d8622d7847651440c8c1"
+      },
+      {
+        "path": "/proc/2262264/maps",
+        "kind": "other"
+      }
+    ],
+    "arm_k64_w2560": [
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sf_k64_w2560_ct.h5",
+        "kind": "artifact",
+        "bytes": 826041,
+        "sha256": "8b8324f2de90a5b9c43a2b755021264fe563ec702b02fcefccbbb8947349c3e5",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_k64_w2560_ct.json",
+        "kind": "artifact",
+        "bytes": 5492,
+        "sha256": "b6e24909edcba4a7018d59e5901c392a315f78ee7f621d9e9b26ca54d53bb3f9",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/d_fs_k64_w2560_ct.h5",
+        "kind": "artifact",
+        "bytes": 538554,
+        "sha256": "8d94420aad18673402f2a7ff08ca01b12e4f7857fddc23f640cc3f2eb32c33a7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/fvu_eval_k64_w2560_ct.json",
+        "kind": "artifact",
+        "bytes": 10104,
+        "sha256": "6dc92724e35e365de8c20406cbba5460175dfd3498ad25e36fad98f676eb4faa",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_k64_w2560_b_ratio_ct.h5",
+        "kind": "artifact",
+        "bytes": 51384300,
+        "sha256": "1be7f52cc221430774d8b5241d9238acd5eca1c5ef0ad58d68b1f7eb6f4fa793",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_match_k64_w2560_ct.h5",
+        "kind": "artifact",
+        "bytes": 679695,
+        "sha256": "5da712bad47b9eb9a1094dfeeffe2371647e7269bd4fb6e828851944c33ac3d9",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/null_pilot_k64_w2560_ct.h5",
+        "kind": "artifact",
+        "bytes": 14377972,
+        "sha256": "7c9f1956b8bdf40eb0a03b251cd88a1485c06e8d1b5d7ea5acf2c057d6d4f347",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_counts_all_theta_k64_w2560_ct.h5",
+        "kind": "artifact",
+        "bytes": 245372,
+        "sha256": "28e625aac3b53ad4e6837d4e464baed552374d8a8eb669aeceda921291678770",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_marginal_m1_k64_w2560_ct.json",
+        "kind": "artifact",
+        "bytes": 214982,
+        "sha256": "5d48cf78e8679b3ef927ebdd65ca6cece8c8e9866be8af187d2a3a625edce1c2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_k64_w2560_ct.json",
+        "kind": "artifact",
+        "bytes": 12503,
+        "sha256": "7a8d1a0a38ef1bc0ac60a010c911fd0882f8f1e3faee79a90bef7ee35bfc43b3",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/annotated_doc-0.0.4.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 34,
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/anyio-4.14.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "fdde98bbaba269998d7b40b2768c22ac4f429a0ef350bda0d3cb50a684b742f7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/fonttools-4.63.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 147,
+        "sha256": "f2454775dc5f156038e05483e26069982fb8b82ca7427928cfff5a3496f6dbb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/httpx-0.28.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 37,
+        "sha256": "da55647509b12c0d6934c812376795f3da3dd070997b3866370b32eabc8a0d20",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/huggingface_hub-1.24.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 212,
+        "sha256": "ccfec5fdb052762adc3d0172b07419f45dcb727e7f74248e119c559460ac1b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/idna-3.18.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 38,
+        "sha256": "ec7de718e1daa778e72c4e5eeeaed8c2bf55abc6b107b5888f9f82ff8376be1c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "4fcd65edf1d0de9965a50e3052d40ae9af20fe9eb0c506e78ca5470a4d96306e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 94,
+        "sha256": "1f68d9683b0327f8bd1f64b05a9c2e15e97c06b67dc472aebe1f83400596f654",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/direct_url.json",
+        "kind": "artifact",
+        "bytes": 337,
+        "sha256": "f1bbffd462d579270d4a2e6c1d0987ea23c5f11049e3ce29e05f3ca0737c7487",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 220,
+        "sha256": "ec26fade0c8bdac211a6c1dd003a65eb16885b925395423e93fcaa115af4052c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pandas-3.0.3.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 69,
+        "sha256": "3952ca3443ecf90ec85b2a5604be9fc6fe7aff3b78b119c423bcdac28eb2ff4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pip-26.1.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 84,
+        "sha256": "5617fcb34218817dfb9ad778bc62fbdc13dcc5d2a7a9e0853f3079f9ddf4c7ca",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pygments-2.20.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 53,
+        "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pytest-9.1.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 95,
+        "sha256": "b21b5de5a40ce6372eff650d87fe4ce166b662590a307535e179bfc6c8d2a4d6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/setuptools-83.0.0-py3.10.egg-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 2449,
+        "sha256": "ce482d8697ff15af4d544f69e85293dd793d0d1d5f680711538728820b15ee30",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/sympy-1.14.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "4a9faf2c9a26e0f4658467d8e91a54adeed28d89b7dc936af4d0b0086796f9f4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/torch-2.13.0+cu126.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 211,
+        "sha256": "72ba54dc1186d950460c57b009875635e78314ee5d4872d276137c1ff61b762e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 57356,
+        "sha256": "a0406c7575adf27f56a09afa6fbcdcd8d9951d12ca219698baa5627351b0d9a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/transformers-5.14.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 68,
+        "sha256": "4dc0659aab98578ef928904af04850367b0b89e816532fd0a0a478474a4c8768",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 1663,
+        "sha256": "c0067ae183ac3e221330fc16dd9539a4bc7f2e56a34245cca63335e9da14a8ce",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 176,
+        "sha256": "8eceb6f3d151935f3f24b99b35f1ac9ad28fefb0fa6986b024e4881efdd7f3d2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/typer-0.27.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 57,
+        "sha256": "60ed770728aa59eb9ab3d5742400cb5004591547bf73053fef099336fc41610f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/wheel-0.47.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 110,
+        "sha256": "24976d480193bcc2db2244d565400cbc628edfd16d59f09517c9a9fcd1fa7b88",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/configs/grid/mvp_k64_w2560.yaml",
+        "kind": "repo",
+        "bytes": 34281,
+        "sha256": "8b4f15b7058c0840b0556603077637ac48d0d888876f00de775ff5836b43ba28"
+      },
+      {
+        "path": "/proc/2262256/maps",
+        "kind": "other"
+      }
+    ],
+    "arm_k64_w40960": [
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sf_k64_w40960_ct.h5",
+        "kind": "artifact",
+        "bytes": 13085238,
+        "sha256": "c7a69d470a2390f2969fc6cc6bcf89663e0620808fda5c751ad413f52d402f33",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_k64_w40960_ct.json",
+        "kind": "artifact",
+        "bytes": 5563,
+        "sha256": "d7e28d27b63315867b590d4c4ca1f30a9f42fcdd77600e93737b46d94d93894b",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/d_fs_k64_w40960_ct.h5",
+        "kind": "artifact",
+        "bytes": 7261481,
+        "sha256": "acb49b20e6124d4c5f01f598a9c174b764c6a5d41e0c03e0cb48d5b403f345b1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/fvu_eval_k64_w40960_ct.json",
+        "kind": "artifact",
+        "bytes": 10115,
+        "sha256": "4109748b8b7f61818f5caf096d3e8d71624768dbf649798f68f9673433324dad",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_k64_w40960_b_ratio_ct.h5",
+        "kind": "artifact",
+        "bytes": 311719110,
+        "sha256": "8d8be4c8f455fa33ede83599c3926ad5d961d283da3496303a57a7150a664e08",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_match_k64_w40960_ct.h5",
+        "kind": "artifact",
+        "bytes": 8496662,
+        "sha256": "c036ae4e8d91d5bab4a41bfa3d88f39ec7d835b39f815917d108101bd7844057",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/null_pilot_k64_w40960_ct.h5",
+        "kind": "artifact",
+        "bytes": 133420151,
+        "sha256": "aeb38c06ac840ba3487bce2cbf25b5c4ffeb56f9809a5eb718c745ec18771e74",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_counts_all_theta_k64_w40960_ct.h5",
+        "kind": "artifact",
+        "bytes": 2510386,
+        "sha256": "c27b96ee3d83e1b6d9eb674c92b18a23a1f5d444ccf02f52d2d3227f9ef8c85c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_marginal_m1_k64_w40960_ct.json",
+        "kind": "artifact",
+        "bytes": 243300,
+        "sha256": "526a182c05cccb2faad341a5c95f76f8a9aea4730d9bc0f28cba4150f8c0fb02",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_k64_w40960_ct.json",
+        "kind": "artifact",
+        "bytes": 12534,
+        "sha256": "86b8e3eaa31fffadcd24f19c60fccce910cd4e051fdb449fecbadf1ce5a3b504",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/annotated_doc-0.0.4.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 34,
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/anyio-4.14.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "fdde98bbaba269998d7b40b2768c22ac4f429a0ef350bda0d3cb50a684b742f7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/fonttools-4.63.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 147,
+        "sha256": "f2454775dc5f156038e05483e26069982fb8b82ca7427928cfff5a3496f6dbb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/httpx-0.28.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 37,
+        "sha256": "da55647509b12c0d6934c812376795f3da3dd070997b3866370b32eabc8a0d20",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/huggingface_hub-1.24.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 212,
+        "sha256": "ccfec5fdb052762adc3d0172b07419f45dcb727e7f74248e119c559460ac1b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/idna-3.18.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 38,
+        "sha256": "ec7de718e1daa778e72c4e5eeeaed8c2bf55abc6b107b5888f9f82ff8376be1c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "4fcd65edf1d0de9965a50e3052d40ae9af20fe9eb0c506e78ca5470a4d96306e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 94,
+        "sha256": "1f68d9683b0327f8bd1f64b05a9c2e15e97c06b67dc472aebe1f83400596f654",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/direct_url.json",
+        "kind": "artifact",
+        "bytes": 337,
+        "sha256": "f1bbffd462d579270d4a2e6c1d0987ea23c5f11049e3ce29e05f3ca0737c7487",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 220,
+        "sha256": "ec26fade0c8bdac211a6c1dd003a65eb16885b925395423e93fcaa115af4052c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pandas-3.0.3.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 69,
+        "sha256": "3952ca3443ecf90ec85b2a5604be9fc6fe7aff3b78b119c423bcdac28eb2ff4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pip-26.1.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 84,
+        "sha256": "5617fcb34218817dfb9ad778bc62fbdc13dcc5d2a7a9e0853f3079f9ddf4c7ca",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pygments-2.20.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 53,
+        "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pytest-9.1.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 95,
+        "sha256": "b21b5de5a40ce6372eff650d87fe4ce166b662590a307535e179bfc6c8d2a4d6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/setuptools-83.0.0-py3.10.egg-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 2449,
+        "sha256": "ce482d8697ff15af4d544f69e85293dd793d0d1d5f680711538728820b15ee30",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/sympy-1.14.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "4a9faf2c9a26e0f4658467d8e91a54adeed28d89b7dc936af4d0b0086796f9f4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/torch-2.13.0+cu126.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 211,
+        "sha256": "72ba54dc1186d950460c57b009875635e78314ee5d4872d276137c1ff61b762e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 57356,
+        "sha256": "a0406c7575adf27f56a09afa6fbcdcd8d9951d12ca219698baa5627351b0d9a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/transformers-5.14.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 68,
+        "sha256": "4dc0659aab98578ef928904af04850367b0b89e816532fd0a0a478474a4c8768",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 1663,
+        "sha256": "c0067ae183ac3e221330fc16dd9539a4bc7f2e56a34245cca63335e9da14a8ce",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 176,
+        "sha256": "8eceb6f3d151935f3f24b99b35f1ac9ad28fefb0fa6986b024e4881efdd7f3d2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/typer-0.27.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 57,
+        "sha256": "60ed770728aa59eb9ab3d5742400cb5004591547bf73053fef099336fc41610f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/wheel-0.47.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 110,
+        "sha256": "24976d480193bcc2db2244d565400cbc628edfd16d59f09517c9a9fcd1fa7b88",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/configs/grid/mvp_k64_w40960.yaml",
+        "kind": "repo",
+        "bytes": 34283,
+        "sha256": "f000fab5f7c51ca0f7bc114e93b2e54627a3a8c1a62029e5f6ab03b6d2d896fe"
+      },
+      {
+        "path": "/proc/4107049/maps",
+        "kind": "other"
+      }
+    ],
+    "arm_k16_w10240": [
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sf_k16_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 3190462,
+        "sha256": "78b88fabc2864a8f1105f98b0e2c4aa0b37a4e140d29e9b947914391cbb63557",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/d_fs_k16_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 1735588,
+        "sha256": "8c940badfdb8e7fc968433136f918523a1426d5eece94a39ffc0580bf1bba160",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/fvu_eval_k16_w10240_ct.json",
+        "kind": "artifact",
+        "bytes": 10120,
+        "sha256": "444999531930e7897209e0b1f34d6a6dc2078646ae168950c5b0e1d5941c5685",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_k16_w10240_b_ratio_topmerged_ct.h5",
+        "kind": "artifact",
+        "bytes": 57931891,
+        "sha256": "7f02caa37216ef66a723df0a0fa2737955ac4d16cc66e28cb1d00c4c8f065fb0",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_match_k16_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 2844218,
+        "sha256": "d6959de87992d3a22446a8359e4101ca4de893f401a6e7bdfbb78ef1d86f427f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/null_pilot_k16_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 38249574,
+        "sha256": "03eaff3cdb08dbd5ce6099529a1e409282d3d042694f5d73cc4680ec7cdc7212",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_counts_all_theta_k16_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 802508,
+        "sha256": "44816664907f80582e8fb0c9201210e3694de46d770bc8bf7095a891ca3e6eb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_marginal_m1_k16_w10240_ct.json",
+        "kind": "artifact",
+        "bytes": 240558,
+        "sha256": "95c4effa78b637ce942e9f48ef9fd871b3ec01ccff407459b1b5f2e8ee04e13f",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_k16_w10240_topmerged_ct.json",
+        "kind": "artifact",
+        "bytes": 12630,
+        "sha256": "376a00d4c0261eb6097b5de7b3160c8b4258031ff2175a4950360a087c5749eb",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/annotated_doc-0.0.4.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 34,
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/anyio-4.14.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "fdde98bbaba269998d7b40b2768c22ac4f429a0ef350bda0d3cb50a684b742f7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/fonttools-4.63.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 147,
+        "sha256": "f2454775dc5f156038e05483e26069982fb8b82ca7427928cfff5a3496f6dbb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/httpx-0.28.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 37,
+        "sha256": "da55647509b12c0d6934c812376795f3da3dd070997b3866370b32eabc8a0d20",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/huggingface_hub-1.24.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 212,
+        "sha256": "ccfec5fdb052762adc3d0172b07419f45dcb727e7f74248e119c559460ac1b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/idna-3.18.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 38,
+        "sha256": "ec7de718e1daa778e72c4e5eeeaed8c2bf55abc6b107b5888f9f82ff8376be1c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "4fcd65edf1d0de9965a50e3052d40ae9af20fe9eb0c506e78ca5470a4d96306e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 94,
+        "sha256": "1f68d9683b0327f8bd1f64b05a9c2e15e97c06b67dc472aebe1f83400596f654",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/direct_url.json",
+        "kind": "artifact",
+        "bytes": 337,
+        "sha256": "f1bbffd462d579270d4a2e6c1d0987ea23c5f11049e3ce29e05f3ca0737c7487",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 220,
+        "sha256": "ec26fade0c8bdac211a6c1dd003a65eb16885b925395423e93fcaa115af4052c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pandas-3.0.3.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 69,
+        "sha256": "3952ca3443ecf90ec85b2a5604be9fc6fe7aff3b78b119c423bcdac28eb2ff4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pip-26.1.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 84,
+        "sha256": "5617fcb34218817dfb9ad778bc62fbdc13dcc5d2a7a9e0853f3079f9ddf4c7ca",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pygments-2.20.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 53,
+        "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pytest-9.1.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 95,
+        "sha256": "b21b5de5a40ce6372eff650d87fe4ce166b662590a307535e179bfc6c8d2a4d6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/setuptools-83.0.0-py3.10.egg-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 2449,
+        "sha256": "ce482d8697ff15af4d544f69e85293dd793d0d1d5f680711538728820b15ee30",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/sympy-1.14.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "4a9faf2c9a26e0f4658467d8e91a54adeed28d89b7dc936af4d0b0086796f9f4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/torch-2.13.0+cu126.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 211,
+        "sha256": "72ba54dc1186d950460c57b009875635e78314ee5d4872d276137c1ff61b762e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 57356,
+        "sha256": "a0406c7575adf27f56a09afa6fbcdcd8d9951d12ca219698baa5627351b0d9a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/transformers-5.14.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 68,
+        "sha256": "4dc0659aab98578ef928904af04850367b0b89e816532fd0a0a478474a4c8768",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 1663,
+        "sha256": "c0067ae183ac3e221330fc16dd9539a4bc7f2e56a34245cca63335e9da14a8ce",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 176,
+        "sha256": "8eceb6f3d151935f3f24b99b35f1ac9ad28fefb0fa6986b024e4881efdd7f3d2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/typer-0.27.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 57,
+        "sha256": "60ed770728aa59eb9ab3d5742400cb5004591547bf73053fef099336fc41610f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/wheel-0.47.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 110,
+        "sha256": "24976d480193bcc2db2244d565400cbc628edfd16d59f09517c9a9fcd1fa7b88",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/configs/grid/mvp_k16_w10240.yaml",
+        "kind": "repo",
+        "bytes": 34282,
+        "sha256": "e6a63cbea83270970e5228b209474b740db17948ebcda6fa939049ffde5b8c17"
+      },
+      {
+        "path": "/proc/4107048/maps",
+        "kind": "other"
+      }
+    ],
+    "arm_k128_w10240": [
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sf_k128_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 3284290,
+        "sha256": "8bf46d97633225026319b18fae74d9f9f67fb76cb952ea855bc34ccf92c763b8",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/d_fs_k128_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 2004607,
+        "sha256": "60b2ecad5cbbbf648950a26fb740edfd339956f3a842b069069fb1550b52e3eb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/fvu_eval_k128_w10240_ct.json",
+        "kind": "artifact",
+        "bytes": 10128,
+        "sha256": "b8e73ab37468099739302468d4a35221314649457f160bc3f0fe67cc0a9b5f8a",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_k128_w10240_b_ratio_topmerged_ct.h5",
+        "kind": "artifact",
+        "bytes": 175819209,
+        "sha256": "0a04e259ead90906a5f6a8f2f8abc6f810f4ba0d289c520b679b95d6eaf24276",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_match_k128_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 1900688,
+        "sha256": "ee2fcb7082913f7607d1006a88964085e0e9215ee8922ddc2fa45b9ea575b85a",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/null_pilot_k128_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 38260422,
+        "sha256": "7b74ac2b6bcb2a03f57876f9378a8f4bafd1def7a27144ea270bdb4c65009f20",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_counts_all_theta_k128_w10240_ct.h5",
+        "kind": "artifact",
+        "bytes": 617010,
+        "sha256": "195041b286172171b4e9a9d86470f0953c35fd9574a0310e5e14e8ad898aadc7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_marginal_m1_k128_w10240_ct.json",
+        "kind": "artifact",
+        "bytes": 238074,
+        "sha256": "f1b29e6508cbaa4c50747f2566b8cc6598e798ae9b894b58e2ce184943160240",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_k128_w10240_topmerged_ct.json",
+        "kind": "artifact",
+        "bytes": 12466,
+        "sha256": "5dd94b411cccdc1976146e6300d1d292224b112fcd44c9033fe4624f28407b04",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/annotated_doc-0.0.4.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 34,
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/anyio-4.14.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "fdde98bbaba269998d7b40b2768c22ac4f429a0ef350bda0d3cb50a684b742f7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/fonttools-4.63.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 147,
+        "sha256": "f2454775dc5f156038e05483e26069982fb8b82ca7427928cfff5a3496f6dbb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/httpx-0.28.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 37,
+        "sha256": "da55647509b12c0d6934c812376795f3da3dd070997b3866370b32eabc8a0d20",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/huggingface_hub-1.24.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 212,
+        "sha256": "ccfec5fdb052762adc3d0172b07419f45dcb727e7f74248e119c559460ac1b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/idna-3.18.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 38,
+        "sha256": "ec7de718e1daa778e72c4e5eeeaed8c2bf55abc6b107b5888f9f82ff8376be1c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "4fcd65edf1d0de9965a50e3052d40ae9af20fe9eb0c506e78ca5470a4d96306e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 94,
+        "sha256": "1f68d9683b0327f8bd1f64b05a9c2e15e97c06b67dc472aebe1f83400596f654",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/direct_url.json",
+        "kind": "artifact",
+        "bytes": 337,
+        "sha256": "f1bbffd462d579270d4a2e6c1d0987ea23c5f11049e3ce29e05f3ca0737c7487",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 220,
+        "sha256": "ec26fade0c8bdac211a6c1dd003a65eb16885b925395423e93fcaa115af4052c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pandas-3.0.3.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 69,
+        "sha256": "3952ca3443ecf90ec85b2a5604be9fc6fe7aff3b78b119c423bcdac28eb2ff4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pip-26.1.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 84,
+        "sha256": "5617fcb34218817dfb9ad778bc62fbdc13dcc5d2a7a9e0853f3079f9ddf4c7ca",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pygments-2.20.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 53,
+        "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pytest-9.1.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 95,
+        "sha256": "b21b5de5a40ce6372eff650d87fe4ce166b662590a307535e179bfc6c8d2a4d6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/setuptools-83.0.0-py3.10.egg-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 2449,
+        "sha256": "ce482d8697ff15af4d544f69e85293dd793d0d1d5f680711538728820b15ee30",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/sympy-1.14.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "4a9faf2c9a26e0f4658467d8e91a54adeed28d89b7dc936af4d0b0086796f9f4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/torch-2.13.0+cu126.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 211,
+        "sha256": "72ba54dc1186d950460c57b009875635e78314ee5d4872d276137c1ff61b762e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 57356,
+        "sha256": "a0406c7575adf27f56a09afa6fbcdcd8d9951d12ca219698baa5627351b0d9a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/transformers-5.14.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 68,
+        "sha256": "4dc0659aab98578ef928904af04850367b0b89e816532fd0a0a478474a4c8768",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 1663,
+        "sha256": "c0067ae183ac3e221330fc16dd9539a4bc7f2e56a34245cca63335e9da14a8ce",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 176,
+        "sha256": "8eceb6f3d151935f3f24b99b35f1ac9ad28fefb0fa6986b024e4881efdd7f3d2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/typer-0.27.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 57,
+        "sha256": "60ed770728aa59eb9ab3d5742400cb5004591547bf73053fef099336fc41610f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/wheel-0.47.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 110,
+        "sha256": "24976d480193bcc2db2244d565400cbc628edfd16d59f09517c9a9fcd1fa7b88",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/configs/grid/mvp_k128_w10240.yaml",
+        "kind": "repo",
+        "bytes": 34283,
+        "sha256": "921235b8c6bf0cc48ca3dfe0b7fb81b12954aeaadb3e1ea843f5b9afc2875d96"
+      },
+      {
+        "path": "/proc/3024791/maps",
+        "kind": "other"
+      }
+    ],
+    "anchors": [
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_ct.json",
+        "kind": "artifact",
+        "bytes": 295105,
+        "sha256": "443a204d67ec3e96675fd9528d5df69f20ef3d982ca7cb63e588e67bd01fc423",
+        "record_hash": "MATCH",
+        "mismatch_lines": [
+          "docs/NUMBERS_OF_RECORD.md: **Owner:** `$PROJECT/analysis/ct/activation_correlation_jackknife_ct.json` (`4c53e43a96d6b2e7713a638944ab7c573e380082589fa36bf223348a271a4d84`, job"
+        ]
+      },
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_match_ct.h5",
+        "kind": "artifact",
+        "bytes": 23928395,
+        "sha256": "a17472e8d8911f0515d238a0c67c79f66f3e230f20aaca0aafb311c60035c084",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/d_fs.h5",
+        "kind": "artifact",
+        "bytes": 3734357,
+        "sha256": "4f1f31701c61359c9d713193f2d049cf39d3dbbabf405d1e53c238854f62a080",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/gtilde_compliant_b_ratio.h5",
+        "kind": "artifact",
+        "bytes": 170496848,
+        "sha256": "151de1f23f51c6db2fe4a3c4ec58ce82cbd6755892e8599e7f36e7954586adf1",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/null_pilot_compliant.h5",
+        "kind": "artifact",
+        "bytes": 45353316,
+        "sha256": "a19205b8171c4ca80255fc182192766a4d82605a341ab83dc159627c38819f93",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/rf_counts_all_theta_n39.h5",
+        "kind": "artifact",
+        "bytes": 2296433,
+        "sha256": "40d5a82fc6ca066be225fe31bf1b596119eca92e115790888afe7514aca1a5ed",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/rf_marginal_m1_n39.json",
+        "kind": "artifact",
+        "bytes": 913260,
+        "sha256": "20a0d3b9aa751adfa178a6090c1904e0853e7841451e9f43191d9aee1f49e0be",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/release/derived/features_n39.csv.gz",
+        "kind": "bundle",
+        "bytes": 12343780,
+        "sha256": "84bcabbd767da5e23b1fe4a1b5ee249a85bea209bbd27f008c1568a1098cda88"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/annotated_doc-0.0.4.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 34,
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/anyio-4.14.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "fdde98bbaba269998d7b40b2768c22ac4f429a0ef350bda0d3cb50a684b742f7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/fonttools-4.63.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 147,
+        "sha256": "f2454775dc5f156038e05483e26069982fb8b82ca7427928cfff5a3496f6dbb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/httpx-0.28.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 37,
+        "sha256": "da55647509b12c0d6934c812376795f3da3dd070997b3866370b32eabc8a0d20",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/huggingface_hub-1.24.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 212,
+        "sha256": "ccfec5fdb052762adc3d0172b07419f45dcb727e7f74248e119c559460ac1b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/idna-3.18.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 38,
+        "sha256": "ec7de718e1daa778e72c4e5eeeaed8c2bf55abc6b107b5888f9f82ff8376be1c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "4fcd65edf1d0de9965a50e3052d40ae9af20fe9eb0c506e78ca5470a4d96306e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 94,
+        "sha256": "1f68d9683b0327f8bd1f64b05a9c2e15e97c06b67dc472aebe1f83400596f654",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/direct_url.json",
+        "kind": "artifact",
+        "bytes": 337,
+        "sha256": "f1bbffd462d579270d4a2e6c1d0987ea23c5f11049e3ce29e05f3ca0737c7487",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 220,
+        "sha256": "ec26fade0c8bdac211a6c1dd003a65eb16885b925395423e93fcaa115af4052c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pandas-3.0.3.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 69,
+        "sha256": "3952ca3443ecf90ec85b2a5604be9fc6fe7aff3b78b119c423bcdac28eb2ff4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pip-26.1.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 84,
+        "sha256": "5617fcb34218817dfb9ad778bc62fbdc13dcc5d2a7a9e0853f3079f9ddf4c7ca",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pygments-2.20.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 53,
+        "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pytest-9.1.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 95,
+        "sha256": "b21b5de5a40ce6372eff650d87fe4ce166b662590a307535e179bfc6c8d2a4d6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/setuptools-83.0.0-py3.10.egg-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 2449,
+        "sha256": "ce482d8697ff15af4d544f69e85293dd793d0d1d5f680711538728820b15ee30",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/sympy-1.14.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "4a9faf2c9a26e0f4658467d8e91a54adeed28d89b7dc936af4d0b0086796f9f4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/torch-2.13.0+cu126.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 211,
+        "sha256": "72ba54dc1186d950460c57b009875635e78314ee5d4872d276137c1ff61b762e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 57356,
+        "sha256": "a0406c7575adf27f56a09afa6fbcdcd8d9951d12ca219698baa5627351b0d9a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/transformers-5.14.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 68,
+        "sha256": "4dc0659aab98578ef928904af04850367b0b89e816532fd0a0a478474a4c8768",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 1663,
+        "sha256": "c0067ae183ac3e221330fc16dd9539a4bc7f2e56a34245cca63335e9da14a8ce",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 176,
+        "sha256": "8eceb6f3d151935f3f24b99b35f1ac9ad28fefb0fa6986b024e4881efdd7f3d2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/typer-0.27.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 57,
+        "sha256": "60ed770728aa59eb9ab3d5742400cb5004591547bf73053fef099336fc41610f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/wheel-0.47.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 110,
+        "sha256": "24976d480193bcc2db2244d565400cbc628edfd16d59f09517c9a9fcd1fa7b88",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/configs/mvp.yaml",
+        "kind": "repo",
+        "bytes": 34282,
+        "sha256": "238b96238dcf083b590306f9935ade03a736d1e7e7b84d370534ee4b4bf36877"
+      },
+      {
+        "path": "/proc/1287816/maps",
+        "kind": "other"
+      }
+    ],
+    "replay": [
+      {
+        "path": "$PROJECT/analysis/ct/activation_correlation_counts_ct.h5",
+        "kind": "artifact",
+        "bytes": 27100546,
+        "sha256": "3b135e207e1213a28e89b8a5592f7714251fa3cc3bbb2ee9fea322b5d1c66882",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/activation_correlation_ct.json",
+        "kind": "artifact",
+        "bytes": 1733,
+        "sha256": "be3640c2c95b208a29ee2cee3d759aa223c4ba5984765c2d44fe0d0c329a2d0e",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/activation_correlation_fit_ct.json",
+        "kind": "artifact",
+        "bytes": 1841,
+        "sha256": "fbbb1b4a4d71e9139347945d6b889d7f0a91c44f7a5d82bd04f3e2c28534c6d6",
+        "record_hash": "MATCH",
+        "mismatch_lines": [
+          "docs/NUMBERS_OF_RECORD.md: `activation_correlation_counts_ct.h5` (`3b135e207e1213a28e89b8a5592f7714251fa3cc3bbb2ee9fea322b5d1c66882`), `activation_correlation_fit_ct.json`"
+        ]
+      },
+      {
+        "path": "$PROJECT/analysis/ct/activation_correlation_jackknife_ct.json",
+        "kind": "artifact",
+        "bytes": 19592,
+        "sha256": "4c53e43a96d6b2e7713a638944ab7c573e380082589fa36bf223348a271a4d84",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/activation_logM_by_class_ct.json",
+        "kind": "artifact",
+        "bytes": 3182,
+        "sha256": "309f2d218a7140609a6d7f68ac791ce10a183989d938bf3a531733c209a71683",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/activation_vs_decoder_slope_curve_ct.json",
+        "kind": "artifact",
+        "bytes": 11776,
+        "sha256": "c4c3c10dc0259029514a3395d90deb4412db539cbf18c834c62734c939b78968",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct10_actA_counts_ct.h5",
+        "kind": "artifact",
+        "bytes": 26411974,
+        "sha256": "724cd50f535e8098a414bd3a111993893677536eee9ae4b63165c4df1e9bfdb9",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct10_actA_ct.json",
+        "kind": "artifact",
+        "bytes": 1731,
+        "sha256": "29d0c7bc7534f064d3d603dee0d3dd613cea53746e6e87c6baadf275ece809b5",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct10_disjoint_rows_ct.json",
+        "kind": "artifact",
+        "bytes": 12429,
+        "sha256": "f95fc58eba4d581174a0a8a46e34a7721be9c84a6cccb2d5689779fe8ec9cd0e",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct15_disjoint_comparators_ct.json",
+        "kind": "artifact",
+        "bytes": 3579,
+        "sha256": "d331cd9e5a1a3d62e7806a6d2c8ff84ec26efca2781d8e3894f4224f42e613dd",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct16_oneway_max_cos_ct.h5",
+        "kind": "artifact",
+        "bytes": 27799587,
+        "sha256": "22b9bb72ffcc34a088169d826d7999fc6c436e4f9c8a292c0088f7eac59e9a38",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct16_threshold_independent_ct.json",
+        "kind": "artifact",
+        "bytes": 7584,
+        "sha256": "cdabed89dc480645b7f93dff8839971636dbb1e7fa436168eb0edd0dd33ce710",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct17_slopes_by_firing_bin_ct.json",
+        "kind": "artifact",
+        "bytes": 10410,
+        "sha256": "e11b3b90e2212a585673c2d888720815b2fe2e4591d8a89a0fa3bec84fdc2b8b",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct20_rules_n19_ct.json",
+        "kind": "artifact",
+        "bytes": 12062,
+        "sha256": "dcd1156bc4026226044b39d4cb9f122a6e09b0fa710ba38cfcd5828c2e9043f3",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct20_rules_sim_ct.h5",
+        "kind": "artifact",
+        "bytes": 45093702,
+        "sha256": "d1a5871dcea6e0a70c97e41d5e6a3bb3e7f5330d7d1d6cd35fefe2bca18e1265",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct20b_rules_grid_ct.json",
+        "kind": "artifact",
+        "bytes": 41478,
+        "sha256": "75b004d2acf29fb02b51abb1b712935cd8661a8d9d8c0933da0f9f7d7deb9c99",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct27_raw_encoder_ct.json",
+        "kind": "artifact",
+        "bytes": 3871,
+        "sha256": "d02447109c9bf7ba140656aaa02c36d75ab719e16a8f8d36a9cc98aad4bcdc4b",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct27_raw_encoder_sim_ct.h5",
+        "kind": "artifact",
+        "bytes": 9526318,
+        "sha256": "c2e7e2d6c45332a8100743efe7f57a12bfa08c0c031a72018deb4f8beebd6fbb",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_ct10_half_a_ct.h5",
+        "kind": "artifact",
+        "bytes": 127683548,
+        "sha256": "930b2c83bdeb39efc8dafe0e70e74f3c56ef5f3a89e065a7ae05956be1e88e07",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_ct10_half_b_ct.h5",
+        "kind": "artifact",
+        "bytes": 122271726,
+        "sha256": "acb0f082d2d69b83176f700ba1041b79d5e33c24faa45324c89c774cdbd93216",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_shared_experimental_merged_ct.h5",
+        "kind": "artifact",
+        "bytes": 49804401,
+        "sha256": "0f385d20168aa20317fe19af89d235cfa7fa064d30bffff9a3ffe047775df1d0",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/gtilde_shared_propagated_merged_ct.h5",
+        "kind": "artifact",
+        "bytes": 52220881,
+        "sha256": "651f83b3282ce8c740155a7a0c64bb788ffee139492848c22da6e06ad25a18ab",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_ct.json",
+        "kind": "artifact",
+        "bytes": 295105,
+        "sha256": "443a204d67ec3e96675fd9528d5df69f20ef3d982ca7cb63e588e67bd01fc423",
+        "record_hash": "MATCH",
+        "mismatch_lines": [
+          "docs/NUMBERS_OF_RECORD.md: **Owner:** `$PROJECT/analysis/ct/activation_correlation_jackknife_ct.json` (`4c53e43a96d6b2e7713a638944ab7c573e380082589fa36bf223348a271a4d84`, job"
+        ]
+      },
+      {
+        "path": "$PROJECT/analysis/ct/jackknife_match_ct.h5",
+        "kind": "artifact",
+        "bytes": 23928395,
+        "sha256": "a17472e8d8911f0515d238a0c67c79f66f3e230f20aaca0aafb311c60035c084",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/stratum_slope_merged_ct.json",
+        "kind": "artifact",
+        "bytes": 4542,
+        "sha256": "74e73672e1a1b4e347fbbde7d1f8dd588d609af9b115e943e4598b2bcff91523",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/design3_join_aw_nofeat.json",
+        "kind": "artifact",
+        "bytes": 1385402,
+        "sha256": "b5382f5efa9d2cf8e0386a6d30d15a76e3f8d2f028b52fa77d15c908ef85779d",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/gtilde_compliant_b_ratio.h5",
+        "kind": "artifact",
+        "bytes": 170496848,
+        "sha256": "151de1f23f51c6db2fe4a3c4ec58ce82cbd6755892e8599e7f36e7954586adf1",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/rf_marginal_m1_n39.json",
+        "kind": "artifact",
+        "bytes": 913260,
+        "sha256": "20a0d3b9aa751adfa178a6090c1904e0853e7841451e9f43191d9aee1f49e0be",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/rule_interior_mass_co.h5",
+        "kind": "artifact",
+        "bytes": 1236992,
+        "sha256": "d49df66d0b28b186d8b3e87e5586d3e5b44ba00519a548c4778fc8fb951a76fe",
+        "record_hash": "UNRESOLVED"
+      },
+      {
+        "path": "$PROJECT/release/derived/features_n39.csv.gz",
+        "kind": "bundle",
+        "bytes": 12343780,
+        "sha256": "84bcabbd767da5e23b1fe4a1b5ee249a85bea209bbd27f008c1568a1098cda88"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/annotated_doc-0.0.4.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 34,
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/anyio-4.14.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "fdde98bbaba269998d7b40b2768c22ac4f429a0ef350bda0d3cb50a684b742f7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/fonttools-4.63.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 147,
+        "sha256": "f2454775dc5f156038e05483e26069982fb8b82ca7427928cfff5a3496f6dbb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/httpx-0.28.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 37,
+        "sha256": "da55647509b12c0d6934c812376795f3da3dd070997b3866370b32eabc8a0d20",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/huggingface_hub-1.24.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 212,
+        "sha256": "ccfec5fdb052762adc3d0172b07419f45dcb727e7f74248e119c559460ac1b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/idna-3.18.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 38,
+        "sha256": "ec7de718e1daa778e72c4e5eeeaed8c2bf55abc6b107b5888f9f82ff8376be1c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "4fcd65edf1d0de9965a50e3052d40ae9af20fe9eb0c506e78ca5470a4d96306e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 94,
+        "sha256": "1f68d9683b0327f8bd1f64b05a9c2e15e97c06b67dc472aebe1f83400596f654",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/direct_url.json",
+        "kind": "artifact",
+        "bytes": 337,
+        "sha256": "f1bbffd462d579270d4a2e6c1d0987ea23c5f11049e3ce29e05f3ca0737c7487",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 220,
+        "sha256": "ec26fade0c8bdac211a6c1dd003a65eb16885b925395423e93fcaa115af4052c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pandas-3.0.3.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 69,
+        "sha256": "3952ca3443ecf90ec85b2a5604be9fc6fe7aff3b78b119c423bcdac28eb2ff4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pip-26.1.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 84,
+        "sha256": "5617fcb34218817dfb9ad778bc62fbdc13dcc5d2a7a9e0853f3079f9ddf4c7ca",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pygments-2.20.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 53,
+        "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pytest-9.1.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 95,
+        "sha256": "b21b5de5a40ce6372eff650d87fe4ce166b662590a307535e179bfc6c8d2a4d6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/setuptools-83.0.0-py3.10.egg-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 2449,
+        "sha256": "ce482d8697ff15af4d544f69e85293dd793d0d1d5f680711538728820b15ee30",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/sympy-1.14.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "4a9faf2c9a26e0f4658467d8e91a54adeed28d89b7dc936af4d0b0086796f9f4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/torch-2.13.0+cu126.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 211,
+        "sha256": "72ba54dc1186d950460c57b009875635e78314ee5d4872d276137c1ff61b762e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 57356,
+        "sha256": "a0406c7575adf27f56a09afa6fbcdcd8d9951d12ca219698baa5627351b0d9a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/transformers-5.14.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 68,
+        "sha256": "4dc0659aab98578ef928904af04850367b0b89e816532fd0a0a478474a4c8768",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 1663,
+        "sha256": "c0067ae183ac3e221330fc16dd9539a4bc7f2e56a34245cca63335e9da14a8ce",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 176,
+        "sha256": "8eceb6f3d151935f3f24b99b35f1ac9ad28fefb0fa6986b024e4881efdd7f3d2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/typer-0.27.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 57,
+        "sha256": "60ed770728aa59eb9ab3d5742400cb5004591547bf73053fef099336fc41610f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/wheel-0.47.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 110,
+        "sha256": "24976d480193bcc2db2244d565400cbc628edfd16d59f09517c9a9fcd1fa7b88",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_0.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "ad03c1f0913b3938f15a5bcbaf53497580eb3d57afefb8454ef73855e2d10226"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_1.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "3eb4e3766960b70d1dc24cf975e27b28cb7143173708f6a4477ca6c8a45f2bc2"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_10.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "903a392ffd6eec0397df3ac85bcec49ef666e9b8158e3dad28fdb46d421991e3"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_11.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "96c9517ef53b2bc4bef15381ac74b5cb064007bed4c190d415c557335906cf31"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_12.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "d7eb20ae1fe1a0f7d03d7f4dddb635e8c1562b24fa19f5fa4d5594a92059d864"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_13.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "5d8fb4e09f1a2088c299ce2b44709b051f6acb7ed4145cdc57371a96f174af2d"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_14.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "6b37e10c2e51cb9dcaa08bb68c785ab74c2be09487d3d5d47eb055918857bbac"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_15.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "d5c753de124448d0cf24bf0b8ccf0c2d7259b1d67069b7c06a8735d72cc2fee1"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_16.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "202d53915455d95c99e25d9589b03364b50af5089c2073f797194e4d057b417c"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_17.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "0e20a78b8aa207a391217b4459f04ec25f03d881ab590bf8f61e8d0e0bb0d235"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_18.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "a02ff217c3d84d2293a59cc0a3ef96899176097b2d8ed7805835866a6b25fc42"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_19.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "85718db42a630b39fd7789e52a3ec668cc75a3c98914fdc5521c37ebe8db4879"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_2.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "d939eb2d91dc6dcc4816d943e9c87605d38da7879911fed5ed35f6bfc3e6a2f8"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_3.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "3664230e5407652b0d3ffd9a041d6f73515aa8692f73446d3075eef2ff767aae"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_4.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "cfbaaf66c9065f1a7ef5d1dcd09b44971df31852c2e55bdaa7c3da5e69350c66"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_5.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "c201743486c0e6cead6b62421b8d71299751c92c85a7706443a7b7ec055db378"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_6.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "af68aa633fbebe6e2fb58011dcc1ded88f32aea7d5a4d581a09a6b319bce8c8f"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_7.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "321a6badfb0f7e060c67c4b27c94e318a79fb055c0486a8d4c99aa028820381f"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_8.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "5f8f57fd66150c721618f8a5eb8e78ae604dfd2bdbc413685d081f80e0e8eeda"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/analysis/adhoc/probes/2026-10-22/ct/pairs/pairs_anchor_9.json",
+        "kind": "repo",
+        "bytes": 15582,
+        "sha256": "720d9ad6e498afb445ed60756eb25f283f7f4840d2667492628084b9cc9401e6"
+      },
+      {
+        "path": "/proc/1484816/maps",
+        "kind": "other"
+      }
+    ],
+    "phase2b": [
+      {
+        "path": "$PROJECT/analysis/carrier_concentration_bb.json",
+        "kind": "artifact",
+        "bytes": 75580,
+        "sha256": "8d98a91965589e0ac1b61e4f0c80c22b1306383cefa5adfe6bbbc8b89fc2f06c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/cj_rule_sensitivity.json",
+        "kind": "artifact",
+        "bytes": 383871,
+        "sha256": "4a2d21bc3ab72235bd7021d0415b2b597a5aafc303259b3093c18ba7379f1ba6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/cl_literal_criterion.json",
+        "kind": "artifact",
+        "bytes": 271634,
+        "sha256": "edb9cc0365cab60da34def2ef3fc9d35af669ac7db48aa2870803baa14641e0c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/fvu_eval_w10240.json",
+        "kind": "artifact",
+        "bytes": 9482,
+        "sha256": "9f3c1d117704e646347613bff54d34c8b3435b56cfde2436cc08a475665196fe",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/fvu_eval_w20480.json",
+        "kind": "artifact",
+        "bytes": 9469,
+        "sha256": "d341e8dedbbcff822dc3376ff47011782cd1ebbdff2e73fd3b5e3fcb40cfbe78",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/fvu_eval_w2560.json",
+        "kind": "artifact",
+        "bytes": 9475,
+        "sha256": "15099dfd5ca88dafed68c24aee03b0451906cf83ff4464f44fa8e3d8517872e2",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/fvu_eval_w40960.json",
+        "kind": "artifact",
+        "bytes": 10079,
+        "sha256": "1a942bc079b982b4bbd2ceb01690b3d0c3f48d1cb0747180a99bef99d1e19141",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/rf_marginal_m1_w10240_n9.json",
+        "kind": "artifact",
+        "bytes": 240495,
+        "sha256": "c6d2bdb5e942fc94a1502e90bba97ab383d57aad73d10c1d0246fa7047abd894",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/rf_marginal_m1_w20480_n9.json",
+        "kind": "artifact",
+        "bytes": 242451,
+        "sha256": "c0d5feab03f3ee735c22439e2a81a0c75b31ccbdcf50838dff658dff76539050",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/rf_marginal_m1_w2560_n9.json",
+        "kind": "artifact",
+        "bytes": 215151,
+        "sha256": "bae04318caddea20f1a9276e1b6bb5c731e476f1167cc08e11f28f095290585b",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/cs/rf_marginal_m1_w40960_n9.json",
+        "kind": "artifact",
+        "bytes": 245769,
+        "sha256": "8adaaef5a575308dd7c94d4b7d098563fc010d7c25989c60b17429bcb63fbec2",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/activation_correlation_fit_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 1848,
+        "sha256": "6cc3c8c289df2524b0499a47a0567e19418bf1729f33bc7be6493dd037d6e364",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/activation_correlation_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 1600,
+        "sha256": "d2faf6b11f19e67332df35346a5ea00d46b3a9fb4c43dfe650219381721990ed",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/carrier_jackknife_ct.json",
+        "kind": "artifact",
+        "bytes": 8310,
+        "sha256": "da63aa1025ca0b6db5fec539b0ef92366c7b5ad008fea78b161f47be31ec04dd",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/carrier_jackknife_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 5432,
+        "sha256": "dabce78b68ff067a556a68467f85fc56f689b7a6c76ba16a297fc2ea7b7fb235",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/classification_2x2_control_ct.h5",
+        "kind": "artifact",
+        "bytes": 220172793,
+        "sha256": "5a29351b2f615bbedd47df3ffb3c21879662c49fd00489960b0b453b530b401a",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/classification_2x2_control_ct.json",
+        "kind": "artifact",
+        "bytes": 27568,
+        "sha256": "e88c4d7b842256ef53cadd7af841833e52229f656e07e08565426a850f1729a2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/classification_2x2_g001_ct.h5",
+        "kind": "artifact",
+        "bytes": 220172793,
+        "sha256": "72a6d3ea4d1f02ec95c3ff8648d213d1f832fd0cbfc3a67c6bba18ff3ecb438a",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/classification_2x2_g001_ct.json",
+        "kind": "artifact",
+        "bytes": 27602,
+        "sha256": "668422805e41efee91ecf505639fc484388c9408c64d1a71225eab068dbba715",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct21_figure_data_ct.json",
+        "kind": "artifact",
+        "bytes": 9715,
+        "sha256": "e1d3d38bfa82b55d86748b77ba19cfa937339c9e7480d4b01923ed9b53b14970",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct22_confirm_ct.h5",
+        "kind": "artifact",
+        "bytes": 15180152,
+        "sha256": "de23ee47e45da901afaf815d3cb069ccdb709edb18ed52ab9f810275a2286b23",
+        "record_hash": "MATCH",
+        "mismatch_lines": [
+          "PREREGISTRATION.md: `d0491efce154ab4909f6df6b5684257b85a6c155d99116a603dc2fab22240460`; per-cell `ct22_confirm_ct.h5`,"
+        ]
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct22_confirm_ct.json",
+        "kind": "artifact",
+        "bytes": 157678,
+        "sha256": "d0491efce154ab4909f6df6b5684257b85a6c155d99116a603dc2fab22240460",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct22_diagnostics_ap_argmax_ct.json",
+        "kind": "artifact",
+        "bytes": 3064,
+        "sha256": "f4192b915c6f5fd4cdd166ef2b19ee69a9bd491f3fc7319b7faa3de5d8791d1f",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct22_diagnostics_ct.json",
+        "kind": "artifact",
+        "bytes": 10032,
+        "sha256": "1b327ba4942c575709de47a2c0b44c318c6ff01a24483debd2bdebbb299469cf",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct22_pilot_ct.json",
+        "kind": "artifact",
+        "bytes": 13048,
+        "sha256": "c2ac83a442a4c4c90c5fd2b338e9d45c4ff44d6750196fbdcdcd7e55ea56e8b2",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct23_disorder_aligned_ct.json",
+        "kind": "artifact",
+        "bytes": 2249,
+        "sha256": "1fd5a411563672a42f91478bb0ea9cca6ad550b920663bcacd82998b8589f3df",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct25_width_tier_ct.json",
+        "kind": "artifact",
+        "bytes": 7200,
+        "sha256": "21e54a44d6aaf59607cceb5dea1523a0a11c9f7a509694509fd9f0c283246f75",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct26_anchor_control_ct.h5",
+        "kind": "artifact",
+        "bytes": 15180152,
+        "sha256": "87936de36df0ac679ba3fc990043a0e5fdd8615b28183ad9ea33a4f548c599d1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct26_anchor_control_ct.json",
+        "kind": "artifact",
+        "bytes": 158834,
+        "sha256": "da93a68e4d239e7b315a6b9968cc85345084b1dc15bde441d27d3e06a7fc0d61",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct26_nonanchor_ct.h5",
+        "kind": "artifact",
+        "bytes": 17770860,
+        "sha256": "ebffdfaeb1d2ca2c8b9b3ce645649cdad1c1102aa5ad66196e023dbc1b3b4469",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct26_nonanchor_ct.json",
+        "kind": "artifact",
+        "bytes": 181534,
+        "sha256": "c5d0a419c0e4f97aea8335515dacfe26ac8b3a94d7ea6bb48a06f9248f24a8c7",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_arm_k32n19_ct.json",
+        "kind": "artifact",
+        "bytes": 20214,
+        "sha256": "c12149c08771f2a71907a46d1559401667181ce9b151924c33e312ef449b28dc",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_arm_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 25455,
+        "sha256": "6710fd61d244ef4de99f1ecc5e7d21c344f58542dae33d96ac70e99ae236250e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_arm_k64n9_ct.json",
+        "kind": "artifact",
+        "bytes": 13198,
+        "sha256": "cd4dc319cffd52bc6d9c5ddb362a581a63e92b1a6f9c05a888a0755f2dc94f4a",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_rules_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 62211,
+        "sha256": "82116f25191d85480bd45b56d0fb47996c71e11802c29e8f634007730f35d3d1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_score_ct.json",
+        "kind": "artifact",
+        "bytes": 1739,
+        "sha256": "ed69068861dfe53c5abc4f74a003a328fab2015de846eb69db3dfed5b214954c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 7977,
+        "sha256": "8b59f2e584164682f8acfd0db3a72cd3e696eded85087ef8d1e6a45cb3597b65",
+        "record_hash": "MATCH",
+        "mismatch_lines": [
+          "PREREGISTRATION.md: **Control (\u00a7CT9-D item 5): BIT_IDENTICAL.** The generalised `sffit` on the full `k = 64` comparison set (seeds 0\u201319) reproduced `ct28_sffit_k64_ct.json` (`8ad67"
+        ]
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_k64_w2560_ct.json",
+        "kind": "artifact",
+        "bytes": 5492,
+        "sha256": "b6e24909edcba4a7018d59e5901c392a315f78ee7f621d9e9b26ca54d53bb3f9",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_k64_w40960_ct.json",
+        "kind": "artifact",
+        "bytes": 5563,
+        "sha256": "d7e28d27b63315867b590d4c4ca1f30a9f42fcdd77600e93737b46d94d93894b",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_k64n9_ct.json",
+        "kind": "artifact",
+        "bytes": 6008,
+        "sha256": "d5e21075db88548a341f097b4605ce86f4f01746ea78787b687d7f4a0e697ebe",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_w10240_ct.json",
+        "kind": "artifact",
+        "bytes": 5496,
+        "sha256": "e1d89c67812485fbef2454f1c47e7e345f6262534140317db6fac6be67e285f8",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_w20480_ct.json",
+        "kind": "artifact",
+        "bytes": 5541,
+        "sha256": "164e65bb17d55e6a624a64f81d04c471d63439afc5f3ec5a4206332d78b44e05",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_w2560_ct.json",
+        "kind": "artifact",
+        "bytes": 5479,
+        "sha256": "cfe243682764f24ea05d66f7146a90b995b6076cabf7fe21e5a4b0da0e5239b7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct28_sffit_w40960_ct.json",
+        "kind": "artifact",
+        "bytes": 5433,
+        "sha256": "a79578d76f15056b1a47bc241ee5fbd75ff07dc25ca69cd822718f6f8f2d28c9",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/ct29_score_ct.json",
+        "kind": "artifact",
+        "bytes": 8955,
+        "sha256": "2cf2b1d53e8617560bf2dc3c38a15dfac44a5e1a4c1a38ac4493fdf40be0886d",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/fvu_eval_k128_w10240_ct.json",
+        "kind": "artifact",
+        "bytes": 10128,
+        "sha256": "b8e73ab37468099739302468d4a35221314649457f160bc3f0fe67cc0a9b5f8a",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/fvu_eval_k16_w10240_ct.json",
+        "kind": "artifact",
+        "bytes": 10120,
+        "sha256": "444999531930e7897209e0b1f34d6a6dc2078646ae168950c5b0e1d5941c5685",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/fvu_eval_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 18290,
+        "sha256": "a8d6b178c6939ac66ec26682da6c43c942e110714462c2cc68f7c17e2fccf436",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/fvu_eval_k64_w2560_ct.json",
+        "kind": "artifact",
+        "bytes": 10104,
+        "sha256": "6dc92724e35e365de8c20406cbba5460175dfd3498ad25e36fad98f676eb4faa",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/fvu_eval_k64_w40960_ct.json",
+        "kind": "artifact",
+        "bytes": 10115,
+        "sha256": "4109748b8b7f61818f5caf096d3e8d71624768dbf649798f68f9673433324dad",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_marginal_m1_k128_w10240_ct.json",
+        "kind": "artifact",
+        "bytes": 238074,
+        "sha256": "f1b29e6508cbaa4c50747f2566b8cc6598e798ae9b894b58e2ce184943160240",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_marginal_m1_k16_w10240_ct.json",
+        "kind": "artifact",
+        "bytes": 240558,
+        "sha256": "95c4effa78b637ce942e9f48ef9fd871b3ec01ccff407459b1b5f2e8ee04e13f",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_marginal_m1_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 522640,
+        "sha256": "b03325ae97976715c6d7147dda74ac4fbfea25d2285bb6b17a438401352f2b4d",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_marginal_m1_k64_w2560_ct.json",
+        "kind": "artifact",
+        "bytes": 214982,
+        "sha256": "5d48cf78e8679b3ef927ebdd65ca6cece8c8e9866be8af187d2a3a625edce1c2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/rf_marginal_m1_k64_w40960_ct.json",
+        "kind": "artifact",
+        "bytes": 243300,
+        "sha256": "526a182c05cccb2faad341a5c95f76f8a9aea4730d9bc0f28cba4150f8c0fb02",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_k128_w10240_topmerged_ct.json",
+        "kind": "artifact",
+        "bytes": 12466,
+        "sha256": "5dd94b411cccdc1976146e6300d1d292224b112fcd44c9033fe4624f28407b04",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_k16_w10240_topmerged_ct.json",
+        "kind": "artifact",
+        "bytes": 12630,
+        "sha256": "376a00d4c0261eb6097b5de7b3160c8b4258031ff2175a4950360a087c5749eb",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_k64_ct.json",
+        "kind": "artifact",
+        "bytes": 17930,
+        "sha256": "fd0373d6c6636198ea79a4a257116d747006182a5be1b222b664bd96e3c08666",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_k64_w2560_ct.json",
+        "kind": "artifact",
+        "bytes": 12503,
+        "sha256": "7a8d1a0a38ef1bc0ac60a010c911fd0882f8f1e3faee79a90bef7ee35bfc43b3",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_k64_w40960_ct.json",
+        "kind": "artifact",
+        "bytes": 12534,
+        "sha256": "86b8e3eaa31fffadcd24f19c60fccce910cd4e051fdb449fecbadf1ce5a3b504",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_w10240_ct.json",
+        "kind": "artifact",
+        "bytes": 12543,
+        "sha256": "0ade5d25dbb4b51df9d7d97d8212301af2c7812bbcf223fde8af4b72719a6675",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_w20480_ct.json",
+        "kind": "artifact",
+        "bytes": 12534,
+        "sha256": "b5ae8a1b4cde9d154ea7f635b07c5f508082fdbe7166f93f4a494002d0ce813d",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_w2560_ct.json",
+        "kind": "artifact",
+        "bytes": 12529,
+        "sha256": "d7bfdb07078aa7e5b36d7339c6f04bc890a2730ca43ebbe0b37996dc2a44f728",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/ct/slope_w40960_ct.json",
+        "kind": "artifact",
+        "bytes": 12531,
+        "sha256": "cd2e3168f0560ac697639d2b72ddf8208cae4b71ef7cb66c27d367878428d27c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/feature_ap_main_compliant.h5",
+        "kind": "artifact",
+        "bytes": 106187008,
+        "sha256": "3d54f84650b0a200cf85d3d507551b15d7106800015642469a95916dcd73698c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/fvu_eval_cf.json",
+        "kind": "artifact",
+        "bytes": 17097,
+        "sha256": "874bfed6624dfccb9b07e01e68feae7ae120d6dbc1a5b4382f41a30ecaf02d9f",
+        "record_hash": "MATCH"
+      },
+      {
+        "path": "$PROJECT/analysis/residue_labels_subtyped_untruncated_pgate5_f67485d.h5",
+        "kind": "artifact",
+        "bytes": 45121140,
+        "sha256": "b68f5f7a16799291c058d86aa4e7bf850f93da51f5af0f0304ada82098f41025",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/residue_labels_subtyped_untruncated_pgate5_f67485d.json",
+        "kind": "artifact",
+        "bytes": 1125491,
+        "sha256": "f003cfc7c5306587e9bcd8d20469bfea3d37e208d4c31ea9a606335298d3c918",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/analysis/rf_marginal_m1_n39.json",
+        "kind": "artifact",
+        "bytes": 913260,
+        "sha256": "20a0d3b9aa751adfa178a6090c1904e0853e7841451e9f43191d9aee1f49e0be",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/release/derived/concepts_carriers.csv.gz",
+        "kind": "bundle",
+        "bytes": 565949,
+        "sha256": "feac1e3caff4ad8ff5034eaf47060bcfb2f93913e7d233540c7e6ef21e51d595"
+      },
+      {
+        "path": "$PROJECT/release/derived/features_n39.csv.gz",
+        "kind": "bundle",
+        "bytes": 12343780,
+        "sha256": "84bcabbd767da5e23b1fe4a1b5ee249a85bea209bbd27f008c1568a1098cda88"
+      },
+      {
+        "path": "$PROJECT/release/derived/meta.json",
+        "kind": "bundle",
+        "bytes": 4078,
+        "sha256": "4e15aeea277be6c4d17085f6aff5f1dc07219b82c2a69624e07477a1197245b0"
+      },
+      {
+        "path": "$PROJECT/release/derived/mnn_indicator_theta070.csv.gz",
+        "kind": "bundle",
+        "bytes": 1929842,
+        "sha256": "166269bd207a27d45839f28df65ee4ae45b5cbe93581a36ed730029bc7a8b868"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_0/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "dfb17016340cfab8d2b00458a33e296bab4d5acccdf00ec71932e75ddf5efc7a",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_1/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "496fe1bfeceef951ba583bc20d303305afc7fa9f531d49b0efa12f161356f58b",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_10/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "66bda73f2bffb96f7093a539fc03a44d0b9445049d2170b7c3c177ac8b587a23",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_11/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "49915090a44abfe3fc1a61f2c896f63775f14559e93ca07f67fd01dbd792c639",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_12/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "4cd9bfe74b2244958ea411c09b4c58afe92126bf43b82e0dae9288447f4c04cc",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_13/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "72a91253e0af6b866c6297fe6d1975d1135819e4a6ffc82ab6fd42a6d802b5a6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_14/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "3c1d9bb319324f81958ec81d1d9893b68925a03d6ce9806e913345cd46b31dd8",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_15/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "a4ae5d2729b8fccdbe09246728c43a6dedcb636d92bdf2e922ece07c1fd12b33",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_16/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "3b80d41f3a0970911d7466db2fe489926584049819453e9124f679a5b106059d",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_17/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "a2fef72f626fdbca837e67a9ab0ceae7ab833b8c5450124fb7b8a3664a92a9c8",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_18/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "7b8cd3e7179abd4c65e57e7635909831e4ab44291e8371c9a856e778bf85ade7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_19/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "3f3a651e90012987d899454cabddaf43fe731d3f10f95fff9c2b68479cb0cc31",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_2/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "e2eb1b36362b722bb013c305266ac487275665ca00a0838536f07cae85b325e3",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_3/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "0d6113df06a39aab3259bfedfd952fa87caf3acfad9a3a0066549415d79a2f00",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_4/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "747705e027a198b195fb14b72429be93af530f63f81db04f60690ce251086a6d",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_5/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "bf8210616f6b57afd43f0a05264305fb6f1342d215bc8530bbc818afd3d10904",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_6/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "3716149e0e26dcffab7fdf0990f28a4a44a33be5606fda296b739b62bc9161d0",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_7/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "f18be2cd25bb6488c5318c1232c75baf47f33fdfb15ceb22f34dc5585577ad37",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_8/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "13703030d36c571a6309148c25635eef33da3b3dfd3eb4ee2b6e653266c75d16",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/sae_ckpts/seed_9/model.pt",
+        "kind": "artifact",
+        "bytes": 104905865,
+        "sha256": "f662003b04571f26ed4f3cdd3756a8891b2c82edfc74f445cf73f31d4a205dd4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/annotated_doc-0.0.4.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 34,
+        "sha256": "e8e62005c2f21425207aa2e09ef332389c4f096ce0cbbb1ee2b2cf2ad3689ccb",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/anyio-4.14.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "fdde98bbaba269998d7b40b2768c22ac4f429a0ef350bda0d3cb50a684b742f7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/fonttools-4.63.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 147,
+        "sha256": "f2454775dc5f156038e05483e26069982fb8b82ca7427928cfff5a3496f6dbb6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/httpx-0.28.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 37,
+        "sha256": "da55647509b12c0d6934c812376795f3da3dd070997b3866370b32eabc8a0d20",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/huggingface_hub-1.24.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 212,
+        "sha256": "ccfec5fdb052762adc3d0172b07419f45dcb727e7f74248e119c559460ac1b4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/idna-3.18.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 38,
+        "sha256": "ec7de718e1daa778e72c4e5eeeaed8c2bf55abc6b107b5888f9f82ff8376be1c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/jinja2-3.1.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/markdown_it_py-4.2.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 58,
+        "sha256": "4fcd65edf1d0de9965a50e3052d40ae9af20fe9eb0c506e78ca5470a4d96306e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/networkx-3.6.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 94,
+        "sha256": "1f68d9683b0327f8bd1f64b05a9c2e15e97c06b67dc472aebe1f83400596f654",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/direct_url.json",
+        "kind": "artifact",
+        "bytes": 337,
+        "sha256": "f1bbffd462d579270d4a2e6c1d0987ea23c5f11049e3ce29e05f3ca0737c7487",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/numpy-2.4.6.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 220,
+        "sha256": "ec26fade0c8bdac211a6c1dd003a65eb16885b925395423e93fcaa115af4052c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pandas-3.0.3.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 69,
+        "sha256": "3952ca3443ecf90ec85b2a5604be9fc6fe7aff3b78b119c423bcdac28eb2ff4c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pip-26.1.2.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 84,
+        "sha256": "5617fcb34218817dfb9ad778bc62fbdc13dcc5d2a7a9e0853f3079f9ddf4c7ca",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pygments-2.20.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 53,
+        "sha256": "b945f0f9784c281117e2959c0ada6e4d39cf84bde1ece104da35a2e75550b1af",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/pytest-9.1.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 95,
+        "sha256": "b21b5de5a40ce6372eff650d87fe4ce166b662590a307535e179bfc6c8d2a4d6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/setuptools-83.0.0-py3.10.egg-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 2449,
+        "sha256": "ce482d8697ff15af4d544f69e85293dd793d0d1d5f680711538728820b15ee30",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/sympy-1.14.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "4a9faf2c9a26e0f4658467d8e91a54adeed28d89b7dc936af4d0b0086796f9f4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/torch-2.13.0+cu126.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 211,
+        "sha256": "72ba54dc1186d950460c57b009875635e78314ee5d4872d276137c1ff61b762e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 57356,
+        "sha256": "a0406c7575adf27f56a09afa6fbcdcd8d9951d12ca219698baa5627351b0d9a1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/tqdm-4.69.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 39,
+        "sha256": "45e2421fb522dd9ca1e8cd7a1383a1b19d6853b5ad31709f6eda3206118edbd6",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/transformers-5.14.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 68,
+        "sha256": "4dc0659aab98578ef928904af04850367b0b89e816532fd0a0a478474a4c8768",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/METADATA",
+        "kind": "artifact",
+        "bytes": 1663,
+        "sha256": "c0067ae183ac3e221330fc16dd9539a4bc7f2e56a34245cca63335e9da14a8ce",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/triton-3.7.1.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 176,
+        "sha256": "8eceb6f3d151935f3f24b99b35f1ac9ad28fefb0fa6986b024e4881efdd7f3d2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/typer-0.27.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 57,
+        "sha256": "60ed770728aa59eb9ab3d5742400cb5004591547bf73053fef099336fc41610f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$PROJECT/ycrc_conda/envs/esm-interp/lib/python3.11/site-packages/wheel-0.47.0.dist-info/entry_points.txt",
+        "kind": "artifact",
+        "bytes": 110,
+        "sha256": "24976d480193bcc2db2244d565400cbc628edfd16d59f09517c9a9fcd1fa7b88",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/PREREGISTRATION.md",
+        "kind": "repo",
+        "bytes": 3176464,
+        "sha256": "de669018bd2fe05fa98ee5fa26e95cc8363c65da40a7656528e7540adad7e9ac"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/configs/mvp.yaml",
+        "kind": "repo",
+        "bytes": 34282,
+        "sha256": "238b96238dcf083b590306f9935ade03a736d1e7e7b84d370534ee4b4bf36877"
+      },
+      {
+        "path": "$SCRATCH/clone_rel_a53b68dc7ed6814d20a5aca7935397495bd8cd1d/docs/NUMBERS_OF_RECORD.md",
+        "kind": "repo",
+        "bytes": 278640,
+        "sha256": "18fbc32502dc50aea5ba0c747d20d442632178fe5e738dde9efd4ad6656aef62"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_0_0ee09963ee9a8b0a.h5",
+        "kind": "artifact",
+        "bytes": 1106329984,
+        "sha256": "72e12daf52ffca9a4232a0a4678ee256dd9ca05e0a85a15d7b765b0c82a9274e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_0_137d515b39dec4c0.h5",
+        "kind": "artifact",
+        "bytes": 1111726732,
+        "sha256": "99087d80b260f7e5489053de6b5146c205ff2e397149e71f156df8378b66547f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_0_b9d9764e6c528722.h5",
+        "kind": "artifact",
+        "bytes": 2279248779,
+        "sha256": "17c8621e519073d06463e4067cfce5e11eeb34b6ecba1ff840f20a17ad83e024",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_10_9e71cfdef02d5185.h5",
+        "kind": "artifact",
+        "bytes": 1107888228,
+        "sha256": "eabc8d2fe6a0040180ee3e38144b00119113dca3b6c421cd45b0e7c6f5ee8c85",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_10_c9aa0ef896bdd71c.h5",
+        "kind": "artifact",
+        "bytes": 2282371090,
+        "sha256": "bfcf965056f2023478ff5bef966dbcf729df0dd6b25adbb401cdfe2e69a36cc4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_10_f0cffce987308dd2.h5",
+        "kind": "artifact",
+        "bytes": 1113150132,
+        "sha256": "e6306968e20d3b6098d088d9e65ab1d8d215fb3ad53a4c2ee89d312a63ccefa1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_11_55447b97ac4c2232.h5",
+        "kind": "artifact",
+        "bytes": 2281228894,
+        "sha256": "a0777ad0d82507e5b270d0cb958b6d7ca3b82ddfdeeb68e94a55ce2a09193d45",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_11_6ce675facddf4017.h5",
+        "kind": "artifact",
+        "bytes": 1107773273,
+        "sha256": "7274a9acc79c8196a19c9983c786b6426457b3317f0624d038e0ed74d4a62253",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_11_be25b3b0d5516b1a.h5",
+        "kind": "artifact",
+        "bytes": 1112149881,
+        "sha256": "8edf27518acf9cfeaf5821fbab6df7034139e3595b75a202461d3f27cf121c14",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_12_9bf037326ac6675d.h5",
+        "kind": "artifact",
+        "bytes": 1112538223,
+        "sha256": "ad5cc723d4426a3121a54877f6adc60c4eff485b569ef119a9ba171a59d6d5ef",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_12_cd034a8c079ce94d.h5",
+        "kind": "artifact",
+        "bytes": 1107824418,
+        "sha256": "acc6b14c1f1c6cc0db0412e227320b12da51176b444308b6cd80107162cdb1ea",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_12_fd5f78c396d65e96.h5",
+        "kind": "artifact",
+        "bytes": 2281637094,
+        "sha256": "3b055d33706ce9353c2ff0cad129f665c4e32d7fad33e1e07957b9758027354a",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_13_70bb4ebc3337a34e.h5",
+        "kind": "artifact",
+        "bytes": 1111651978,
+        "sha256": "c5685738613f5a538d183f5010273fb37161bbaa71c0f8a8cbea66545e844df2",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_13_9aed7d8cd2e8a04d.h5",
+        "kind": "artifact",
+        "bytes": 2278165617,
+        "sha256": "bcf7af28dc8ec2c02bed5d002bc85f938eb6ecd978f66c1872977620bb570ca9",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_13_c8b808c20e7c73e6.h5",
+        "kind": "artifact",
+        "bytes": 1105419158,
+        "sha256": "12b715ce8f9d7c2fb38987825f7f573e053328207cd522a0896e0e59011396e8",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_14_4180d395f9675575.h5",
+        "kind": "artifact",
+        "bytes": 1109443705,
+        "sha256": "27bfa6ac1236afc1d13b9a8bd4f9076d6cd0a7f432bcbdd709969258c5d7d17c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_14_4b6706d477f36500.h5",
+        "kind": "artifact",
+        "bytes": 1114002496,
+        "sha256": "0315d4ffd37a72f0a0d22374ccfe5385bfa6d07e10c60f969a9c30b00aed09a0",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_14_ab367e342c5bdf34.h5",
+        "kind": "artifact",
+        "bytes": 2284788070,
+        "sha256": "752e74473f6f439eb0848f89bb855b41f2e8b0a6914f5931b6b5eae0819b2708",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_15_debd3955e5c4f264.h5",
+        "kind": "artifact",
+        "bytes": 1107058710,
+        "sha256": "1a7de5f3004a96a8363746009b7eb9c26cfa162bbc6adaec06ade482bcc89f36",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_15_e461a418232934fd.h5",
+        "kind": "artifact",
+        "bytes": 1112108142,
+        "sha256": "b553f22b2c2cf3b29cf129746eff5fe6db950c8b9f1806c421055ea3c46337cf",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_15_e91e8dd6f5e5e853.h5",
+        "kind": "artifact",
+        "bytes": 2280270911,
+        "sha256": "fff65777eab297711d3112f35684e7e6eceb7b56aaee182f51bef1315422e398",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_16_02453901f12fbdeb.h5",
+        "kind": "artifact",
+        "bytes": 2281532001,
+        "sha256": "39e854a689d5ac1dd4d85eb7faad4942b950fe88132eeacef21f3a3fc6610fdd",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_16_40136f84ffaa1eb6.h5",
+        "kind": "artifact",
+        "bytes": 1112532121,
+        "sha256": "242fad6cc0b891076db2a25c6b4c263d0303c098aa032dd6fb5f663a8cd17ff9",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_16_5db2c5c77c505b7a.h5",
+        "kind": "artifact",
+        "bytes": 1107872240,
+        "sha256": "aa6f4fabf1c3c2817c6fd0784d9ffb141d71fed6f73e4008037b32ad4bf04ae4",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_17_173d3bc5ef37dace.h5",
+        "kind": "artifact",
+        "bytes": 1112640825,
+        "sha256": "22f8aecae8163663ad2497d4599ec6ceac43d6eecd6111df09796424d5df4725",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_17_76a9dfd0d73f3ec6.h5",
+        "kind": "artifact",
+        "bytes": 2545355233,
+        "sha256": "c3013d02c234c28bef645dda55997a1c29bdc21522a912f97196bee62b8f1e8f",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_17_94e1c566c6c590f4.h5",
+        "kind": "artifact",
+        "bytes": 2280614624,
+        "sha256": "583dd0f73ca2eacf616c321c4ef8b9a24140e2f76fd76a78827f067036050d49",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_17_bdbc5ad9dfe3ed3a.h5",
+        "kind": "artifact",
+        "bytes": 1106879818,
+        "sha256": "05925e4f964b2df4554415364012365bf0647d1c63d0482d15a1d13f65c4a025",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_18_035263ec1919f536.h5",
+        "kind": "artifact",
+        "bytes": 2280808225,
+        "sha256": "49064fb4dc064a0d092189243832dcc1e87e949c8031f283c5896e41b9d10812",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_18_5118e61e0b56dfd0.h5",
+        "kind": "artifact",
+        "bytes": 1106891795,
+        "sha256": "6ebbc42654977084d25dd79b8ee0815ddcb56798e638d6a53ab52125c720356c",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_18_5de07f65989fc3bb.h5",
+        "kind": "artifact",
+        "bytes": 1112637940,
+        "sha256": "f90e43b7fa734b3931b0ba31e3586779987e733ce3e72a968e8761c1c0bb14e5",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_19_0beff9467343637d.h5",
+        "kind": "artifact",
+        "bytes": 1112670790,
+        "sha256": "35846cf1fe6c5052bce04968136b3cab40ed433436931e9d60f0caea6ce9ae46",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_19_5686bd0a2f7a7cff.h5",
+        "kind": "artifact",
+        "bytes": 1107284436,
+        "sha256": "6e3228e5ad27b473e7e556c5733d71e2cfacb31c6c29b20eb616a8822f6621bd",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_19_a44c92d64ce71e63.h5",
+        "kind": "artifact",
+        "bytes": 2281105318,
+        "sha256": "bfba6f41d1799a9d6c9311eb4213e9653c351ca615eafff4b2528a766deae9d1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_1_0eb9ff4490500f4a.h5",
+        "kind": "artifact",
+        "bytes": 1108655778,
+        "sha256": "1f44bac99ce7058c8d8e263cf5d7922711518984c73111de481b1eafbecc03fd",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_1_3799efbf0ec144cc.h5",
+        "kind": "artifact",
+        "bytes": 2282728003,
+        "sha256": "a4ed9df2eb949b35386ce9f9bbd4c73449961aab326217ae0da1135e4ca6f243",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_1_fcba892529767463.h5",
+        "kind": "artifact",
+        "bytes": 1112689313,
+        "sha256": "da37d7f18dccfe7e9b88d9444cdb14beb541aa83a984ceed0ada922385f0c4c1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_2_2df7e7260825b1c6.h5",
+        "kind": "artifact",
+        "bytes": 1106628491,
+        "sha256": "e229607a15b2d7b38a65b9dc9160d7ed8650fc4e62b941df40a471b5e5bc1f36",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_2_50eb5fdacf3f77b6.h5",
+        "kind": "artifact",
+        "bytes": 2279421808,
+        "sha256": "29e196e97d9a909e2379736baf60268c2bda1f3b083a03d0a08c1c7ce5cb465a",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_2_5a0f690997e38a09.h5",
+        "kind": "artifact",
+        "bytes": 1111644479,
+        "sha256": "3b2ef7e6718009ebad79a82cca75a7d184ea15e58cfeacda918d9abd27f715bd",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_3_33491799ba75c19f.h5",
+        "kind": "artifact",
+        "bytes": 2545834888,
+        "sha256": "d8efea3df1ab7192cfbaeb468c5ad8baf1fa3c51fbb17563a4c11bf1cac95157",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_3_601ee162929cdfb5.h5",
+        "kind": "artifact",
+        "bytes": 1107167473,
+        "sha256": "7a40114e9d4a25c0d603c95caf00811a15ae1b22095275788257510d34656765",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_3_b3da1cfdaa9c8959.h5",
+        "kind": "artifact",
+        "bytes": 2281006344,
+        "sha256": "05feb4bd877b084ac7c7553c77e3c55e6dbafe470b4037fbdb60a290ffb315a8",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_3_cdafad93a866d575.h5",
+        "kind": "artifact",
+        "bytes": 1112716698,
+        "sha256": "6ad46d2d8ffdb0f532680872d94485dda7a844d05c3f9d55b8457bf5bde2cfe7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_4_06814db3a75b9c29.h5",
+        "kind": "artifact",
+        "bytes": 1111637340,
+        "sha256": "4c03335d6743d697dc0b111f726fc4ab7b431f49fd238b1b55f8d1c796d6c1bd",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_4_5986b2a1affb76bd.h5",
+        "kind": "artifact",
+        "bytes": 2279592903,
+        "sha256": "567d80b9e48b9d2076bd594fab7ad6bac4983eb6741ed9639ab610f1ea91d36b",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_4_748c862a3f4eb512.h5",
+        "kind": "artifact",
+        "bytes": 1106831681,
+        "sha256": "348fc8f27bac98d85fe047ea8481b81574110157e43d504b27ed422acc83a910",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_5_47feb09d9b0264db.h5",
+        "kind": "artifact",
+        "bytes": 1107637920,
+        "sha256": "979ddb9262f69f7f6fc3f9a1f047e83ddb59a354bed3ce71a25d5b6b27008e70",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_5_7f4d86ef5ec4eba3.h5",
+        "kind": "artifact",
+        "bytes": 1112214409,
+        "sha256": "dfadec62d1898891543aff7a15b28f38c9d958c38f1f306cfaa48db828026d05",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_5_a6e8a9ca0d8c7f25.h5",
+        "kind": "artifact",
+        "bytes": 2281219524,
+        "sha256": "906456d6b681f7e6c6e1d5b217d439aaf1ffd9d88c80a3a3e870e7db8c9b80d1",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_6_03da1a809abad831.h5",
+        "kind": "artifact",
+        "bytes": 1107602602,
+        "sha256": "1208c9597dc0cf3d69989055ea20595c73d55918f235f81ad3dd83e255ab8dad",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_6_2ae51854dcec5190.h5",
+        "kind": "artifact",
+        "bytes": 2281560201,
+        "sha256": "ee5923af20a6b8e9ea5bed591300272201acb6ae80232c5b28775fed979b472e",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_6_376add48e3b966a0.h5",
+        "kind": "artifact",
+        "bytes": 1112579165,
+        "sha256": "9f24aa34d9287f26b6596d389f0367fc3f8019e43e0e415e4f9638414e3534fa",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_7_48bffb37285fd225.h5",
+        "kind": "artifact",
+        "bytes": 2281524287,
+        "sha256": "59dadf5803c79c5944d3c697b54500599f9b5f14d5b3a917eaef8c416d8174cd",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_7_89ba7d5aa0c211ca.h5",
+        "kind": "artifact",
+        "bytes": 1107562383,
+        "sha256": "bab276ac3992e082abc201ff1ea4a4a101fa0b4ad11883d4b8db87ad4123215d",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_7_c50c1c0bd6a78bba.h5",
+        "kind": "artifact",
+        "bytes": 1112493999,
+        "sha256": "98c7dabbc764a8c129ee2e0063c190e58dd49f27f441fc620d93246b60305dcc",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_8_224e246c6bbff02b.h5",
+        "kind": "artifact",
+        "bytes": 1107481726,
+        "sha256": "8e44e3e36b48bfe06fb9dc80d2b8f67ffed40f1cd8c3565c1f333987f2ff18ba",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_8_638eadd9e046176b.h5",
+        "kind": "artifact",
+        "bytes": 1112858792,
+        "sha256": "5b35e0a85bfbf1b7eba9d9346106c783dea27f9eaffbd2ce52b2c18dec79ee47",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_8_b6bfb07a6a3bda32.h5",
+        "kind": "artifact",
+        "bytes": 2281475819,
+        "sha256": "ea6775080306ce0943531e9a42376354032fbc51b28453e4570caab54133a6aa",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_9_5918cf590dfdcfd0.h5",
+        "kind": "artifact",
+        "bytes": 1111338959,
+        "sha256": "09d8f7584e34632be347596b9802afced01a25a803300213b710cfb713dadcf7",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_9_b842b2344538b413.h5",
+        "kind": "artifact",
+        "bytes": 1107142554,
+        "sha256": "3400d7c1cc369767b3792f0027486f39dd8b4654a2d71fdcce44de044b7832ba",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "$SCRATCH/row_index_cache/row_index_seed_9_eced3f2d9fe22adc.h5",
+        "kind": "artifact",
+        "bytes": 2279587916,
+        "sha256": "a17dc731245829aef90098c1fc96fa57abc08d6e01b9d716ec8f730be76e759d",
+        "record_hash": "NOT_STATED"
+      },
+      {
+        "path": "/proc/2450506/maps",
+        "kind": "other"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper given as the preferred citation. Its title is the workshop paper's; the extended version's title may differ, and its citation will come with it."
+type: software
+title: "Cross-seed reproducibility depends on the measurement, not only the model: sparse autoencoder features in a protein language model (code)"
+authors:
+  - family-names: He
+    given-names: Theodore
+    orcid: "https://orcid.org/0009-0001-7381-7893"
+version: "1.0"
+license: MIT
+repository-code: "https://github.com/TheoCyHe/esm2-saes-cross-seed-reproducibility"
+preferred-citation:
+  type: conference-paper
+  title: "Cross-seed reproducibility depends on the measurement, not only the model: sparse autoencoder features in a protein language model"
+  authors:
+    - family-names: He
+      given-names: Theodore
+      orcid: "https://orcid.org/0009-0001-7381-7893"
+  year: 2026
+  conference:
+    name: "Interpretability as a Science: NeurIPS 2026 Workshop"
+  notes: "The title is the workshop paper's; the extended version's title may differ. The workshop is non-archival. The workshop paper reports a subset of the study that this software accompanies; an extended version is in preparation, and its citation will come with it."

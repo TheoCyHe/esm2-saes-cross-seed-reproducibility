@@ -1,0 +1,185 @@
+{
+  "governing_amendment": "CT \u00a7CT18 (b)",
+  "producing_commit": "94ca8b98a5f40bc61def883f9d00b7d9479b8f06",
+  "git_dirty": false,
+  "n_compare": 39,
+  "n_anchors": 20,
+  "anchor_seed_order_features": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "comparison_columns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "theta_grid": [
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9
+  ],
+  "reference_theta": 0.7,
+  "n_rows_scored": 15972325,
+  "n_rows_ap": 15972325,
+  "firing_bin_edges_carrier": [
+    0.0,
+    0.0001,
+    0.0003,
+    0.001,
+    0.003,
+    0.01,
+    0.03,
+    0.1,
+    0.5,
+    1.000000001
+  ],
+  "carrier_pair_order_lexicographic": [
+    0,
+    1,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "carrier_pair_rule": "unordered pairs s < t in carrier_pair_order; 'has a partner' evaluated s -> t with s's carrier; cells with both seeds detecting the concept",
+  "a4a_floor_rows": 200,
+  "concepts_in_pool": 703,
+  "carrier_ties": {
+    "n_cells": 14060,
+    "n_cells_with_tied_argmax": 0,
+    "share_tied": 0.0,
+    "max_tie_multiplicity": 1
+  },
+  "gates": {
+    "1_counts_from_sim_equal_stored": "EXACT (load_join_inputs)",
+    "3_logM_logphi_dfs_rebuilt_bit_identical": "PASS",
+    "2_indicator_sums_equal_n39_and_n19_counts": "PASS",
+    "4_headline_0.495513": 0.4955126953125,
+    "5_carrier_excess_exact": 7.221862004486324
+  },
+  "sources": {
+    "sim": {
+      "path": "$PROJECT/analysis/ct/jackknife_match_ct.h5",
+      "sha256": "a17472e8d8911f0515d238a0c67c79f66f3e230f20aaca0aafb311c60035c084"
+    },
+    "rf_counts_all_theta": {
+      "path": "$PROJECT/analysis/rf_counts_all_theta_n39.h5",
+      "sha256": "40d5a82fc6ca066be225fe31bf1b596119eca92e115790888afe7514aca1a5ed"
+    },
+    "rf_counts_n19": {
+      "path": "$PROJECT/analysis/rf_counts_theta070_n19.h5",
+      "sha256": "8555dfef2d52d9d06f5c2c53a5209df3f8c2d9f048d201d1478731921c8287c5"
+    },
+    "m1_json": {
+      "path": "$PROJECT/analysis/rf_marginal_m1_n39.json",
+      "sha256": "20a0d3b9aa751adfa178a6090c1904e0853e7841451e9f43191d9aee1f49e0be"
+    },
+    "gtilde": {
+      "path": "$PROJECT/analysis/gtilde_compliant_b_ratio.h5",
+      "sha256": "151de1f23f51c6db2fe4a3c4ec58ce82cbd6755892e8599e7f36e7954586adf1"
+    },
+    "null_reductions": {
+      "path": "$PROJECT/analysis/null_pilot_compliant.h5",
+      "sha256": "a19205b8171c4ca80255fc182192766a4d82605a341ab83dc159627c38819f93"
+    },
+    "d_fs": {
+      "path": "$PROJECT/analysis/d_fs.h5",
+      "sha256": "4f1f31701c61359c9d713193f2d049cf39d3dbbabf405d1e53c238854f62a080"
+    },
+    "degenerate_flag": {
+      "path": "$PROJECT/analysis/degenerate_argmax_flag.h5",
+      "sha256": "a1232ee16d7b5511e538253e37091a5cf4ca6eb0b8a52cff592d156029055e5f"
+    },
+    "ap": {
+      "path": "$PROJECT/analysis/feature_ap_main_compliant.h5",
+      "sha256": "3d54f84650b0a200cf85d3d507551b15d7106800015642469a95916dcd73698c"
+    },
+    "carrier_reference": {
+      "path": "$PROJECT/analysis/carrier_concentration_bb.json",
+      "sha256": "8d98a91965589e0ac1b61e4f0c80c22b1306383cefa5adfe6bbbc8b89fc2f06c"
+    },
+    "fvu": {
+      "path": "$PROJECT/analysis/fvu_eval_cf.json",
+      "sha256": "874bfed6624dfccb9b07e01e68feae7ae120d6dbc1a5b4382f41a30ecaf02d9f"
+    }
+  }
+}

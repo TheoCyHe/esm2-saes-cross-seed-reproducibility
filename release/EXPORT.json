@@ -1,0 +1,15 @@
+{
+ "what": "This tree is a curated, scrubbed export of a private working repository (README.md; GUIDE.md). The project's record is not part of the public release (README.md, 'What is released').",
+ "source_commit": "8f6a313d9cc325a87dbf408fed71cab5e5dd507b",
+ "source_commit_date": "2026-11-18T21:51:04-05:00",
+ "not_exported": [
+  "scripts/export_release.py",
+  "scripts/export_idscan.py",
+  "tests/test_export_release.py",
+  "tests/test_export_idscan.py",
+  "slurm/export_decoders.sbatch",
+  "tests/test_prereg_log.py",
+  "release/zenodo/",
+  "release/private/"
+ ]
+}

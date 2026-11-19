@@ -1,0 +1,14 @@
+* text=auto eol=lf
+
+*.sbatch text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+
+# binary file types (added 2026-09-16):
+# text=auto already detects them; stated so a future .h5/.png/.pdf can never be
+# line-ending-normalised by mistake.
+*.pdf -text
+*.png -text
+*.h5 -text

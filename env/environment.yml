@@ -1,0 +1,45 @@
+# The everyday environment. Nothing is pinned, so what this file installs
+# changes with time: it is a best-effort file. The environment in which the
+# paper's numbers were reproduced is pinned in env/reference_environment.yml
+# (Linux x86_64), and that file is the documented way to reproduce them.
+#
+#   conda env create -f env/environment.yml && conda activate esm-interp
+#
+# PyTorch comes from pip, not from the `pytorch` conda channel, which is no
+# longer the maintained distribution path. scripts/reproduce_table1.py and the
+# test suite need it installed and use no GPU: a CPU-only build is enough. The
+# extra index below offers the CUDA 12.6 wheels the pipeline's GPU jobs ran
+# with (rtx_5000_ada, sm_89); pip takes the newest version it finds on either
+# index, so on a later date it installs a different build.
+#
+# mmseqs2 is NOT listed. bioconda builds it for Linux and macOS only, and with
+# it listed this file cannot be solved on Windows. Only the pipeline's
+# clustering step needs it (slurm/cluster_swissprot.sbatch); for that step,
+# on Linux or macOS:  conda install -n esm-interp -c bioconda mmseqs2
+# (env/reference_environment.yml pins the version of the cluster's
+# environment as exported on 2026-11-01; the version the clustering ran with
+# was not recorded).
+#
+# On a cluster that keeps conda environments on a quota-limited file system,
+# check the quota before building several.
+name: esm-interp
+channels: [conda-forge, bioconda]
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - scikit-learn             # average_precision_score
+  - h5py
+  - pandas
+  - pyyaml
+  - matplotlib
+  - statsmodels              # regression for the confound model
+  - pytest
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu126
+      - torch
+      - transformers
+      - fair-esm
+      - biopython
+      - tqdm

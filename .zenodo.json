@@ -1,0 +1,33 @@
+{
+  "upload_type": "software",
+  "title": "Cross-seed reproducibility depends on the measurement, not only the model: sparse autoencoder features in a protein language model (code)",
+  "version": "1.0",
+  "creators": [
+    {
+      "name": "He, Theodore",
+      "orcid": "0009-0001-7381-7893"
+    }
+  ],
+  "description": "<p>The code for a study of which sparse-autoencoder features of ESM-2 reproduce across training seeds: the pipeline, the analyses, the tests, and the script that checks the study's reported numbers against the derived data. This release accompanies the full study. The workshop paper reports a subset of it; RELEASE_NOTES.md in the repository says which parts the workshop paper does not report, and an extended version of the paper is in preparation. The derived data and the decoder matrices are a separate Zenodo record, linked below. The project record (the pre-registration with its dated amendments, and the table of numbers, which holds the study's main results with the owner of each) is deposited separately with restricted files, which are available on request; the prediction ledger is in this repository.</p>",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "sparse autoencoders",
+    "ESM-2",
+    "protein language models",
+    "interpretability",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24074394",
+      "relation": "isSupplementedBy",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "10.5281/zenodo.24226557",
+      "relation": "isDocumentedBy",
+      "resource_type": "other"
+    }
+  ]
+}
